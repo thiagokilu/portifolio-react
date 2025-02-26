@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaGithub, FaLinkedin, FaInstagram, FaYoutube, FaFigma, FaHtml5, FaCss3Alt, FaJs, FaGitAlt, FaCss3, FaJsSquare } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaInstagram, FaYoutube, FaFigma, FaHtml5, FaCss3Alt, FaJs, FaGitAlt, FaCss3, FaJsSquare, FaReact } from "react-icons/fa";
 import logo from '../../assets/icons/logo.png'
 import logoFigma from '../../assets/icons/Figma-logo.png'
 import soundifyCard from '../../assets/imagens/soundify-card.jpeg';
@@ -94,6 +94,17 @@ export default function Home() {
       <FaHtml5 />
       <FaCss3Alt />
       <FaJsSquare />
+    </div>}
+/>
+
+<Card
+  linkProjeto="https://notes-react-orpin.vercel.app/"
+  linkImg='https://res.cloudinary.com/dbwz36bcf/image/upload/v1740570943/voice-notes_udcywa.png'
+  title="Voice Notes"
+  description="Bloco de notas usando api de voz"
+  icons={
+    <div className="flex gap-3 text-xl mb-3">
+      <FaReact/>
     </div>}
 />
     </div>
