@@ -22,7 +22,11 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Portifólio",
+  icons: {
+    icon: "../../favicon2.png", // Caminho dentro da pasta /public
+  },
 };
+
 
 export default function RootLayout({
   children,
