@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { FaHtml5, FaCss3Alt, FaJsSquare } from "react-icons/fa";
 import Image from "next/image";
+import { JSX } from "react";
 
 interface CardProps {
     linkProjeto: string;
