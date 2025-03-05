@@ -33,7 +33,7 @@ export function Header() {
 						<Link href="#page__title">Projetos</Link>
 					</li>
 					<li>
-						<Link href="../contact">Contact</Link>
+						<Link href="#contact__title">Contact</Link>
 					</li>
 				</ul>
 			</div>

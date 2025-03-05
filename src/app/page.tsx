@@ -54,6 +54,7 @@ export default function Home() {
 					<CardGroup />
 				</div>
 			</main>
+			<h2 id="contact__title">Contact</h2>
 			<ContactForm />
 			<Footer />
 		</div>
