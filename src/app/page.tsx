@@ -1,35 +1,10 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
-import {
-	FaGithub,
-	FaLinkedin,
-	FaInstagram,
-	FaYoutube,
-	FaFigma,
-	FaHtml5,
-	FaCss3Alt,
-	FaJs,
-	FaGitAlt,
-	FaCss3,
-	FaJsSquare,
-	FaReact,
-	FaNodeJs,
-} from "react-icons/fa";
-import logo from "../../assets/icons/logo.png";
-import logoFigma from "../../assets/icons/Figma-logo.png";
-import soundifyCard from "../../assets/imagens/soundify-card.jpeg";
-import appFilaCard from "../../assets/imagens/app-fila-card.jpeg";
-import recycleCard from "../../assets/imagens/recycle-card.jpeg";
-import conversorMoedasCard from "../../assets/imagens/Conversor-de-moedas.png";
 import { Header } from "../../components/header";
 import { Footer } from "../../components/footer";
 import { Slider } from "../../components/slider";
-import { Card } from "../../components/card";
 import { About_me } from "../../components/about-me";
 import { CardGroup } from "../../components/card-group";
-import Contact from "./contact/page";
 import { ContactForm } from "../../components/contact-form";
 
 export default function Home() {
@@ -54,7 +29,12 @@ export default function Home() {
 					<CardGroup />
 				</div>
 			</main>
-			<h2 id="contact__title">Contact</h2>
+			<h2
+				id="contact__title"
+				className="text-2xl font-semibold flex items-center justify-center"
+			>
+				Contact
+			</h2>
 			<ContactForm />
 			<Footer />
 		</div>
