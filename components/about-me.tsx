@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaHtml5, FaCss3Alt, FaJs, FaGitAlt, FaLinux } from "react-icons/fa";
-import { SiTypescript } from "react-icons/si";
+import { SiTailwindcss, SiTypescript } from "react-icons/si";
 import cyberBaget from "../assets/icons/introduction-to-cybersecurity (3).png";
 import perfilPicutre from "../assets/imagens/perfil.png";
 import logoFigma from "../assets/icons/Figma-logo.png";
+import { FcLinux } from "react-icons/fc";
 
 export function About_me() {
 	return (
@@ -24,12 +25,12 @@ export function About_me() {
 						desafios para aprimorar minhas habilidades e contribuir com projetos
 						inovadores.
 					</p>
-					<div className="courses flex gap-4 mt-4 text-3xl">
+					<div className="courses flex gap-4 mt-4 text-4xl">
 						<Link href="#" title="Figma">
 							<Image
 								src={logoFigma}
 								alt="Cybersecurity Badge"
-								width={20}
+								width={25}
 								height={20}
 							/>
 						</Link>
@@ -39,6 +40,9 @@ export function About_me() {
 						</Link>
 						<Link href="#" title="CSS3">
 							<FaCss3Alt className="text-[#1572b6] " />
+						</Link>
+						<Link href="#" title="Talwind css">
+							<SiTailwindcss className="text-[#00bcff] " />
 						</Link>
 						<Link href="#" title="JavaScript">
 							<FaJs className="text-[#f7df1e] " />
@@ -50,7 +54,7 @@ export function About_me() {
 							<FaGitAlt className="text-[#f05032] " />
 						</Link>
 						<Link href="#" title="Linux">
-							<FaLinux className="text-[#FFA500]" />
+							<FcLinux />
 						</Link>
 						<Link
 							href="https://www.credly.com/badges/b171edcd-9e83-49fe-8beb-708554115286"
