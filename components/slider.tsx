@@ -9,6 +9,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Image from "next/image";
+import Link from "next/link";
 
 export function Slider() {
 	return (
@@ -28,21 +29,41 @@ export function Slider() {
 			className="max-w-7xl mt-5"
 		>
 			{[
-				"https://res.cloudinary.com/dbwz36bcf/image/upload/v1740570945/agoravai_e27jfo.png",
-				"https://res.cloudinary.com/dbwz36bcf/image/upload/v1740570944/conversor-moedas-banner_oajcst.png",
-				"https://res.cloudinary.com/dbwz36bcf/image/upload/v1740570943/recycle-ecology-banner_o2egpg.png",
-				"https://res.cloudinary.com/dbwz36bcf/image/upload/v1740570945/horaMarcada-banner_kckkyu.png",
+				{
+					imageUrl:
+						"https://res.cloudinary.com/dbwz36bcf/image/upload/v1740570945/agoravai_e27jfo.png",
+					pageUrl: "https://soundify-five.vercel.app/",
+				},
+				{
+					imageUrl:
+						"https://res.cloudinary.com/dbwz36bcf/image/upload/v1740570944/conversor-moedas-banner_oajcst.png",
+					pageUrl: "https://conversor-de-moedas-tau.vercel.app/",
+				},
+				{
+					imageUrl:
+						"https://res.cloudinary.com/dbwz36bcf/image/upload/v1740570943/recycle-ecology-banner_o2egpg.png",
+					pageUrl:
+						"https://www.figma.com/design/j5V2lLkMvaBj4paCLMuO0q/Recycle-Ecology-aplicativo?t=TQcT3cwhzpi9VB6i-0",
+				},
+				{
+					imageUrl:
+						"https://res.cloudinary.com/dbwz36bcf/image/upload/v1740570945/horaMarcada-banner_kckkyu.png",
+					pageUrl:
+						"https://www.figma.com/design/Z9jPdhmS9ZbBQQQ069BUYW/App-gestor-de-filas?node-id=0-1&p=f&t=4rRrL3ZUxLZPIHze-0",
+				},
 			].map((src, index) => (
 				<SwiperSlide key={index}>
 					<div className="relative w-full h-34 sm:h-34 md:h-62 lg:h-69">
 						{" "}
 						{/* Altura ajustada */}
-						<Image
-							src={src}
-							alt={`Slide ${index + 1}`}
-							fill
-							className="rounded-lg object-cover"
-						/>
+						<Link href={src.pageUrl}>
+							<Image
+								src={src.imageUrl}
+								alt={`Slide ${index + 1}`}
+								fill
+								className="rounded-lg object-cover"
+							/>
+						</Link>
 					</div>
 				</SwiperSlide>
 			))}
