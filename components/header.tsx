@@ -5,7 +5,7 @@ import logoWhite from "../assets/icons/logo-ta-white.png";
 
 export function Header() {
 	return (
-		<header className="bg-[#3f3f3f]">
+		<header className="dark:bg-[#3f3f3f]">
 			<div className="flex flex-row justify-between w-full text-2xl p-7">
 				<div className="ml-10 ">
 					<Image

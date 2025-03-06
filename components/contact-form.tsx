@@ -5,7 +5,7 @@ import gif from "../assets/imagens/giphy.gif";
 
 export function ContactForm() {
 	return (
-		<div className="bg-[#3f3f3f]">
+		<div className="dark:bg-[#3f3f3f]">
 			<main className="flex justify-center items-center p-8 mt-10">
 				<div className="flex flex-wrap gap-8 max-w-4xl w-full items-start">
 					<div className="flex-1">
