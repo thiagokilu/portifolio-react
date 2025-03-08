@@ -6,7 +6,6 @@ import cyberBaget from "../assets/icons/introduction-to-cybersecurity (3).png";
 import perfilPicutre from "../assets/imagens/perfil.png";
 import logoFigma from "../assets/icons/Figma-logo.png";
 import { FcLinux } from "react-icons/fc";
-import ParticlesComponent from "./particlesbackground";
 
 export function About_me() {
 	return (
