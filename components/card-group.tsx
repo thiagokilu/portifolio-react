@@ -10,7 +10,7 @@ import { Card } from "./card";
 
 export function CardGroup() {
 	return (
-		<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+		<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 sm:gap-8 xs:flex xs:flex-col xs:items-center">
 			<Card
 				linkProjeto="https://soundify-five.vercel.app/"
 				linkImg="https://res.cloudinary.com/dbwz36bcf/image/upload/v1740570943/soundify-card_dmwzyv.jpg"
@@ -86,7 +86,6 @@ export function CardGroup() {
 					</div>
 				}
 			/>
-
 			<Card
 				linkProjeto="https://notes-react-orpin.vercel.app/"
 				linkImg="https://res.cloudinary.com/dbwz36bcf/image/upload/v1740570943/voice-notes_udcywa.png"

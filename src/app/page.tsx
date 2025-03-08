@@ -13,8 +13,11 @@ export default function Home() {
 			<Header />
 			<About_me />
 
-			<div className="flex justify-center items-center text-2xl mt-20">
-				<h1 id="page__title" className="sub-header mt-20">
+			<div className="flex justify-center items-center text-2xl mt-20 flex-wrap">
+				<h1
+					id="page__title"
+					className="sub-header text-2xl lg:text-4xl md:text-4xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 text-transparent bg-clip-text break-words whitespace-normal text-center"
+				>
 					"Transformando ideias em experiências digitais únicas."
 				</h1>
 			</div>

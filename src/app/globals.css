@@ -13,17 +13,44 @@ html {
     animation: typingName 4s steps(53) forwards, blinking 0.5s step-end infinite;
   }
 
-  .sub-header {
-    font-family: monospace;
-    border-right: 4px solid;
-    width: 20ch; /* Ajustado para caber o texto completo */
-    white-space: nowrap;
-    overflow: hidden;
-    animation: typing 4s steps(20) forwards, blinking 0.5s step-end infinite;
+  
+
+
+  /* Estilo para os botões de navegação */
+.swiper-button-next,
+.swiper-button-prev {
+  width: 30px; /* Ajuste o tamanho */
+  height: 30px; /* Ajuste o tamanho */
+  background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo */
+  border-radius: 50%; /* Forma arredondada */
+  z-index: 10; /* Garantir que os botões fiquem na frente de outros elementos */
 }
 
+/* Estilo do ícone nos botões */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 20px; /* Tamanho do ícone */
+  color: #fff; /* Cor do ícone */
+}
 
-  
+/* Posicionamento dos botões */
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* Centra verticalmente */
+}
+
+/* Posicionar o botão anterior à esquerda */
+.swiper-button-prev {
+  left: 10px; /* Distância da borda esquerda */
+}
+
+/* Posicionar o botão próximo à direita */
+.swiper-button-next {
+  right: 10px; /* Distância da borda direita */
+}
+
   
   @keyframes typing {
     from {

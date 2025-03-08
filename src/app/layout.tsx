@@ -33,7 +33,7 @@ export default function RootLayout({
 	return (
 		<html lang="pt">
 			<body
-				className={`${inter.variable} ${inter.variable}, dark:bg-[#353535] dark:text-white`}
+				className={`${inter.variable} ${inter.variable}, dark:bg-[#0f172a] dark:text-white`}
 			>
 				{children}
 			</body>

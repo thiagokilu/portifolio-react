@@ -6,26 +6,27 @@ import cyberBaget from "../assets/icons/introduction-to-cybersecurity (3).png";
 import perfilPicutre from "../assets/imagens/perfil.png";
 import logoFigma from "../assets/icons/Figma-logo.png";
 import { FcLinux } from "react-icons/fc";
+import ParticlesComponent from "./particlesbackground";
 
 export function About_me() {
 	return (
-		<div className="mb-[50vh]">
+		<div className="mb-[50vh] max-w[100vh]">
 			<section
 				id="about"
 				className="about flex flex-wrap items-center mt-10 ml-7 mr-7"
 			>
 				<div className="about__left flex-1 p-4">
-					<h1 className="about__title text-3xl font-bold">
+					<h1 className="text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 text-transparent bg-clip-text">
 						Olá, eu sou Thiago!
 					</h1>
-					<p className="about__text mt-4 text-xl">
+					<p className="about__text mt-4 text-[16px] l lg:text-xl md:text-xl">
 						Tenho 21 anos, formado em Gestão em Tecnologia da Informação. Tenho
 						conhecimentos em HTML, CSS, JavaScript, Git e metodologias ágeis.
 						Sou apaixonado por tecnologia e estou sempre em busca de novos
 						desafios para aprimorar minhas habilidades e contribuir com projetos
 						inovadores.
 					</p>
-					<div className="courses flex gap-4 mt-4 text-4xl">
+					<div className="courses flex gap-4 mt-4 text-2xl lg:text-4xl md:text-4xl flex-wrap text-wrap">
 						<Link href="#" title="Figma">
 							<Image
 								src={logoFigma}

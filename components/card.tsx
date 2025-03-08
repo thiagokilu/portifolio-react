@@ -19,7 +19,7 @@ export function Card({
 	icons,
 }: CardProps) {
 	return (
-		<div className="dark:bg-black group relative w-[300px] overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300 sm:flex sm:flex-col sm:items-center sm:justify-center sm:text-center lg:w-96">
+		<div className="dark:bg-[#334155] group relative w-[300px] overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300 sm:flex sm:flex-col sm:items-center sm:justify-center sm:text-center lg:w-96">
 			<Link href={linkProjeto} target="_blank">
 				<div className="overflow-hidden">
 					<Image
