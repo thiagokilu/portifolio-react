@@ -21,8 +21,6 @@ html {
 .swiper-button-prev {
   width: 30px; /* Ajuste o tamanho */
   height: 30px; /* Ajuste o tamanho */
-  background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo */
-  border-radius: 50%; /* Forma arredondada */
   z-index: 10; /* Garantir que os botões fiquem na frente de outros elementos */
 }
 
@@ -30,7 +28,7 @@ html {
 .swiper-button-next::after,
 .swiper-button-prev::after {
   font-size: 20px; /* Tamanho do ícone */
-  color: #fff; /* Cor do ícone */
+  color: #4475ff; /* Cor do ícone */
 }
 
 /* Posicionamento dos botões */
