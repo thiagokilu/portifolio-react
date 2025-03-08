@@ -7,6 +7,12 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { ToastContainer, toast } from "react-toastify";
 
+interface FormDataProps {
+	name: string;
+	email: string;
+	message: string;
+}
+
 const subscriptionSchema = z.object({
 	name: z.string().min(2, "Digite seu nome completo"),
 	email: z.string().email("Digite um email válido"),
@@ -22,7 +28,7 @@ export function ContactForm() {
 		resolver: zodResolver(subscriptionSchema),
 	});
 
-	const onSubmit = (data) => {
+	const onSubmit = (data: FormDataProps) => {
 		fetch("https://getform.io/f/akkynpra", {
 			method: "POST",
 			body: JSON.stringify(data),
