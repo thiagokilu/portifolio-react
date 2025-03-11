@@ -101,6 +101,17 @@ export function CardGroup() {
 						</div>
 					}
 				/>
+				<Card
+					linkProjeto="https://calculadora-react-eight-rho.vercel.app/"
+					linkImg="https://res.cloudinary.com/dbwz36bcf/image/upload/v1741731174/Screenshot_from_2025-03-11_19-09-20_tstysv.png"
+					title="Calculadora"
+					description="Calculadora simples usando React"
+					icons={
+						<div className="flex gap-3 text-xl mb-3">
+							<FaReact />
+						</div>
+					}
+				/>
 			</div>
 		</div>
 	);
