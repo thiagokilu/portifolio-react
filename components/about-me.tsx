@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaHtml5, FaCss3Alt, FaJs, FaGitAlt, FaLinux } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGitAlt, FaLinux } from "react-icons/fa";
 import { SiTailwindcss, SiTypescript } from "react-icons/si";
 import cyberBaget from "../assets/icons/introduction-to-cybersecurity (3).png";
 import perfilPicutre from "../assets/imagens/perfil.png";
@@ -49,6 +49,9 @@ export function About_me() {
 						</Link>
 						<Link href="#" title="Typescript">
 							<SiTypescript className="text-[#3178C6] " />
+						</Link>
+						<Link href="#" title="React">
+							<FaReact className="text-[#3cdafb] " />
 						</Link>
 						<Link href="#" title="Git">
 							<FaGitAlt className="text-[#f05032] " />
