@@ -114,6 +114,18 @@ export function CardGroup() {
 				/>
 
 				<Card
+					linkProjeto="https://conversor-moedas-react-seven.vercel.app/"
+					linkImg="https://res.cloudinary.com/dbwz36bcf/image/upload/v1742834403/Screenshot_from_2025-03-24_13-39-49_hi2yr8.png"
+					title="Conversor de moedas"
+					description="Conversor de moedas usando React"
+					icons={
+						<div className="flex gap-3 text-xl mb-3">
+							<FaReact />
+						</div>
+					}
+				/>
+
+				<Card
 					linkProjeto="https://cronometro-lovat-six.vercel.app/"
 					linkImg="https://res.cloudinary.com/dbwz36bcf/image/upload/v1742834218/Screenshot_from_2025-03-24_13-36-17_fj4n9j.png"
 					title="Cronômetro"
