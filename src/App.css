@@ -1,0 +1,156 @@
+@import "tailwindcss";
+
+
+html {
+    scroll-behavior: smooth;
+  }
+
+  /* CSS Global */
+
+  .about__title{
+    font-family: monospace;
+    border-right: 4px solid;
+    width: 53ch; /* Ajuste para caber o texto completo */
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typingName 4s steps(53) forwards, blinking 0.5s step-end infinite;
+  }
+
+  
+
+
+  /* Estilo para os botões de navegação */
+.swiper-button-next,
+.swiper-button-prev {
+  width: 30px; /* Ajuste o tamanho */
+  height: 30px; /* Ajuste o tamanho */
+  z-index: 10; /* Garantir que os botões fiquem na frente de outros elementos */
+}
+
+/* Estilo do ícone nos botões */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 20px; /* Tamanho do ícone */
+  color: #4475ff; /* Cor do ícone */
+}
+
+/* Posicionamento dos botões */
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* Centra verticalmente */
+}
+
+/* Posicionar o botão anterior à esquerda */
+.swiper-button-prev {
+  left: 10px; /* Distância da borda esquerda */
+}
+
+/* Posicionar o botão próximo à direita */
+.swiper-button-next {
+  right: 10px; /* Distância da borda direita */
+}
+
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 53ch; /* Ajuste para o comprimento exato do texto */
+    }
+  }
+
+  @keyframes typingName {
+    from {
+      width: 0;
+    }
+    to {
+      width: 19ch; /* Ajuste para o comprimento exato do texto */
+    }
+  }
+  
+  @keyframes blinking {
+    50% {
+      border-color: transparent;
+    }
+  }
+
+  /* From Uiverse.io by ClawHack1 */
+/* Genel stil */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px; /* Tamanho intermediário */
+  height: 34px; /* Tamanho intermediário */
+  margin: 10px;
+  margin-bottom: 0;
+}
+
+/* Giriş stil */
+.toggle-switch .toggle-input {
+  display: none;
+}
+
+/* Anahtarın stilinin etrafındaki etiketin stil */
+.toggle-switch .toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px; /* Tamanho intermediário */
+  height: 34px; /* Tamanho intermediário */
+  background-color: #cccccc;
+  border-radius: 34px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Anahtarın yuvarlak kısmının stil */
+.toggle-switch .toggle-label::before {
+  content: "";
+  position: absolute;
+  width: 28px; /* Tamanho intermediário do círculo */
+  height: 28px; /* Tamanho intermediário do círculo */
+  border-radius: 50%;
+  top: 3px; /* Ajustado para a nova proporção */
+  left: 3px; /* Ajustado para a nova proporção */
+  background-color: #fff;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+
+/* Anahtarın etkin hale gelmesindeki stil değişiklikleri */
+.toggle-switch .toggle-input:checked + .toggle-label {
+  background-color: #4caf50;
+}
+
+.toggle-switch .toggle-input:checked + .toggle-label::before {
+  transform: translateX(26px); /* Ajustado para o novo tamanho */
+}
+
+/* Light tema */
+.toggle-switch.light .toggle-label {
+  background-color: #bebebe;
+}
+
+.toggle-switch.light .toggle-input:checked + .toggle-label {
+  background-color: #9b9b9b;
+}
+
+.toggle-switch.light .toggle-input:checked + .toggle-label::before {
+  transform: translateX(8px); /* Ajustado para o novo tamanho */
+}
+
+/* Dark tema */
+.toggle-switch.dark .toggle-label {
+  background-color: #4b4b4b;
+}
+
+.toggle-switch.dark .toggle-input:checked + .toggle-label {
+  background-color: #717171;
+}
+
+.toggle-switch.dark .toggle-input:checked + .toggle-label::before {
+  transform: translateX(26px); /* Ajustado para o novo tamanho */
+}

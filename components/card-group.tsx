@@ -1,0 +1,130 @@
+import React from "react";
+
+import {
+	FaHtml5,
+	FaCss3Alt,
+	FaJsSquare,
+	FaNodeJs,
+	FaFigma,
+	FaReact,
+} from "react-icons/fa";
+import { Card } from "./card";
+import { BigCard } from "./bigCard";
+import { useState, useEffect } from "react";
+
+export function CardGroup() {
+	const [projetos, setProjetos] = useState([]);
+	const [imagens, setImagens] = useState({});
+
+	const icons = (
+		<>
+			<FaHtml5 />
+			<FaCss3Alt />
+			<FaJsSquare />
+		</>
+	);
+
+	useEffect(() => {
+		async function getVercelProjects() {
+			try {
+				const res = await fetch("https://api.vercel.com/v9/projects", {
+					headers: {
+						Authorization: `Bearer ${import.meta.env.VITE_VERCEL_API_KEY}`,
+					},
+				});
+				if (!res.ok) {
+					throw new Error(`Erro na API: ${res.status} ${res.statusText}`);
+				}
+				const data = await res.json();
+				setProjetos(data.projects);
+			} catch (error) {
+				console.error(
+					"Ocorreu um erro ao buscar os projetos da Vercel:",
+					error.message,
+				);
+			}
+		}
+		getVercelProjects();
+	}, []);
+
+	useEffect(() => {
+		async function getScreenshots() {
+			const imagensTemp = {};
+			await Promise.all(
+				projetos.map(async (proj) => {
+					const urlProjeto = `https://${proj.name}-thiagokilus-projects.vercel.app`;
+					try {
+						const res = await fetch(
+							`https://api.microlink.io/?url=${urlProjeto}&screenshot=true`,
+						);
+						const data = await res.json();
+						imagensTemp[proj.id] = data.data.screenshot.url;
+					} catch (error) {
+						console.error("Erro ao buscar a imagem:", error);
+					}
+				}),
+			);
+			setImagens(imagensTemp);
+		}
+		if (projetos.length > 0) getScreenshots();
+	}, [projetos]);
+
+	return (
+		<div>
+			<div className="flex w-full gap-10 mb-10">
+				<BigCard
+					linkProjeto="https://soundify-five.vercel.app/"
+					linkImg="https://res.cloudinary.com/dbwz36bcf/image/upload/v1741477590/Soundify-16-9_p9hk7c.png"
+					title="Soundify"
+					description="Plataforma de streaming musical com integração de API e player customizado."
+					icons={
+						<div className="flex gap-3 text-xl mb-3">
+							<FaHtml5 />
+							<FaCss3Alt />
+							<FaJsSquare />
+							<FaNodeJs />
+						</div>
+					}
+				/>
+
+				<BigCard
+					linkProjeto="https://nature-ecomerce.vercel.app/"
+					linkImg="https://res.cloudinary.com/dbwz36bcf/image/upload/v1741477591/nature-ecomerce-16-9_q6tmvd.png"
+					title="Nature E-commerce"
+					description="Loja virtual focada em produtos sustentáveis e ecológicos."
+					icons={
+						<div className="flex gap-3 text-xl mb-3">
+							<FaHtml5 />
+							<FaCss3Alt />
+							<FaJsSquare />
+						</div>
+					}
+				/>
+			</div>
+			<h2 className="text-4xl font-bold text-center mb-16">Outros projetos</h2>
+			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 sm:gap-8 xs:flex xs:flex-col xs:items-center auto-rows-min">
+				{projetos.map((proj) => {
+					const urlProjeto = `https://${proj.name}-thiagokilus-projects.vercel.app`;
+					const framework = proj.framework;
+					let icon;
+					if (framework === "vite" || framework === "nextjs") {
+						icon = <FaReact />;
+					} else {
+						icon = <div className="flex flex-row gap-2">{icons}</div>;
+					}
+
+					return (
+						<Card
+							key={proj.id}
+							linkProjeto={urlProjeto}
+							linkImg={imagens[proj.id] || "https://via.placeholder.com/300"}
+							title={proj.name}
+							description="Projeto da Vercel com deploy automático."
+							icons={<div className="flex gap-3 text-xl mb-3">{icon}</div>}
+						/>
+					);
+				})}
+			</div>
+		</div>
+	);
+}
