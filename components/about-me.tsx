@@ -20,8 +20,7 @@ export function About_me() {
 						Olá, eu sou Thiago!
 					</h1>
 					<p className="about__text mt-4 text-[16px] l lg:text-xl md:text-xl">
-						Tenho 21 anos, formado em Gestão em Tecnologia da Informação. Tenho
-						conhecimentos em HTML, CSS, JavaScript, Git e metodologias ágeis.
+						Tenho 21 anos, formado em Gestão em Tecnologia da Informação.
 						Sou apaixonado por tecnologia e estou sempre em busca de novos
 						desafios para aprimorar minhas habilidades e contribuir com projetos
 						inovadores.
