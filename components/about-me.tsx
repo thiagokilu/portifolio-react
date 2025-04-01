@@ -54,7 +54,7 @@ export function About_me() {
 							rel="noopener noreferrer"
 						>
 							<img
-								src="../assets/icons/introduction-to-cybersecurity (3).png"
+								src="../public/icons/introduction-to-cybersecurity (3).png"
 								alt="Cybersecurity Badge"
 								width={40}
 								height={40}
@@ -63,7 +63,7 @@ export function About_me() {
 					</div>
 					<div>
 						<a
-							href="../assets/files/Curriculo-thiago.pdf"
+							href="../public/files/Curriculo-thiago.pdf"
 							download="Curriculo-thiago.pdf"
 							className=" flex flex-row items-center gap-2 px-6 py-3 mt-5 max-w-40 text-xl font-semibold text-white rounded-md shadow-md bg-gradient-to-r from-blue-500 via-indigo-500 to-cyan-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-indigo-300 hover:shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1 active:translate-y-0"
 						>
@@ -75,7 +75,7 @@ export function About_me() {
 
 				<div className="right-0">
 					<img
-						src="../assets/imagens/perfil.png"
+						src="../public/imagens/perfil.png"
 						alt="Perfil"
 						width={350}
 						height={350}
