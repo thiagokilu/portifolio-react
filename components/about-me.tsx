@@ -1,10 +1,8 @@
-import React from "react";
 import {
 	FaHtml5,
 	FaCss3Alt,
 	FaJs,
 	FaGitAlt,
-	FaLinux,
 	FaArrowDown,
 } from "react-icons/fa";
 import { SiTailwindcss, SiTypescript } from "react-icons/si";

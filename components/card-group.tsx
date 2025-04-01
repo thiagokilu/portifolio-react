@@ -1,20 +1,27 @@
-import React from "react";
-
 import {
 	FaHtml5,
 	FaCss3Alt,
 	FaJsSquare,
 	FaNodeJs,
-	FaFigma,
 	FaReact,
 } from "react-icons/fa";
 import { Card } from "./card";
 import { BigCard } from "./bigCard";
 import { useState, useEffect } from "react";
 
+interface Project {
+	id: string;
+	name: string;
+	framework: string;
+}
+
+interface Screenshots {
+	[key: string]: string;
+}
+
 export function CardGroup() {
-	const [projetos, setProjetos] = useState([]);
-	const [imagens, setImagens] = useState({});
+	const [projetos, setProjetos] = useState<Project[]>([]);
+	const [imagens, setImagens] = useState<Screenshots>({});
 
 	const icons = (
 		<>
@@ -40,7 +47,7 @@ export function CardGroup() {
 			} catch (error) {
 				console.error(
 					"Ocorreu um erro ao buscar os projetos da Vercel:",
-					error.message,
+					error instanceof Error ? error.message : "Unknown error",
 				);
 			}
 		}
@@ -49,7 +56,7 @@ export function CardGroup() {
 
 	useEffect(() => {
 		async function getScreenshots() {
-			const imagensTemp = {};
+			const imagensTemp: Screenshots = {};
 			await Promise.all(
 				projetos.map(async (proj) => {
 					const urlProjeto = `https://${proj.name}-thiagokilus-projects.vercel.app`;

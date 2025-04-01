@@ -1,4 +1,3 @@
-import React from "react";
 import { FaGithub, FaLinkedin, FaInstagram, FaYoutube } from "react-icons/fa";
 
 export function Footer() {

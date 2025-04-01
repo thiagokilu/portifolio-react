@@ -1,4 +1,3 @@
-import React from "react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -8,7 +7,13 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
 
-const projects = [
+interface Project {
+	imageUrl: string;
+	pageUrl: string;
+	title: string;
+}
+
+const projects: Project[] = [
 	{
 		imageUrl:
 			"https://res.cloudinary.com/dbwz36bcf/image/upload/v1740570945/agoravai_e27jfo.png",
