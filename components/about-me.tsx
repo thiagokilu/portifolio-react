@@ -54,7 +54,7 @@ export function About_me() {
 							rel="noopener noreferrer"
 						>
 							<img
-								src="/icons/introduction-to-cybersecurity (3).png"
+								src="/assets/icons/introduction-to-cybersecurity (3).png"
 								alt="Cybersecurity Badge"
 								width={40}
 								height={40}
@@ -75,7 +75,7 @@ export function About_me() {
 
 				<div className="right-0">
 					<img
-						src="/imagens/perfil.png"
+						src="/assets/imagens/perfil.png"
 						alt="Perfil"
 						width={350}
 						height={350}
