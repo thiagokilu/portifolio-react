@@ -31,7 +31,7 @@ const projects: Project[] = [
 			"https://res.cloudinary.com/dbwz36bcf/image/upload/v1740570943/recycle-ecology-banner_o2egpg.png",
 		pageUrl:
 			"https://www.figma.com/design/j5V2lLkMvaBj4paCLMuO0q/Recycle-Ecology-aplicativo?t=TQcT3cwhzpi9VB6i-0",
-		title: "Recycle Ecology",
+		title: "Recycle Ecology s",
 	},
 	{
 		imageUrl:
