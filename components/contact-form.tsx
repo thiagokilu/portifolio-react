@@ -53,7 +53,7 @@ export function ContactForm() {
 				<div className="flex flex-wrap gap-8 max-w-4xl w-full items-start">
 					<div className="flex-1">
 						<img
-							src="../public/imagens/giphy.gif"
+							src="/assets/imagens/giphy.gif"
 							alt="Animated GIF"
 							width={300}
 							height={200}

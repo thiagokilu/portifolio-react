@@ -4,7 +4,7 @@ export function Header() {
 			<div className="container mx-auto flex items-center justify-between py-5 px-6">
 				<a href="../">
 					<img
-						src="../public/icons/logo-ta-white.png"
+						src="/assets/icons/logo-ta-white.png"
 						alt="Logo do site"
 						width={150}
 						height={100}
