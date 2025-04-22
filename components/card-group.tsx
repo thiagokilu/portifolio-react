@@ -140,20 +140,13 @@ export function CardGroup() {
 							linkProjeto={urlProjeto}
 							linkImg={
 								isLoading || !imgSrc
-									? "https://via.placeholder.com/300"
+									? "https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif"
 									: imgSrc
 							}
 							title={proj.name}
 							description="Projeto da Vercel com deploy automático."
 							icons={<div className="flex gap-3 text-xl mb-3">{icon}</div>}
-						>
-							{/* Spinner overlay opcional */}
-							{isLoading && (
-								<div className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-white/50 backdrop-blur-sm rounded">
-									<div className="w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin" />
-								</div>
-							)}
-						</Card>
+						/>
 					);
 				})}
 			</div>
