@@ -22,6 +22,7 @@ interface Screenshots {
 export function CardGroup() {
 	const [projetos, setProjetos] = useState<Project[]>([]);
 	const [imagens, setImagens] = useState<Screenshots>({});
+	const [loadingImg, setLoadingImg] = useState(false);
 
 	const icons = (
 		<>
@@ -56,6 +57,7 @@ export function CardGroup() {
 
 	useEffect(() => {
 		async function getScreenshots() {
+			setLoadingImg(true);
 			const imagensTemp: Screenshots = {};
 			await Promise.all(
 				projetos.map(async (proj) => {
@@ -72,6 +74,7 @@ export function CardGroup() {
 				}),
 			);
 			setImagens(imagensTemp);
+			setLoadingImg(false);
 		}
 		if (projetos.length > 0) getScreenshots();
 	}, [projetos]);
@@ -108,7 +111,16 @@ export function CardGroup() {
 					}
 				/>
 			</div>
+
 			<h2 className="text-4xl font-bold text-center mb-16">Outros projetos</h2>
+
+			{/* Loading Spinner */}
+			{loadingImg && (
+				<div className="w-full flex justify-center items-center mb-10">
+					<div className="w-10 h-10 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+				</div>
+			)}
+
 			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 sm:gap-8 xs:flex xs:flex-col xs:items-center auto-rows-min">
 				{projetos.map((proj) => {
 					const urlProjeto = `https://${proj.name}-thiagokilus-projects.vercel.app`;
