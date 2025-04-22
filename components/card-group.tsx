@@ -34,7 +34,7 @@ export function CardGroup() {
 		async function getLocalProjects() {
 			setLoading(true);
 			try {
-				const res = await fetch("/projetos.json");
+				const res = await fetch("./public/assets/files/projetos.json");
 				if (!res.ok) {
 					throw new Error(`Erro ao carregar projetos.json: ${res.statusText}`);
 				}
