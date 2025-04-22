@@ -67,9 +67,19 @@ export function CardGroup() {
 							`https://api.microlink.io/?url=${urlProjeto}&screenshot=true`,
 						);
 						const data = await res.json();
-						imagensTemp[proj.id] = data.data.screenshot.url;
+
+						// Verificação mais robusta
+						if (data && data.data && data.data.screenshot) {
+							imagensTemp[proj.id] = data.data.screenshot.url;
+						} else {
+							// Fallback para imagem padrão
+							imagensTemp[proj.id] = "https://via.placeholder.com/300";
+							console.log(`Dados incompletos para ${proj.name}:`, data);
+						}
 					} catch (error) {
 						console.error("Erro ao buscar a imagem:", error);
+						// Adicione também um fallback aqui
+						imagensTemp[proj.id] = "https://via.placeholder.com/300";
 					}
 				}),
 			);
