@@ -59,8 +59,22 @@ export function CardGroup() {
 		async function getScreenshots() {
 			setLoadingImg(true);
 			const imagensTemp: Screenshots = {};
+
+			// Define projetos estáticos que não precisam usar a API Microlink
+			const projetosEstaticos: Record<string, string> = {
+				// Adicione aqui seus projetos estáticos se necessário
+				// Exemplo: "project-id": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1741477590/project-name.png"
+			};
+
 			await Promise.all(
 				projetos.map(async (proj) => {
+					// Verifica se o projeto tem uma imagem estática definida
+					if (projetosEstaticos[proj.id] || projetosEstaticos[proj.name]) {
+						imagensTemp[proj.id] =
+							projetosEstaticos[proj.id] || projetosEstaticos[proj.name];
+						return;
+					}
+
 					const urlProjeto = `https://${proj.name}-thiagokilus-projects.vercel.app`;
 					try {
 						const res = await fetch(
@@ -68,24 +82,39 @@ export function CardGroup() {
 						);
 						const data = await res.json();
 
-						// Verificação mais robusta
+						// Verifica se atingiu o limite da API
+						if (data.status === "fail" && data.code === "ERATE") {
+							console.log(
+								"Limite da API Microlink atingido, usando fallback para:",
+								proj.name,
+							);
+							imagensTemp[proj.id] =
+								`https://via.placeholder.com/300x200?text=${proj.name}`;
+							return;
+						}
+
+						// Verificação robusta dos dados
 						if (data && data.data && data.data.screenshot) {
 							imagensTemp[proj.id] = data.data.screenshot.url;
 						} else {
-							// Fallback para imagem padrão
-							imagensTemp[proj.id] = "https://via.placeholder.com/300";
+							// Fallback para imagem padrão com nome do projeto
+							imagensTemp[proj.id] =
+								`https://via.placeholder.com/300x200?text=${proj.name}`;
 							console.log(`Dados incompletos para ${proj.name}:`, data);
 						}
 					} catch (error) {
 						console.error("Erro ao buscar a imagem:", error);
-						// Adicione também um fallback aqui
-						imagensTemp[proj.id] = "https://via.placeholder.com/300";
+						// Adicione também um fallback aqui com o nome do projeto
+						imagensTemp[proj.id] =
+							`https://via.placeholder.com/300x200?text=${proj.name}`;
 					}
 				}),
 			);
+
 			setImagens(imagensTemp);
 			setLoadingImg(false);
 		}
+
 		if (projetos.length > 0) getScreenshots();
 	}, [projetos]);
 
