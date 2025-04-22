@@ -12,6 +12,7 @@ import { useState, useEffect } from "react";
 interface Project {
 	id: string;
 	name: string;
+	img: string;
 	framework: string;
 	description: string;
 	link: string;
@@ -106,7 +107,7 @@ export function CardGroup() {
 						<Card
 							key={proj.id}
 							linkProjeto={proj.link}
-							linkImg="https://via.placeholder.com/300x200?text=Projeto"
+							linkImg={proj.img}
 							title={proj.name}
 							description={proj.description}
 							icons={<div className="flex gap-3 text-xl mb-3">{icon}</div>}

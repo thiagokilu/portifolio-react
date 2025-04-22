@@ -1,163 +1,142 @@
 [
-    {
-      "id": 1,
-      "img": "https://via.placeholder.com/300x200?text=Soundify",
-      "title": "Soundify",
-      "description": "Plataforma de streaming musical com player customizado e integração com APIs para busca e reprodução de músicas.",
-      "link": "https://soundify-thiagokilus-projects.vercel.app"
-    },
-    {
-      "id": 2,
-      "img": "https://via.placeholder.com/300x200?text=Conversor+de+Moedas",
-      "title": "Conversor de Moedas",
-      "description": "Aplicativo que permite converter valores entre diferentes moedas em tempo real utilizando APIs de câmbio.",
-      "link": "https://conversor-de-moedas-thiagokilus-projects.vercel.app"
-    },
-    {
-      "id": 3,
-      "img": "https://via.placeholder.com/300x200?text=Recycle+Ecology",
-      "title": "Recycle Ecology",
-      "description": "Projeto educativo focado em sustentabilidade, com informações e funcionalidades para promover o descarte consciente.",
-      "link": "https://recycle-ecology-thiagokilus-projects.vercel.app"
-    },
-    {
-      "id": 4,
-      "img": "https://via.placeholder.com/300x200?text=Hora+Marcada",
-      "title": "Hora Marcada",
-      "description": "Aplicativo para agendamento de compromissos, ideal para clínicas, salões e serviços personalizados.",
-      "link": "https://hora-marcada-thiagokilus-projects.vercel.app"
-    },
-    {
-      "id": 5,
-      "img": "https://via.placeholder.com/300x200?text=Nature+E-commerce",
-      "title": "Nature E-commerce",
-      "description": "Loja virtual de produtos sustentáveis, com foco em responsabilidade ambiental e consumo consciente.",
-      "link": "https://nature-e-commerce-thiagokilus-projects.vercel.app"
-    },
-    {
-      "id": 6,
-      "img": "https://via.placeholder.com/300x200?text=Portifolio+React",
-      "title": "Portifólio React",
-      "description": "Portfólio pessoal desenvolvido com React e hospedado na Vercel, com deploy automático.",
-      "link": "https://portifólio-react-thiagokilus-projects.vercel.app"
-    },
-    {
-      "id": 7,
-      "img": "https://via.placeholder.com/300x200?text=Todo+List+React",
-      "title": "Todo List React",
-      "description": "Lista de tarefas interativa desenvolvida com React, com funcionalidade de adicionar, marcar e remover tarefas.",
-      "link": "https://todo-list-react-thiagokilus-projects.vercel.app"
-    },
-    {
-      "id": 8,
-      "img": "https://via.placeholder.com/300x200?text=Kanban",
-      "title": "Kanban",
-      "description": "Sistema de organização de tarefas baseado na metodologia Kanban, com colunas e drag-and-drop.",
-      "link": "https://kanban-thiagokilus-projects.vercel.app"
-    },
-    {
-      "id": 9,
-      "img": "https://via.placeholder.com/300x200?text=Furniture+Web+Page",
-      "title": "Furniture Web Page",
-      "description": "Página moderna de e-commerce focada em móveis, com design limpo e responsivo.",
-      "link": "https://furniture-web-page-thiagokilus-projects.vercel.app"
-    },
-    {
-      "id": 10,
-      "img": "https://via.placeholder.com/300x200?text=Daily+Coffee",
-      "title": "Daily Coffee",
-      "description": "Landing page de uma cafeteria fictícia, com foco em design minimalista e navegação fluida.",
-      "link": "https://daily-coffee-thiagokilus-projects.vercel.app"
-    },
-    {
-      "id": 11,
-      "img": "https://via.placeholder.com/300x200?text=Carros+Search",
-      "title": "Carros Search",
-      "description": "Projeto de busca de veículos com filtros e visualização de detalhes sobre carros disponíveis.",
-      "link": "https://carros-search-thiagokilus-projects.vercel.app"
-    },
-    {
-      "id": 12,
-      "img": "https://via.placeholder.com/300x200?text=Cronômetro",
-      "title": "Cronômetro",
-      "description": "Aplicativo simples de cronômetro com funções de iniciar, pausar e resetar o tempo.",
-      "link": "https://cronômetro-thiagokilus-projects.vercel.app"
-    },
-    {
-      "id": 13,
-      "img": "https://via.placeholder.com/300x200?text=Conversor+Moedas+React",
-      "title": "Conversor de Moedas React",
-      "description": "Versão do conversor de moedas utilizando React, com layout dinâmico e resultados atualizados em tempo real.",
-      "link": "https://conversor-de-moedas-react-thiagokilus-projects.vercel.app"
-    },
-    {
-      "id": 14,
-      "img": "https://via.placeholder.com/300x200?text=Calculadora+React",
-      "title": "Calculadora React",
-      "description": "Calculadora funcional desenvolvida em React com operações básicas e visual inspirado no iOS.",
-      "link": "https://calculadora-react-thiagokilus-projects.vercel.app"
-    },
-    {
-      "id": 15,
-      "img": "https://via.placeholder.com/300x200?text=Portifolio",
-      "title": "Portifólio",
-      "description": "Versão alternativa do portfólio pessoal, também hospedado na Vercel com foco em responsividade.",
-      "link": "https://portifólio-thiagokilus-projects.vercel.app"
-    },
-    {
-      "id": 16,
-      "img": "https://via.placeholder.com/300x200?text=Notes+React",
-      "title": "Notes React",
-      "description": "Aplicativo para anotações rápidas com suporte a criação, edição e exclusão de notas.",
-      "link": "https://notes-react-thiagokilus-projects.vercel.app"
-    },
-    {
-      "id": 17,
-      "img": "https://via.placeholder.com/300x200?text=Conversor+de+Moedas",
-      "title": "Conversor de Moedas",
-      "description": "Ferramenta prática para conversão de moedas com base em taxas atualizadas por API externa.",
-      "link": "https://conversor-de-moedas-thiagokilus-projects.vercel.app"
-    },
-    {
-      "id": 18,
-      "img": "https://via.placeholder.com/300x200?text=Quiz+JS",
-      "title": "Quiz JS",
-      "description": "Jogo de perguntas e respostas desenvolvido com JavaScript puro, ideal para treinar conhecimentos gerais.",
-      "link": "https://quiz-js-thiagokilus-projects.vercel.app"
-    },
-    {
-      "id": 19,
-      "img": "https://via.placeholder.com/300x200?text=Instagram+Clone",
-      "title": "Instagram Clone",
-      "description": "Interface inspirada no Instagram, recriada com tecnologias web para fins de estudo de layout.",
-      "link": "https://instagram-clone-thiagokilus-projects.vercel.app"
-    },
-    {
-      "id": 20,
-      "img": "https://via.placeholder.com/300x200?text=Nature+Ecomerce",
-      "title": "Nature Ecomerce",
-      "description": "Outra variação do projeto de e-commerce sustentável, com foco em performance e usabilidade.",
-      "link": "https://nature-ecomerce-thiagokilus-projects.vercel.app"
-    },
-    {
-      "id": 21,
-      "img": "https://via.placeholder.com/300x200?text=Todo+List",
-      "title": "Todo List",
-      "description": "Aplicativo simples de lista de tarefas, versão sem React com JavaScript puro.",
-      "link": "https://todo-list-thiagokilus-projects.vercel.app"
-    },
-    {
-      "id": 22,
-      "img": "https://via.placeholder.com/300x200?text=iOS+Calculator",
-      "title": "iOS Calculator",
-      "description": "Clone da calculadora do iOS, com design idêntico e funcionalidade completa usando JavaScript.",
-      "link": "https://ios-calculator-thiagokilus-projects.vercel.app"
-    },
-    {
-      "id": 23,
-      "img": "https://via.placeholder.com/300x200?text=Link+Bio",
-      "title": "Link Bio",
-      "description": "Página para centralizar links pessoais ou profissionais, ideal para uso em perfis de redes sociais.",
-      "link": "https://link-bio-thiagokilus-projects.vercel.app"
-    }
-  ]
+  {
+    "id": 1,
+    "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/1_Soundify_kmtsps.png",
+    "title": "Soundify",
+    "description": "Plataforma de streaming musical com player customizado e integração com APIs para busca e reprodução de músicas.",
+    "link": "https://soundify-five.vercel.app"
+  },
+  {
+    "id": 2,
+    "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/2_Portifolio_React_memncn.png",
+    "title": "Portifolio React",
+    "description": "Portfólio pessoal desenvolvido em React para apresentar projetos e habilidades como desenvolvedor.",
+    "link": "https://portifolio-react-xi-five.vercel.app"
+  },
+  {
+    "id": 3,
+    "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/3_Todo_List_React_yt4pcb.png",
+    "title": "Todo List React",
+    "description": "Aplicação de lista de tarefas com funcionalidades para adicionar, remover e marcar tarefas como concluídas.",
+    "link": "https://todolistreact-chi-six.vercel.app"
+  },
+  {
+    "id": 4,
+    "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/4_Kanban_lyaywv.png",
+    "title": "Kanban",
+    "description": "Sistema de organização de tarefas estilo Kanban com colunas dinâmicas e arrastar e soltar.",
+    "link": "https://kanban-beta-murex.vercel.app"
+  },
+  {
+    "id": 5,
+    "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/5_Furniture_Web_Page_ttrckj.png",
+    "title": "Furniture Web Page",
+    "description": "Landing page de e-commerce para móveis com design responsivo e foco na experiência mobile.",
+    "link": "https://furniture-web-page.vercel.app"
+  },
+  {
+    "id": 6,
+    "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/6_Daily_Coffee_aesypi.png",
+    "title": "Daily Coffee",
+    "description": "Site de cafeteria com layout moderno e responsivo, destacando produtos e promoções diárias.",
+    "link": "https://daily-coffee-tau.vercel.app"
+  },
+  {
+    "id": 7,
+    "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/7_Recycle_Ecology_eh9rfv.png",
+    "title": "Recycle Ecology",
+    "description": "Projeto informativo com foco em reciclagem e sustentabilidade, com conteúdo educativo.",
+    "link": "https://recycle-ecology.vercel.app"
+  },
+  {
+    "id": 8,
+    "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/8_Carros_Search_cwtw3u.png",
+    "title": "Carros Search",
+    "description": "Ferramenta de busca de carros com filtros e integração com APIs para exibir modelos e preços.",
+    "link": "https://carros-search.vercel.app"
+  },
+  {
+    "id": 9,
+    "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/9_Cronômetro_rliavr.png",
+    "title": "Cronômetro",
+    "description": "Aplicação de cronômetro simples com controle de tempo e interface amigável.",
+    "link": "https://cronometro-lovat-six.vercel.app"
+  },
+  {
+    "id": 10,
+    "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/10_Conversor_Moedas_React_spyf8u.png",
+    "title": "Conversor Moedas React",
+    "description": "Conversor de moedas em tempo real utilizando React e APIs de câmbio.",
+    "link": "https://conversor-moedas-react-seven.vercel.app"
+  },
+  {
+    "id": 11,
+    "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/11_Calculadora_React_j8ub26.png",
+    "title": "Calculadora React",
+    "description": "Calculadora funcional desenvolvida com React, com operações básicas e layout intuitivo.",
+    "link": "https://calculadora-react-eight-rho.vercel.app"
+  },
+  {
+    "id": 12,
+    "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/12_Portifolio_jrsbtp.png",
+    "title": "Portifolio",
+    "description": "Versão anterior do portfólio pessoal com layout moderno e responsivo.",
+    "link": "https://portifolio-steel-tau.vercel.app"
+  },
+  {
+    "id": 13,
+    "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/13_Notes_React_zq4dtn.png",
+    "title": "Notes React",
+    "description": "Aplicativo de anotações feito em React, com suporte para edição, exclusão e armazenamento local.",
+    "link": "https://notes-react-orpin.vercel.app"
+  },
+  {
+    "id": 14,
+    "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/14_Conversor_de_Moedas_fhckdb.png",
+    "title": "Conversor de Moedas",
+    "description": "Projeto simples de conversão de moedas com layout limpo e intuitivo.",
+    "link": "https://conversor-de-moedas-tau.vercel.app"
+  },
+  {
+    "id": 15,
+    "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/15_Quiz_JS_jhvhcl.png",
+    "title": "Quiz JS",
+    "description": "Aplicação de perguntas e respostas com JavaScript puro e contagem de pontos.",
+    "link": "https://quiz-js-ebon.vercel.app"
+  },
+  {
+    "id": 16,
+    "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/16_Instagram_Clone_kkf9ik.png",
+    "title": "Instagram Clone",
+    "description": "Clone simplificado da interface do Instagram com HTML, CSS e interações básicas.",
+    "link": "https://instagram-green-delta.vercel.app"
+  },
+  {
+    "id": 17,
+    "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/17_Nature_E-commerce_sqsxhj.png",
+    "title": "Nature E-commerce",
+    "description": "Página de e-commerce de produtos naturais com visual clean e foco na natureza.",
+    "link": "https://nature-ecomerce.vercel.app"
+  },
+  {
+    "id": 18,
+    "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/18_Todo_List_gmtsdm.png",
+    "title": "Todo List",
+    "description": "Lista de tarefas com interface minimalista e funcionalidades básicas.",
+    "link": "https://todo-list-eta-vert.vercel.app"
+  },
+  {
+    "id": 19,
+    "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/19_iOS_Calculator_pbtkzj.png",
+    "title": "iOS Calculator",
+    "description": "Clone da calculadora do iOS com design fiel e operações matemáticas básicas.",
+    "link": "https://ios-calculator-kappa.vercel.app"
+  },
+  {
+    "id": 20,
+    "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/20_Link_Bio_dsztf1.png",
+    "title": "Link Bio",
+    "description": "Página de links para redes sociais, ideal para uso em perfis do Instagram.",
+    "link": "https://link-bio-six.vercel.app"
+  }
+]
