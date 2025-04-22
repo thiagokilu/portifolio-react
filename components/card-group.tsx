@@ -19,10 +19,14 @@ interface Screenshots {
 	[key: string]: string;
 }
 
+interface LoadingState {
+	[key: string]: boolean;
+}
+
 export function CardGroup() {
 	const [projetos, setProjetos] = useState<Project[]>([]);
 	const [imagens, setImagens] = useState<Screenshots>({});
-	const [loadingImg, setLoadingImg] = useState(false);
+	const [loadingById, setLoadingById] = useState<LoadingState>({});
 
 	const icons = (
 		<>
@@ -46,10 +50,7 @@ export function CardGroup() {
 				const data = await res.json();
 				setProjetos(data.projects);
 			} catch (error) {
-				console.error(
-					"Ocorreu um erro ao buscar os projetos da Vercel:",
-					error instanceof Error ? error.message : "Unknown error",
-				);
+				console.error("Erro ao buscar os projetos da Vercel:", error);
 			}
 		}
 		getVercelProjects();
@@ -57,11 +58,12 @@ export function CardGroup() {
 
 	useEffect(() => {
 		async function getScreenshots() {
-			setLoadingImg(true);
 			const imagensTemp: Screenshots = {};
+			const loadingTemp: LoadingState = {};
 			await Promise.all(
 				projetos.map(async (proj) => {
 					const urlProjeto = `https://${proj.name}-thiagokilus-projects.vercel.app`;
+					loadingTemp[proj.id] = true;
 					try {
 						const res = await fetch(
 							`https://api.microlink.io/?url=${urlProjeto}&screenshot=true`,
@@ -74,7 +76,11 @@ export function CardGroup() {
 				}),
 			);
 			setImagens(imagensTemp);
-			setLoadingImg(false);
+			// Marca todas as imagens como carregadas (poderia fazer individual, se quisesse animar ao carregar cada uma)
+			const finalLoading = Object.fromEntries(
+				Object.keys(imagensTemp).map((id) => [id, false]),
+			);
+			setLoadingById(finalLoading);
 		}
 		if (projetos.length > 0) getScreenshots();
 	}, [projetos]);
@@ -114,13 +120,6 @@ export function CardGroup() {
 
 			<h2 className="text-4xl font-bold text-center mb-16">Outros projetos</h2>
 
-			{/* Loading Spinner */}
-			{loadingImg && (
-				<div className="w-full flex justify-center items-center mb-10">
-					<div className="w-10 h-10 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
-				</div>
-			)}
-
 			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 sm:gap-8 xs:flex xs:flex-col xs:items-center auto-rows-min">
 				{projetos.map((proj) => {
 					const urlProjeto = `https://${proj.name}-thiagokilus-projects.vercel.app`;
@@ -132,15 +131,29 @@ export function CardGroup() {
 						icon = <div className="flex flex-row gap-2">{icons}</div>;
 					}
 
+					const isLoading = loadingById[proj.id];
+					const imgSrc = imagens[proj.id];
+
 					return (
 						<Card
 							key={proj.id}
 							linkProjeto={urlProjeto}
-							linkImg={imagens[proj.id] || "https://via.placeholder.com/300"}
+							linkImg={
+								isLoading || !imgSrc
+									? "https://via.placeholder.com/300"
+									: imgSrc
+							}
 							title={proj.name}
 							description="Projeto da Vercel com deploy automático."
 							icons={<div className="flex gap-3 text-xl mb-3">{icon}</div>}
-						/>
+						>
+							{/* Spinner overlay opcional */}
+							{isLoading && (
+								<div className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-white/50 backdrop-blur-sm rounded">
+									<div className="w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin" />
+								</div>
+							)}
+						</Card>
 					);
 				})}
 			</div>
