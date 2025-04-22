@@ -94,7 +94,6 @@ export function CardGroup() {
 
 			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 sm:gap-8 xs:flex xs:flex-col xs:items-center auto-rows-min">
 				{projetos.map((proj) => {
-					const urlProjeto = `https://${proj.name}-thiagokilus-projects.vercel.app`;
 					const framework = proj.framework;
 					let icon;
 					if (framework === "vite" || framework === "nextjs") {
