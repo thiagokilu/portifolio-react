@@ -138,5 +138,12 @@
     "title": "Link Bio",
     "description": "Página de links para redes sociais, ideal para uso em perfis do Instagram.",
     "link": "https://link-bio-six.vercel.app"
+  },
+  {
+    "id": 21,
+    "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745436571/21_React-books_tf6x5d.png",
+    "title": "React books",
+    "description": "Busca de livros usando api do google books e modal com informaçõs do livro",
+    "link": "https://books-react-sand.vercel.app/"
   }
 ]
