@@ -101,14 +101,6 @@ export function CardGroup() {
 
 			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 sm:gap-8 xs:flex xs:flex-col xs:items-center auto-rows-min">
 				{projetos.map((proj) => {
-					const framework = proj.framework;
-					let icon;
-					if (framework === "vite" || framework === "nextjs") {
-						icon = <FaReact />;
-					} else {
-						icon = <div className="flex flex-row gap-2">{icons}</div>;
-					}
-
 					return (
 						<Card
 							key={proj.id}
