@@ -30,6 +30,12 @@ export function CardGroup() {
 		</>
 	);
 
+	const reactIcons = (
+		<>
+			<FaReact />
+		</>
+	);
+
 	useEffect(() => {
 		async function getLocalProjects() {
 			setLoading(true);
@@ -110,7 +116,11 @@ export function CardGroup() {
 							linkImg={proj.img}
 							title={proj.name}
 							description={proj.description}
-							icons={<div className="flex gap-3 text-xl mb-3">{icon}</div>}
+							icons={
+								<div className="flex gap-3 text-xl mb-3">
+									{proj.framework === "padrao" ? icons : reactIcons}
+								</div>
+							}
 						/>
 					);
 				})}

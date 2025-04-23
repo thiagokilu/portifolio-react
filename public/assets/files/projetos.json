@@ -4,146 +4,167 @@
     "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/1_Soundify_kmtsps.png",
     "title": "Soundify",
     "description": "Plataforma de streaming musical com player customizado e integração com APIs para busca e reprodução de músicas.",
-    "link": "https://soundify-five.vercel.app"
+    "link": "https://soundify-five.vercel.app",
+    "framework": "padrao"
   },
   {
     "id": 2,
     "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/2_Portifolio_React_memncn.png",
     "title": "Portifolio React",
     "description": "Portfólio pessoal desenvolvido em React para apresentar projetos e habilidades como desenvolvedor.",
-    "link": "https://portifolio-react-xi-five.vercel.app"
+    "link": "https://portifolio-react-xi-five.vercel.app",
+    "framework": "react"
   },
   {
     "id": 3,
     "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/3_Todo_List_React_yt4pcb.png",
     "title": "Todo List React",
     "description": "Aplicação de lista de tarefas com funcionalidades para adicionar, remover e marcar tarefas como concluídas.",
-    "link": "https://todolistreact-chi-six.vercel.app"
+    "link": "https://todolistreact-chi-six.vercel.app",
+    "framework": "react"
   },
   {
     "id": 4,
     "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/4_Kanban_lyaywv.png",
     "title": "Kanban",
     "description": "Sistema de organização de tarefas estilo Kanban com colunas dinâmicas e arrastar e soltar.",
-    "link": "https://kanban-beta-murex.vercel.app"
+    "link": "https://kanban-beta-murex.vercel.app",
+    "framework": "react"
   },
   {
     "id": 5,
     "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/5_Furniture_Web_Page_ttrckj.png",
     "title": "Furniture Web Page",
     "description": "Landing page de e-commerce para móveis com design responsivo e foco na experiência mobile.",
-    "link": "https://furniture-web-page.vercel.app"
+    "link": "https://furniture-web-page.vercel.app",
+    "framework": "padrao"
   },
   {
     "id": 6,
     "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/6_Daily_Coffee_aesypi.png",
     "title": "Daily Coffee",
     "description": "Site de cafeteria com layout moderno e responsivo, destacando produtos e promoções diárias.",
-    "link": "https://daily-coffee-tau.vercel.app"
+    "link": "https://daily-coffee-tau.vercel.app",
+    "framework": "padrao"
   },
   {
     "id": 7,
-    "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/7_Recycle_Ecology_eh9rfv.png",
-    "title": "Recycle Ecology",
-    "description": "Projeto informativo com foco em reciclagem e sustentabilidade, com conteúdo educativo.",
-    "link": "https://recycle-ecology.vercel.app"
+    "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745436571/21_React-books_tf6x5d.png",
+    "title": "React books",
+    "description": "Busca de livros usando api do google books e modal com informaçõs do livro",
+    "link": "https://books-react-sand.vercel.app/",
+    "framework": "react"
   },
   {
     "id": 8,
     "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/8_Carros_Search_cwtw3u.png",
     "title": "Carros Search",
     "description": "Ferramenta de busca de carros com filtros e integração com APIs para exibir modelos e preços.",
-    "link": "https://carros-search.vercel.app"
+    "link": "https://carros-search.vercel.app",
+    "framework": "react"
   },
   {
     "id": 9,
     "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/9_Cronômetro_rliavr.png",
     "title": "Cronômetro",
     "description": "Aplicação de cronômetro simples com controle de tempo e interface amigável.",
-    "link": "https://cronometro-lovat-six.vercel.app"
+    "link": "https://cronometro-lovat-six.vercel.app",
+    "framework": "react"
   },
   {
     "id": 10,
     "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/10_Conversor_Moedas_React_spyf8u.png",
     "title": "Conversor Moedas React",
     "description": "Conversor de moedas em tempo real utilizando React e APIs de câmbio.",
-    "link": "https://conversor-moedas-react-seven.vercel.app"
+    "link": "https://conversor-moedas-react-seven.vercel.app",
+    "framework": "react"
   },
   {
     "id": 11,
     "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/11_Calculadora_React_j8ub26.png",
     "title": "Calculadora React",
     "description": "Calculadora funcional desenvolvida com React, com operações básicas e layout intuitivo.",
-    "link": "https://calculadora-react-eight-rho.vercel.app"
+    "link": "https://calculadora-react-eight-rho.vercel.app",
+    "framework": "react"
   },
   {
     "id": 12,
     "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/12_Portifolio_jrsbtp.png",
     "title": "Portifolio",
     "description": "Versão anterior do portfólio pessoal com layout moderno e responsivo.",
-    "link": "https://portifolio-steel-tau.vercel.app"
+    "link": "https://portifolio-steel-tau.vercel.app",
+    "framework": "padrao"
   },
   {
     "id": 13,
     "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/13_Notes_React_zq4dtn.png",
     "title": "Notes React",
     "description": "Aplicativo de anotações feito em React, com suporte para edição, exclusão e armazenamento local.",
-    "link": "https://notes-react-orpin.vercel.app"
+    "link": "https://notes-react-orpin.vercel.app",
+    "framework": "react"
   },
   {
     "id": 14,
     "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/14_Conversor_de_Moedas_fhckdb.png",
     "title": "Conversor de Moedas",
     "description": "Projeto simples de conversão de moedas com layout limpo e intuitivo.",
-    "link": "https://conversor-de-moedas-tau.vercel.app"
+    "link": "https://conversor-de-moedas-tau.vercel.app",
+    "framework": "padrao"
   },
   {
     "id": 15,
     "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/15_Quiz_JS_jhvhcl.png",
     "title": "Quiz JS",
     "description": "Aplicação de perguntas e respostas com JavaScript puro e contagem de pontos.",
-    "link": "https://quiz-js-ebon.vercel.app"
+    "link": "https://quiz-js-ebon.vercel.app",
+    "framework": "padrao"
   },
   {
     "id": 16,
     "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/16_Instagram_Clone_kkf9ik.png",
     "title": "Instagram Clone",
     "description": "Clone simplificado da interface do Instagram com HTML, CSS e interações básicas.",
-    "link": "https://instagram-green-delta.vercel.app"
+    "link": "https://instagram-green-delta.vercel.app",
+    "framework": "padrao"
   },
   {
     "id": 17,
     "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/17_Nature_E-commerce_sqsxhj.png",
     "title": "Nature E-commerce",
     "description": "Página de e-commerce de produtos naturais com visual clean e foco na natureza.",
-    "link": "https://nature-ecomerce.vercel.app"
+    "link": "https://nature-ecomerce.vercel.app",
+    "framework": "padrao"
   },
   {
     "id": 18,
     "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/18_Todo_List_gmtsdm.png",
     "title": "Todo List",
     "description": "Lista de tarefas com interface minimalista e funcionalidades básicas.",
-    "link": "https://todo-list-eta-vert.vercel.app"
+    "link": "https://todo-list-eta-vert.vercel.app",
+    "framework": "padrao"
   },
   {
     "id": 19,
     "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/19_iOS_Calculator_pbtkzj.png",
     "title": "iOS Calculator",
     "description": "Clone da calculadora do iOS com design fiel e operações matemáticas básicas.",
-    "link": "https://ios-calculator-kappa.vercel.app"
+    "link": "https://ios-calculator-kappa.vercel.app",
+    "framework": "padrao"
   },
   {
     "id": 20,
     "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/20_Link_Bio_dsztf1.png",
     "title": "Link Bio",
     "description": "Página de links para redes sociais, ideal para uso em perfis do Instagram.",
-    "link": "https://link-bio-six.vercel.app"
+    "link": "https://link-bio-six.vercel.app",
+    "framework": "padrao"
   },
   {
     "id": 21,
-    "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745436571/21_React-books_tf6x5d.png",
-    "title": "React books",
-    "description": "Busca de livros usando api do google books e modal com informaçõs do livro",
-    "link": "https://books-react-sand.vercel.app/"
+    "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/7_Recycle_Ecology_eh9rfv.png",
+    "title": "Recycle Ecology",
+    "description": "Projeto informativo com foco em reciclagem e sustentabilidade, com conteúdo educativo.",
+    "link": "https://recycle-ecology.vercel.app",
+    "framework": "padrao"
   }
 ]
