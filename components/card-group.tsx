@@ -60,7 +60,7 @@ export function CardGroup() {
 
 	return (
 		<div>
-			<div className="flex w-full gap-10 mb-10">
+			<div className="flex flex-wrap w-full gap-5 mb-10">
 				<BigCard
 					linkProjeto="https://soundify-five.vercel.app/"
 					linkImg="https://res.cloudinary.com/dbwz36bcf/image/upload/v1741477590/Soundify-16-9_p9hk7c.png"

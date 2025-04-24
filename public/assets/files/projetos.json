@@ -8,14 +8,6 @@
     "framework": "padrao"
   },
   {
-    "id": 2,
-    "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/2_Portifolio_React_memncn.png",
-    "title": "Portifolio React",
-    "description": "Portfólio pessoal desenvolvido em React para apresentar projetos e habilidades como desenvolvedor.",
-    "link": "https://portifolio-react-xi-five.vercel.app",
-    "framework": "react"
-  },
-  {
     "id": 3,
     "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/3_Todo_List_React_yt4pcb.png",
     "title": "Todo List React",
