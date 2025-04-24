@@ -1,14 +1,6 @@
 [
   {
     "id": 1,
-    "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/1_Soundify_kmtsps.png",
-    "title": "Soundify",
-    "description": "Plataforma de streaming musical com player customizado e integração com APIs para busca e reprodução de músicas.",
-    "link": "https://soundify-five.vercel.app",
-    "framework": "padrao"
-  },
-  {
-    "id": 3,
     "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/3_Todo_List_React_yt4pcb.png",
     "title": "Todo List React",
     "description": "Aplicação de lista de tarefas com funcionalidades para adicionar, remover e marcar tarefas como concluídas.",
@@ -16,7 +8,7 @@
     "framework": "react"
   },
   {
-    "id": 4,
+    "id": 2,
     "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/4_Kanban_lyaywv.png",
     "title": "Kanban",
     "description": "Sistema de organização de tarefas estilo Kanban com colunas dinâmicas e arrastar e soltar.",
@@ -24,7 +16,7 @@
     "framework": "react"
   },
   {
-    "id": 5,
+    "id": 3,
     "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/5_Furniture_Web_Page_ttrckj.png",
     "title": "Furniture Web Page",
     "description": "Landing page de e-commerce para móveis com design responsivo e foco na experiência mobile.",
@@ -32,7 +24,7 @@
     "framework": "padrao"
   },
   {
-    "id": 6,
+    "id": 4,
     "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/6_Daily_Coffee_aesypi.png",
     "title": "Daily Coffee",
     "description": "Site de cafeteria com layout moderno e responsivo, destacando produtos e promoções diárias.",
@@ -40,7 +32,7 @@
     "framework": "padrao"
   },
   {
-    "id": 7,
+    "id": 5,
     "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745436571/21_React-books_tf6x5d.png",
     "title": "React books",
     "description": "Busca de livros usando api do google books e modal com informaçõs do livro",
@@ -48,7 +40,7 @@
     "framework": "react"
   },
   {
-    "id": 8,
+    "id": 6,
     "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/8_Carros_Search_cwtw3u.png",
     "title": "Carros Search",
     "description": "Ferramenta de busca de carros com filtros e integração com APIs para exibir modelos e preços.",
@@ -56,7 +48,7 @@
     "framework": "react"
   },
   {
-    "id": 9,
+    "id": 7,
     "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/9_Cronômetro_rliavr.png",
     "title": "Cronômetro",
     "description": "Aplicação de cronômetro simples com controle de tempo e interface amigável.",
@@ -64,7 +56,7 @@
     "framework": "react"
   },
   {
-    "id": 10,
+    "id": 8,
     "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/10_Conversor_Moedas_React_spyf8u.png",
     "title": "Conversor Moedas React",
     "description": "Conversor de moedas em tempo real utilizando React e APIs de câmbio.",
@@ -72,7 +64,7 @@
     "framework": "react"
   },
   {
-    "id": 11,
+    "id": 9,
     "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/11_Calculadora_React_j8ub26.png",
     "title": "Calculadora React",
     "description": "Calculadora funcional desenvolvida com React, com operações básicas e layout intuitivo.",
@@ -80,7 +72,7 @@
     "framework": "react"
   },
   {
-    "id": 12,
+    "id": 10,
     "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/12_Portifolio_jrsbtp.png",
     "title": "Portifolio",
     "description": "Versão anterior do portfólio pessoal com layout moderno e responsivo.",
@@ -88,7 +80,7 @@
     "framework": "padrao"
   },
   {
-    "id": 13,
+    "id": 11,
     "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/13_Notes_React_zq4dtn.png",
     "title": "Notes React",
     "description": "Aplicativo de anotações feito em React, com suporte para edição, exclusão e armazenamento local.",
@@ -96,7 +88,7 @@
     "framework": "react"
   },
   {
-    "id": 14,
+    "id": 12,
     "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/14_Conversor_de_Moedas_fhckdb.png",
     "title": "Conversor de Moedas",
     "description": "Projeto simples de conversão de moedas com layout limpo e intuitivo.",
@@ -104,7 +96,7 @@
     "framework": "padrao"
   },
   {
-    "id": 15,
+    "id": 13,
     "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/15_Quiz_JS_jhvhcl.png",
     "title": "Quiz JS",
     "description": "Aplicação de perguntas e respostas com JavaScript puro e contagem de pontos.",
@@ -112,7 +104,7 @@
     "framework": "padrao"
   },
   {
-    "id": 16,
+    "id": 14,
     "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/16_Instagram_Clone_kkf9ik.png",
     "title": "Instagram Clone",
     "description": "Clone simplificado da interface do Instagram com HTML, CSS e interações básicas.",
@@ -120,15 +112,7 @@
     "framework": "padrao"
   },
   {
-    "id": 17,
-    "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/17_Nature_E-commerce_sqsxhj.png",
-    "title": "Nature E-commerce",
-    "description": "Página de e-commerce de produtos naturais com visual clean e foco na natureza.",
-    "link": "https://nature-ecomerce.vercel.app",
-    "framework": "padrao"
-  },
-  {
-    "id": 18,
+    "id": 15,
     "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/18_Todo_List_gmtsdm.png",
     "title": "Todo List",
     "description": "Lista de tarefas com interface minimalista e funcionalidades básicas.",
@@ -136,7 +120,7 @@
     "framework": "padrao"
   },
   {
-    "id": 19,
+    "id": 16,
     "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/19_iOS_Calculator_pbtkzj.png",
     "title": "iOS Calculator",
     "description": "Clone da calculadora do iOS com design fiel e operações matemáticas básicas.",
@@ -144,7 +128,7 @@
     "framework": "padrao"
   },
   {
-    "id": 20,
+    "id": 17,
     "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/20_Link_Bio_dsztf1.png",
     "title": "Link Bio",
     "description": "Página de links para redes sociais, ideal para uso em perfis do Instagram.",
@@ -152,7 +136,7 @@
     "framework": "padrao"
   },
   {
-    "id": 21,
+    "id": 18,
     "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/7_Recycle_Ecology_eh9rfv.png",
     "title": "Recycle Ecology",
     "description": "Projeto informativo com foco em reciclagem e sustentabilidade, com conteúdo educativo.",
