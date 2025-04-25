@@ -4,6 +4,7 @@ import {
 	FaJs,
 	FaGitAlt,
 	FaArrowDown,
+	FaGraduationCap,
 } from "react-icons/fa";
 import { SiTailwindcss, SiTypescript } from "react-icons/si";
 import { FcLinux } from "react-icons/fc";
@@ -20,11 +21,27 @@ export function About_me() {
 						Olá, eu sou Thiago!
 					</h1>
 					<p className="about__text mt-4 text-[16px] l lg:text-xl md:text-xl">
-						Tenho 21 anos, formado em Gestão em Tecnologia da Informação.
-						Sou apaixonado por tecnologia e estou sempre em busca de novos
-						desafios para aprimorar minhas habilidades e contribuir com projetos
+						Tenho 21 anos, formado em Gestão em Tecnologia da Informação. Sou
+						apaixonado por tecnologia e estou sempre em busca de novos desafios
+						para aprimorar minhas habilidades e contribuir com projetos
 						inovadores.
 					</p>
+					<div>
+						<div className="flex flex-row items-center text-xl mt-10">
+							<FaGraduationCap className="mr-5 text-3xl" />
+							<hr className="w-10 mr-5 border-t-2" />
+							<h2>
+								Gestão em tecnologia da Informação - Faculdade de tecnologia e
+								inovação - Senac DF
+							</h2>
+						</div>
+
+						<div className="flex flex-row items-center text-xl mt-5 mb-10">
+							<FaGraduationCap className="mr-5 text-3xl" />
+							<hr className="w-10 mr-5 border-t-2" />
+							<h2>Inglês avançado - Centro de línguas</h2>
+						</div>
+					</div>
 					<div className="courses flex gap-4 mt-4 text-2xl lg:text-4xl md:text-4xl flex-wrap text-wrap">
 						<a href="#" title="HTML5">
 							<FaHtml5 className="text-[#e34f26] " />
@@ -62,7 +79,7 @@ export function About_me() {
 					</div>
 					<div>
 						<a
-							href="/assets/files/Curriculo-thiago.pdf"
+							href="/assets/files/curriculo-thiago-portifolio.pdf"
 							download="Curriculo-thiago.pdf"
 							className=" flex flex-row items-center gap-2 px-6 py-3 mt-5 max-w-40 text-xl font-semibold text-white rounded-md shadow-md bg-gradient-to-r from-blue-500 via-indigo-500 to-cyan-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-indigo-300 hover:shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1 active:translate-y-0"
 						>
