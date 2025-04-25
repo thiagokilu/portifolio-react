@@ -5,6 +5,7 @@ import {
 	FaGitAlt,
 	FaArrowDown,
 	FaGraduationCap,
+	FaReact,
 } from "react-icons/fa";
 import { SiTailwindcss, SiTypescript } from "react-icons/si";
 import { FcLinux } from "react-icons/fc";
@@ -57,6 +58,9 @@ export function About_me() {
 						</a>
 						<a href="#" title="Typescript">
 							<SiTypescript className="text-[#3178C6] " />
+						</a>
+						<a href="#" title="React">
+							<FaReact className="text-[#3cdafb] " />
 						</a>
 						<a href="#" title="Git">
 							<FaGitAlt className="text-[#f05032] " />
