@@ -83,7 +83,7 @@ export function About_me() {
 					</div>
 					<div>
 						<a
-							href="/assets/files/curriculo-thiago-portifolio.pdf"
+							href="/assets/files/Curriculo-thiagoalexandre-p-2-25.pdf"
 							download="Curriculo-thiago.pdf"
 							className=" flex flex-row items-center gap-2 px-6 py-3 mt-5 max-w-40 text-xl font-semibold text-white rounded-md shadow-md bg-gradient-to-r from-blue-500 via-indigo-500 to-cyan-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-indigo-300 hover:shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1 active:translate-y-0"
 						>
