@@ -1,6 +1,4 @@
 import { Header } from "../components/header";
-import { Footer } from "../components/Footer";
-import { Slider } from "../components/slider";
 import { About_me } from "../components/about-me";
 import { CardGroup } from "../components/card-group";
 import { ContactForm } from "../components/contact-form";
