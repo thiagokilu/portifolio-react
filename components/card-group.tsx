@@ -1,12 +1,5 @@
-import {
-  FaHtml5,
-  FaCss3Alt,
-  FaJsSquare,
-  FaNodeJs,
-  FaReact,
-} from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact } from "react-icons/fa";
 import { Card } from "./card";
-import { BigCard } from "./bigCard";
 import { useState, useEffect } from "react";
 
 interface Project {
