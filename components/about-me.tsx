@@ -11,16 +11,28 @@ import {
 } from "react-icons/fa";
 import { SiTailwindcss, SiTypescript } from "react-icons/si";
 import { FcLinux } from "react-icons/fc";
+import { useState, useEffect } from "react";
 
 export function About_me() {
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setShow(true), 100);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900 to-gray-800">
+    <div className="min-h-screen flex items-center justify-center  px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900 to-gray-800 lg:-mt-10 overflow-hidden">
       <section
         id="about"
-        className="max-w-6xl w-full bg-gray-800 rounded-2xl shadow-xl overflow-hidden border border-gray-700"
+        className={`
+    max-w-6xl w-full bg-gray-800 rounded-2xl shadow-xl overflow-hidden border border-gray-700
+    transform transition-all duration-700 ease-out
+    ${show ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"}
+  `}
       >
         <div className="flex flex-col md:flex-row">
-          <div className="md:w-1/2 p-8 md:p-12 space-y-8 md:w-1/2 order-2 md:order-1">
+          <div className=" p-8 md:p-12 space-y-8 md:w-1/2 order-2 md:order-1">
             <div>
               <span className="text-sm font-medium text-cyan-400">
                 SOBRE MIM

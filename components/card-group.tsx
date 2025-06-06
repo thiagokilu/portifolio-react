@@ -59,37 +59,13 @@ export function CardGroup() {
   }, []);
 
   return (
-    <div>
-      <div className="flex flex-col lg:flex-row gap-5 mb-10">
-        <BigCard
-          linkProjeto="https://soundify-five.vercel.app/"
-          linkImg="https://res.cloudinary.com/dbwz36bcf/image/upload/v1741477590/Soundify-16-9_p9hk7c.png"
-          title="Soundify"
-          description="Plataforma de streaming musical com integração de API e player customizado."
-          icons={
-            <div className="flex gap-3 text-xl mb-3">
-              <FaHtml5 />
-              <FaCss3Alt />
-              <FaJsSquare />
-              <FaNodeJs />
-            </div>
-          }
-        />
-
-        <BigCard
-          linkProjeto="https://astroxzdesigner.com.br/"
-          linkImg="https://res.cloudinary.com/ds4ptms7d/image/upload/v1748537447/Captura_de_tela_de_2025-05-29_13-49-36_fgsone.png"
-          title="Artroxz"
-          description="Portfólio criativo com foco em design e desenvolvimento visual."
-          icons={
-            <div className="flex gap-3 text-xl mb-3">
-              <FaReact />
-            </div>
-          }
-        />
-      </div>
-
-      <h2 className="text-4xl font-bold text-center mb-16">Outros projetos</h2>
+    <div className="pb-20">
+      <h2
+        id="otherProjects"
+        className="text-4xl font-bold text-center mb-16 mt-10"
+      >
+        Outros projetos
+      </h2>
 
       {loading && (
         <div className="w-full flex justify-center items-center mb-10">
