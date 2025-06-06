@@ -1,26 +1,21 @@
 @import "tailwindcss";
 
-
-
 html {
-    scroll-behavior: smooth;
-  }
+  scroll-behavior: smooth;
+}
 
-  /* CSS Global */
+/* CSS Global */
 
-  .about__title{
-    font-family: monospace;
-    border-right: 4px solid;
-    width: 53ch; /* Ajuste para caber o texto completo */
-    white-space: nowrap;
-    overflow: hidden;
-    animation: typingName 4s steps(53) forwards, blinking 0.5s step-end infinite;
-  }
+.about__title {
+  font-family: monospace;
+  border-right: 4px solid;
+  width: 53ch; /* Ajuste para caber o texto completo */
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typingName 4s steps(53) forwards, blinking 0.5s step-end infinite;
+}
 
-  
-
-
-  /* Estilo para os botões de navegação */
+/* Estilo para os botões de navegação */
 .swiper-button-next,
 .swiper-button-prev {
   width: 30px; /* Ajuste o tamanho */
@@ -32,7 +27,7 @@ html {
 .swiper-button-next::after,
 .swiper-button-prev::after {
   font-size: 20px; /* Tamanho do ícone */
-  color: #4475ff; /* Cor do ícone */
+  color: #01d2de; /* Cor do ícone */
 }
 
 /* Posicionamento dos botões */
@@ -53,32 +48,31 @@ html {
   right: 10px; /* Distância da borda direita */
 }
 
-  
-  @keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 53ch; /* Ajuste para o comprimento exato do texto */
-    }
+@keyframes typing {
+  from {
+    width: 0;
   }
+  to {
+    width: 53ch; /* Ajuste para o comprimento exato do texto */
+  }
+}
 
-  @keyframes typingName {
-    from {
-      width: 0;
-    }
-    to {
-      width: 19ch; /* Ajuste para o comprimento exato do texto */
-    }
+@keyframes typingName {
+  from {
+    width: 0;
   }
-  
-  @keyframes blinking {
-    50% {
-      border-color: transparent;
-    }
+  to {
+    width: 19ch; /* Ajuste para o comprimento exato do texto */
   }
+}
 
-  /* From Uiverse.io by ClawHack1 */
+@keyframes blinking {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* From Uiverse.io by ClawHack1 */
 /* Genel stil */
 .toggle-switch {
   position: relative;
