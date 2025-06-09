@@ -49,7 +49,7 @@ export function SocialLinks() {
   ];
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900 to-gray-800 lg:-mt-10">
+    <div className="min-h-screen overflow-hidden flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900 to-gray-800 lg:-mt-10">
       <section
         id="social"
         className={`

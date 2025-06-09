@@ -37,7 +37,7 @@ export function Projetos({
   }, []);
 
   return (
-    <div className="min-h-screen  flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900 to-gray-800 pb-20">
+    <div className="min-h-screen overflow-hidden flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900 to-gray-800 pb-20">
       <section
         id="projects"
         className={`max-w-6xl w-full bg-gray-800 rounded-2xl shadow-xl overflow-hidden border border-gray-700 pb-2 transform transition-all duration-700 ease-out
@@ -56,7 +56,7 @@ export function Projetos({
             </p>
           </div>
 
-          <div className="flex flex-row gap-5 items-center justify-center">
+          <div className="flex flex-col lg:flex-row gap-5 items-center justify-center">
             {projects.map((project, index) => (
               <div
                 key={index}

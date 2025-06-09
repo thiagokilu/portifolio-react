@@ -22,7 +22,7 @@ export function About_me() {
   }, []);
 
   return (
-    <div className="min-h-screen flex items-center justify-center  px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900 to-gray-800 lg:-mt-10 overflow-hidden">
+    <div className="min-h-screen  flex items-center justify-center  px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900 to-gray-800 lg:-mt-10 overflow-hidden">
       <section
         id="about"
         className={`

@@ -57,7 +57,7 @@ export function ContactForm() {
   }, []);
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900 to-gray-800 overflow-hidden">
+    <div className="min-h-screen  flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900 to-gray-800 overflow-hidden">
       <section
         id="contact"
         className={`max-w-6xl w-full bg-gray-800 rounded-2xl shadow-xl overflow-hidden border border-gray-700 lg:-mt-20 transform transition-all duration-700 ease-out
