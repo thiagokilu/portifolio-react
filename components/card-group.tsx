@@ -1,4 +1,10 @@
-import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact } from "react-icons/fa";
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaJsSquare,
+  FaReact,
+  FaVuejs,
+} from "react-icons/fa";
 import { Card } from "./card";
 import { useState, useEffect } from "react";
 
@@ -29,6 +35,12 @@ export function CardGroup() {
     </>
   );
 
+  const vueIcons = (
+    <>
+      <FaVuejs />
+    </>
+  );
+
   useEffect(() => {
     async function getLocalProjects() {
       setLoading(true);
@@ -38,7 +50,8 @@ export function CardGroup() {
           throw new Error(`Erro ao carregar projetos.json: ${res.statusText}`);
         }
         const data: Project[] = await res.json();
-        setProjetos(data);
+        // Inverte o array para mostrar os últimos projetos primeiro
+        setProjetos(data.reverse());
       } catch (error) {
         console.error(
           "Erro ao buscar os projetos locais:",
@@ -77,7 +90,11 @@ export function CardGroup() {
               description={proj.description}
               icons={
                 <div className="flex gap-3 text-xl mb-3">
-                  {proj.framework === "padrao" ? icons : reactIcons}
+                  {proj.framework === "padrao"
+                    ? icons
+                    : proj.framework === "vue"
+                    ? vueIcons
+                    : reactIcons}
                 </div>
               }
             />

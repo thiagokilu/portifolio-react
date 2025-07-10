@@ -18,10 +18,12 @@ export function Card({
   return (
     <div
       className="dark:bg-gray-800 border-2 border-gray-700
-	 group relative w-[300px] overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300 sm:flex sm:flex-col sm:items-center sm:justify-center sm:text-center lg:w-96"
+      group relative w-[400px] max-h-[400px] overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300 flex flex-col"
     >
       <a href={linkProjeto} target="_blank" rel="noopener noreferrer">
-        <div className="overflow-hidden">
+        <div className="overflow-hidden h-52">
+          {" "}
+          {/* ✅ Altura fixa na imagem */}
           <img
             src={linkImg}
             alt={title}

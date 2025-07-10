@@ -17,7 +17,7 @@ export function Header({ setNumCard, setOpenProjects }: HeaderProps) {
           />
         </a>
         <nav>
-          <ul className="flex items-center gap-8 text-gray-300 text-[18px] font-semibold lg:text-xl md:text-xl">
+          <ul className="flex items-center gap-8 text-sm text-gray-300  font-semibold lg:text-xl md:text-xl">
             <li>
               <a
                 onClick={() => {

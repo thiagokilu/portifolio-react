@@ -1,10 +1,34 @@
 [
   {
-    "id": 16,
-    "img": "https://res.cloudinary.com/ds4ptms7d/image/upload/v1748537447/Captura_de_tela_de_2025-05-29_13-49-20_ifmt56.png",
-    "title": "Form MultiStep",
-    "description": "Formulário multietapas com validação e navegação entre os passos.",
-    "link": "https://form-multistep-gamma.vercel.app/",
+    "id": 3,
+    "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/5_Furniture_Web_Page_ttrckj.png",
+    "title": "Furniture Web Page",
+    "description": "Landing page de e-commerce para móveis com design responsivo e foco na experiência mobile.",
+    "link": "https://furniture-web-page.vercel.app",
+    "framework": "padrao"
+  },
+  {
+    "id": 4,
+    "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/6_Daily_Coffee_aesypi.png",
+    "title": "Daily Coffee",
+    "description": "Site de cafeteria com layout moderno e responsivo, destacando produtos e promoções diárias.",
+    "link": "https://daily-coffee-tau.vercel.app",
+    "framework": "padrao"
+  },
+  {
+    "id": 12,
+    "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/14_Conversor_de_Moedas_fhckdb.png",
+    "title": "Conversor de Moedas",
+    "description": "Projeto simples de conversão de moedas com layout limpo e intuitivo.",
+    "link": "https://conversor-de-moedas-tau.vercel.app",
+    "framework": "padrao"
+  },
+  {
+    "id": 13,
+    "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/15_Quiz_JS_jhvhcl.png",
+    "title": "Quiz JS",
+    "description": "Aplicação de perguntas e respostas com JavaScript puro e contagem de pontos.",
+    "link": "https://quiz-js-ebon.vercel.app",
     "framework": "padrao"
   },
   {
@@ -22,22 +46,6 @@
     "description": "Sistema de organização de tarefas estilo Kanban com colunas dinâmicas e arrastar e soltar.",
     "link": "https://kanban-beta-murex.vercel.app",
     "framework": "react"
-  },
-  {
-    "id": 3,
-    "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/5_Furniture_Web_Page_ttrckj.png",
-    "title": "Furniture Web Page",
-    "description": "Landing page de e-commerce para móveis com design responsivo e foco na experiência mobile.",
-    "link": "https://furniture-web-page.vercel.app",
-    "framework": "padrao"
-  },
-  {
-    "id": 4,
-    "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/6_Daily_Coffee_aesypi.png",
-    "title": "Daily Coffee",
-    "description": "Site de cafeteria com layout moderno e responsivo, destacando produtos e promoções diárias.",
-    "link": "https://daily-coffee-tau.vercel.app",
-    "framework": "padrao"
   },
   {
     "id": 5,
@@ -80,14 +88,6 @@
     "framework": "react"
   },
   {
-    "id": 10,
-    "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/12_Portifolio_jrsbtp.png",
-    "title": "Portifolio",
-    "description": "Versão anterior do portfólio pessoal com layout moderno e responsivo.",
-    "link": "https://portifolio-steel-tau.vercel.app",
-    "framework": "padrao"
-  },
-  {
     "id": 11,
     "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/13_Notes_React_zq4dtn.png",
     "title": "Notes React",
@@ -96,35 +96,19 @@
     "framework": "react"
   },
   {
-    "id": 12,
-    "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/14_Conversor_de_Moedas_fhckdb.png",
+    "id": 16,
+    "img": "https://res.cloudinary.com/ds4ptms7d/image/upload/v1748537447/Captura_de_tela_de_2025-05-29_13-49-20_ifmt56.png",
+    "title": "Form MultiStep",
+    "description": "Formulário multietapas com validação e navegação entre os passos.",
+    "link": "https://form-multistep-gamma.vercel.app/",
+    "framework": "react"
+  },
+  {
+    "id": 16,
+    "img": "https://res.cloudinary.com/ds4ptms7d/image/upload/v1752170894/Captura_de_tela_de_2025-07-10_15-08-03_x4zt61.png",
     "title": "Conversor de Moedas",
-    "description": "Projeto simples de conversão de moedas com layout limpo e intuitivo.",
-    "link": "https://conversor-de-moedas-tau.vercel.app",
-    "framework": "padrao"
-  },
-  {
-    "id": 13,
-    "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/15_Quiz_JS_jhvhcl.png",
-    "title": "Quiz JS",
-    "description": "Aplicação de perguntas e respostas com JavaScript puro e contagem de pontos.",
-    "link": "https://quiz-js-ebon.vercel.app",
-    "framework": "padrao"
-  },
-  {
-    "id": 14,
-    "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/18_Todo_List_gmtsdm.png",
-    "title": "Todo List",
-    "description": "Lista de tarefas com interface minimalista e funcionalidades básicas.",
-    "link": "https://todo-list-eta-vert.vercel.app",
-    "framework": "padrao"
-  },
-  {
-    "id": 15,
-    "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/20_Link_Bio_dsztf1.png",
-    "title": "Recycle Ecology",
-    "description": "Projeto informativo com foco em reciclagem e sustentabilidade, com conteúdo educativo.",
-    "link": "https://recycle-ecology.vercel.app",
-    "framework": "padrao"
+    "description": "Aplicação de conversão de moedas utilizando API de câmbio, desenvolvida com Vue.",
+    "link": "https://conversor-moedas-vue-theta.vercel.app/",
+    "framework": "vue"
   }
 ]
