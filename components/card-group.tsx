@@ -10,7 +10,9 @@ import {
 } from "react-icons/fa";
 import { SiTypescript, SiTailwindcss, SiNextdotjs } from "react-icons/si";
 
-const iconMap: Record<string, JSX.Element> = {
+import type { ReactNode } from "react";
+
+const iconMap: Record<string, ReactNode> = {
   html: <FaHtml5 />,
   css: <FaCss3Alt />,
   js: <FaJsSquare />,

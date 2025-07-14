@@ -12,8 +12,9 @@ import {
 } from "react-icons/fa";
 import { SiTypescript, SiTailwindcss, SiFirebase } from "react-icons/si";
 import { GiPineapple } from "react-icons/gi";
+import type { ReactNode } from "react";
 
-const iconMap: Record<string, JSX.Element> = {
+const iconMap: Record<string, ReactNode> = {
   html5: <FaHtml5 />,
   css3: <FaCss3Alt />,
   javascript: <FaJsSquare />,
