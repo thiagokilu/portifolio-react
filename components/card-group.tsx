@@ -4,7 +4,28 @@ import {
   FaJsSquare,
   FaReact,
   FaVuejs,
+  FaNodeJs,
+  FaPython,
+  FaGitAlt,
 } from "react-icons/fa";
+import { SiTypescript, SiTailwindcss, SiNextdotjs } from "react-icons/si";
+
+const iconMap: Record<string, JSX.Element> = {
+  html: <FaHtml5 />,
+  css: <FaCss3Alt />,
+  js: <FaJsSquare />,
+  javascript: <FaJsSquare />,
+  typescript: <SiTypescript />,
+  react: <FaReact />,
+  vue: <FaVuejs />,
+  tailwind: <SiTailwindcss />,
+  next: <SiNextdotjs />,
+  node: <FaNodeJs />,
+  python: <FaPython />,
+  git: <FaGitAlt />,
+  // adicione mais conforme necessário
+};
+
 import { Card } from "./card";
 import { useState, useEffect } from "react";
 
@@ -12,7 +33,7 @@ interface Project {
   id: string;
   name: string;
   img: string;
-  framework: string;
+  techs: string[];
   description: string;
   link: string;
 }
@@ -20,26 +41,6 @@ interface Project {
 export function CardGroup() {
   const [projetos, setProjetos] = useState<Project[]>([]);
   const [loading, setLoading] = useState(false);
-
-  const icons = (
-    <>
-      <FaHtml5 />
-      <FaCss3Alt />
-      <FaJsSquare />
-    </>
-  );
-
-  const reactIcons = (
-    <>
-      <FaReact />
-    </>
-  );
-
-  const vueIcons = (
-    <>
-      <FaVuejs />
-    </>
-  );
 
   useEffect(() => {
     async function getLocalProjects() {
@@ -90,11 +91,11 @@ export function CardGroup() {
               description={proj.description}
               icons={
                 <div className="flex gap-3 text-xl mb-3">
-                  {proj.framework === "padrao"
-                    ? icons
-                    : proj.framework === "vue"
-                    ? vueIcons
-                    : reactIcons}
+                  {proj.techs?.map((tech) => (
+                    <span key={tech} title={tech}>
+                      {iconMap[tech.toLowerCase()] ?? null}
+                    </span>
+                  ))}
                 </div>
               }
             />

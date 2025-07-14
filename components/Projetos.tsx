@@ -1,5 +1,30 @@
-import { FaGithub, FaExternalLinkAlt, FaArrowDown } from "react-icons/fa";
 import { useState, useEffect } from "react";
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaJsSquare,
+  FaReact,
+  FaVuejs,
+  FaNodeJs,
+  FaGithub,
+  FaExternalLinkAlt,
+  FaArrowDown,
+} from "react-icons/fa";
+import { SiTypescript, SiTailwindcss, SiFirebase } from "react-icons/si";
+import { GiPineapple } from "react-icons/gi";
+
+const iconMap: Record<string, JSX.Element> = {
+  html5: <FaHtml5 />,
+  css3: <FaCss3Alt />,
+  javascript: <FaJsSquare />,
+  typescript: <SiTypescript />,
+  react: <FaReact />,
+  vue: <FaVuejs />,
+  pinia: <GiPineapple />,
+  tailwind: <SiTailwindcss />,
+  firebase: <SiFirebase />,
+  "node.js": <FaNodeJs />,
+};
 
 export function Projetos({
   setOpenProjects,
@@ -18,14 +43,14 @@ export function Projetos({
         "https://res.cloudinary.com/dbwz36bcf/image/upload/v1741477590/Soundify-16-9_p9hk7c.png",
     },
     {
-      title: "Astroxz Designer",
+      title: "Food Delivery",
       description:
-        "Portfólio criativo com foco em design e desenvolvimento visual",
-      technologies: ["React", "Firebase", "Tailwind CSS"],
+        "Food App é uma aplicação simples e responsiva para pedidos de comida, com foco em usabilidade.",
+      technologies: ["Vue", "Typescript", "Pinia", "Tailwind"],
       githubLink: "https://github.com/thiagokilu/",
-      liveLink: "https://astroxzdesigner.com.br/",
+      liveLink: "https://delivery-app-ddvs.vercel.app/",
       image:
-        "https://res.cloudinary.com/ds4ptms7d/image/upload/v1748537447/Captura_de_tela_de_2025-05-29_13-49-36_fgsone.png",
+        "https://res.cloudinary.com/ds4ptms7d/image/upload/v1752532466/Captura_de_tela_de_2025-07-14_19-30-31_pj93kg.png",
     },
   ];
 
@@ -76,14 +101,22 @@ export function Projetos({
                   <p className="text-gray-300 mb-4">{project.description}</p>
 
                   <div className="flex flex-wrap gap-2 mb-6">
-                    {project.technologies.map((tech, techIndex) => (
-                      <span
-                        key={techIndex}
-                        className="px-3 py-1 bg-gray-600 rounded-full text-xs text-gray-200"
-                      >
-                        {tech}
-                      </span>
-                    ))}
+                    {project.technologies.map((tech, techIndex) => {
+                      const lowerTech = tech.toLowerCase();
+                      return (
+                        <span
+                          key={techIndex}
+                          className="flex items-center gap-1 px-3 py-1 bg-gray-600 rounded-full text-xs text-gray-200"
+                        >
+                          {iconMap[lowerTech] && (
+                            <span className="text-base">
+                              {iconMap[lowerTech]}
+                            </span>
+                          )}
+                          {tech}
+                        </span>
+                      );
+                    })}
                   </div>
 
                   <div className="flex justify-between">
