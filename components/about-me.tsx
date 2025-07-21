@@ -9,6 +9,7 @@ import {
   FaGithub,
   FaLinkedin,
   FaVuejs,
+  FaSass,
 } from "react-icons/fa";
 import { SiTailwindcss, SiTypescript } from "react-icons/si";
 import { FcLinux } from "react-icons/fc";
@@ -85,6 +86,9 @@ export function About_me() {
                 </div>
                 <div className="skill-tooltip" title="CSS3">
                   <FaCss3Alt className="text-3xl text-[#1572b6] hover:scale-110 transition-transform" />
+                </div>
+                <div className="skill-tooltip" title="Sass">
+                  <FaSass className="text-3xl text-[#cf6a9b] hover:scale-110 transition-transform" />
                 </div>
                 <div className="skill-tooltip" title="Tailwind CSS">
                   <SiTailwindcss className="text-3xl text-[#00bcff] hover:scale-110 transition-transform" />
