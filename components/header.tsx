@@ -17,7 +17,7 @@ export function Header({ setNumCard, setOpenProjects }: HeaderProps) {
           />
         </a>
         <nav>
-          <ul className="flex items-center gap-8 text-sm text-gray-300  font-semibold lg:text-xl md:text-xl">
+          <ul className="flex items-center gap-5 text-sm text-gray-300  font-semibold lg:text-xl md:text-xl">
             <li>
               <a
                 onClick={() => {
@@ -35,7 +35,7 @@ export function Header({ setNumCard, setOpenProjects }: HeaderProps) {
                   setOpenProjects(false);
                   setNumCard(2);
                 }}
-                className="hover:text-white transition-colors hover:cursor-pointer"
+                className="hover:text-white transition-colors hover:cursor-pointer whitespace-nowrap"
               >
                 Redes Sociais
               </a>
