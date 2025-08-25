@@ -22,17 +22,6 @@ export function Header({ setNumCard, setOpenProjects }: HeaderProps) {
               <a
                 onClick={() => {
                   setOpenProjects(false);
-                  setNumCard(0);
-                }}
-                className="hover:text-white transition-colors hover:cursor-pointer"
-              >
-                Home
-              </a>
-            </li>
-            <li>
-              <a
-                onClick={() => {
-                  setOpenProjects(false);
                   setNumCard(1);
                 }}
                 className="hover:text-white transition-colors hover:cursor-pointer"
