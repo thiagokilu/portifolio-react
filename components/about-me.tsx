@@ -14,6 +14,7 @@ import {
 import { SiTailwindcss, SiTypescript } from "react-icons/si";
 import { FcLinux } from "react-icons/fc";
 import { useState, useEffect } from "react";
+import { RiNextjsFill } from "react-icons/ri";
 
 export function About_me() {
   const [show, setShow] = useState(false);
@@ -104,6 +105,9 @@ export function About_me() {
                 </div>
                 <div className="skill-tooltip" title="VueJs">
                   <FaVuejs className="text-3xl text-[#14bb87] hover:scale-110 transition-transform" />
+                </div>
+                <div className="skill-tooltip" title="NextJs">
+                  <RiNextjsFill className="text-3xl text-white hover:scale-110 transition-transform" />
                 </div>
                 <div className="skill-tooltip" title="Git">
                   <FaGitAlt className="text-3xl text-[#f05032] hover:scale-110 transition-transform" />
