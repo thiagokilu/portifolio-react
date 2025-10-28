@@ -1,4 +1,4 @@
-import { JSX, useEffect } from "react";
+import { JSX } from "react";
 
 interface CardProps {
   linkProjeto: string;
