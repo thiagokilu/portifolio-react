@@ -7,8 +7,15 @@ import {
   FaNodeJs,
   FaPython,
   FaGitAlt,
+  FaDocker,
 } from "react-icons/fa";
-import { SiTypescript, SiTailwindcss, SiNextdotjs } from "react-icons/si";
+import {
+  SiTypescript,
+  SiTailwindcss,
+  SiNextdotjs,
+  SiPostgresql,
+  SiExpress,
+} from "react-icons/si";
 
 import type { ReactNode } from "react";
 
@@ -25,15 +32,20 @@ const iconMap: Record<string, ReactNode> = {
   node: <FaNodeJs />,
   python: <FaPython />,
   git: <FaGitAlt />,
+  docker: <FaDocker />,
+  express: <SiExpress />,
+  postgres: <SiPostgresql />,
+  firebase: <IoLogoFirebase />,
   // adicione mais conforme necessário
 };
 
 import { Card } from "./card";
 import { useState, useEffect } from "react";
+import { IoLogoFirebase } from "react-icons/io5";
 
 interface Project {
   id: string;
-  name: string;
+  title: string;
   img: string;
   techs: string[];
   description: string;
@@ -89,7 +101,7 @@ export function CardGroup() {
               key={proj.id}
               linkProjeto={proj.link}
               linkImg={proj.img}
-              title={proj.name}
+              title={proj.title} // ✅ troque name por title
               description={proj.description}
               icons={
                 <div className="flex gap-3 text-xl mb-3">

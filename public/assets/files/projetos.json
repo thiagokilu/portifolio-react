@@ -118,5 +118,22 @@
     "description": "Portfólio criativo com foco em design e desenvolvimento visual",
     "link": "https://astroxzdesigner.com.br/",
     "techs": ["react", "firebase", "tailwind"]
+  },
+  {
+    "id": 18,
+    "img": "https://res.cloudinary.com/ds4ptms7d/image/upload/v1761652313/Captura_de_tela_de_2025-10-28_08-50-24_kvjedu.png",
+    "title": "Tickets Api",
+    "description": "Api para gerenciamento de tickets e chamados de suporte.",
+    "link": "https://github.com/thiagokilu/api-tickets-docker",
+    "techs": ["node", "express", "docker", "postgres"]
+  },
+
+  {
+    "id": 18,
+    "title": "Soundify",
+    "description": "Plataforma de e-commerce completa com carrinho de compras, autenticação e pagamentos.",
+    "techs": ["Html5", "Css3", "Javascript", "Node.js"],
+    "link": "https://soundify-five.vercel.app/",
+    "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1741477590/Soundify-16-9_p9hk7c.png"
   }
 ]

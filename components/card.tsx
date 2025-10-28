@@ -1,4 +1,4 @@
-import { JSX } from "react";
+import { JSX, useEffect } from "react";
 
 interface CardProps {
   linkProjeto: string;
@@ -18,28 +18,26 @@ export function Card({
   return (
     <div
       className="dark:bg-gray-800 border-2 border-gray-700
-      group relative w-[400px] max-h-[400px] overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300 flex flex-col"
+  group relative w-[400px] max-h-[400px] rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300 flex flex-col"
     >
       <a href={linkProjeto} target="_blank" rel="noopener noreferrer">
-        <div className="overflow-hidden h-52">
-          {" "}
-          {/* ✅ Altura fixa na imagem */}
+        <div className="overflow-hidden aspect-video bg-gray-900">
           <img
             src={linkImg}
             alt={title}
             className="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-300"
-            width={400}
-            height={400}
           />
         </div>
-        <div className="p-6 flex flex-col items-start">
-          <div className="flex justify-between w-full">
-            <h3 className="text-xl font-semibold mb-2">{title}</h3>
-            <div className="flex gap-3 text-xl mb-3">{icons}</div>
-          </div>
-          <p>{description}</p>
-        </div>
       </a>
+
+      {/* conteúdo fora do link */}
+      <div className="p-6 flex flex-col items-start text-white">
+        <div className="flex justify-between w-full">
+          <h3 className="text-xl font-semibold mb-2">{title}</h3>
+          <div className="flex gap-3 text-xl mb-3">{icons}</div>
+        </div>
+        <p className="text-gray-300">{description}</p>
+      </div>
     </div>
   );
 }
