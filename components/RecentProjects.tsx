@@ -1,4 +1,3 @@
-import React from "react";
 import {
   FaHtml5,
   FaCss3Alt,
@@ -6,13 +5,10 @@ import {
   FaReact,
   FaVuejs,
   FaNodeJs,
-  FaGithub,
-  FaExternalLinkAlt,
-  FaArrowDown,
 } from "react-icons/fa";
 import { SiTypescript, SiTailwindcss } from "react-icons/si";
 import { GiPineapple } from "react-icons/gi";
-
+import type { ReactNode } from "react";
 import { IoLogoFirebase } from "react-icons/io5";
 import RecentProjectCard from "./RecentProjectCard";
 const iconMap: Record<string, ReactNode> = {
