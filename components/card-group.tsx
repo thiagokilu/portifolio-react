@@ -1,47 +1,6 @@
-import {
-  FaHtml5,
-  FaCss3Alt,
-  FaJsSquare,
-  FaReact,
-  FaVuejs,
-  FaNodeJs,
-  FaPython,
-  FaGitAlt,
-  FaDocker,
-} from "react-icons/fa";
-import {
-  SiTypescript,
-  SiTailwindcss,
-  SiNextdotjs,
-  SiPostgresql,
-  SiExpress,
-} from "react-icons/si";
-
-import type { ReactNode } from "react";
-
-const iconMap: Record<string, ReactNode> = {
-  html: <FaHtml5 />,
-  css: <FaCss3Alt />,
-  js: <FaJsSquare />,
-  javascript: <FaJsSquare />,
-  typescript: <SiTypescript />,
-  react: <FaReact />,
-  vue: <FaVuejs />,
-  tailwind: <SiTailwindcss />,
-  next: <SiNextdotjs />,
-  node: <FaNodeJs />,
-  python: <FaPython />,
-  git: <FaGitAlt />,
-  docker: <FaDocker />,
-  express: <SiExpress />,
-  postgres: <SiPostgresql />,
-  firebase: <IoLogoFirebase />,
-  // adicione mais conforme necessário
-};
-
-import { Card } from "./card";
 import { useState, useEffect } from "react";
-import { IoLogoFirebase } from "react-icons/io5";
+import { Card } from "./card";
+import { iconMap } from "../src/utils/iconMap";
 
 interface Project {
   id: string;
@@ -95,26 +54,24 @@ export function CardGroup() {
       )}
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center">
-        {projetos.map((proj) => {
-          return (
-            <Card
-              key={proj.id}
-              linkProjeto={proj.link}
-              linkImg={proj.img}
-              title={proj.title} // ✅ troque name por title
-              description={proj.description}
-              icons={
-                <div className="flex gap-3 text-xl mb-3">
-                  {proj.techs?.map((tech) => (
-                    <span key={tech} title={tech}>
-                      {iconMap[tech.toLowerCase()] ?? null}
-                    </span>
-                  ))}
-                </div>
-              }
-            />
-          );
-        })}
+        {projetos.map((proj) => (
+          <Card
+            key={proj.id}
+            linkProjeto={proj.link}
+            linkImg={proj.img}
+            title={proj.title}
+            description={proj.description}
+            icons={
+              <div className="flex gap-3 text-xl mb-3">
+                {proj.techs?.map((tech) => (
+                  <span key={tech} title={tech}>
+                    {iconMap[tech.toLowerCase()] ?? null}
+                  </span>
+                ))}
+              </div>
+            }
+          />
+        ))}
       </div>
     </div>
   );

@@ -1,28 +1,5 @@
-import {
-  FaHtml5,
-  FaCss3Alt,
-  FaJsSquare,
-  FaReact,
-  FaVuejs,
-  FaNodeJs,
-} from "react-icons/fa";
-import { SiTypescript, SiTailwindcss } from "react-icons/si";
-import { GiPineapple } from "react-icons/gi";
-import type { ReactNode } from "react";
-import { IoLogoFirebase } from "react-icons/io5";
+import { iconMap } from "../src/utils/iconMap";
 import RecentProjectCard from "./RecentProjectCard";
-const iconMap: Record<string, ReactNode> = {
-  html5: <FaHtml5 />,
-  css3: <FaCss3Alt />,
-  javascript: <FaJsSquare />,
-  typescript: <SiTypescript />,
-  react: <FaReact />,
-  vue: <FaVuejs />,
-  pinia: <GiPineapple />,
-  tailwind: <SiTailwindcss />,
-  firebase: <IoLogoFirebase />,
-  node: <FaNodeJs />,
-};
 
 export default function RecentProjects() {
   const projects = [
@@ -32,6 +9,7 @@ export default function RecentProjects() {
         "Sistema para gerenciamento de tickets e chamados de suporte.",
       technologies: [
         "next",
+        "typescript",
         "firebase",
         "node",
         "express",
