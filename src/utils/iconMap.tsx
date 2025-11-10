@@ -9,6 +9,7 @@ import {
   FaPython,
   FaGitAlt,
   FaDocker,
+  FaStackExchange,
 } from "react-icons/fa";
 import {
   SiTypescript,
@@ -16,10 +17,12 @@ import {
   SiNextdotjs,
   SiPostgresql,
   SiExpress,
+  SiFastify,
 } from "react-icons/si";
 import { IoLogoFirebase } from "react-icons/io5";
 
 import type { ReactNode } from "react";
+import { LuBrain } from "react-icons/lu";
 
 export const iconMap: Record<string, ReactNode> = {
   html: <FaHtml5 />,
@@ -38,4 +41,6 @@ export const iconMap: Record<string, ReactNode> = {
   express: <SiExpress />,
   postgres: <SiPostgresql />,
   firebase: <IoLogoFirebase />,
+  fastify: <SiFastify />,
+  ai: <LuBrain />,
 };
