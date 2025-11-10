@@ -134,5 +134,13 @@
     "techs": ["Html", "Css", "Javascript", "Node"],
     "link": "https://soundify-five.vercel.app/",
     "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1741477590/Soundify-16-9_p9hk7c.png"
+  },
+    {
+    "id": 18,
+    "img": "https://res.cloudinary.com/ds4ptms7d/image/upload/v1762794413/Captura_de_tela_de_2025-11-10_14-06-37_zpkc1e.png",
+    "title": "App Dietas",
+    "description": "Um aplicativo completo que utiliza Inteligência Artificial para gerar planos alimentares personalizados com base nas informações do usuário.  O sistema é composto por um Frontend em Vue/React** e um **Backend em Node.js/Fastify, com integração a um modelo de IA para elaboração das dietas.",
+    "link": "https://github.com/thiagokilu/app-dieta",
+    "techs": ["next", "typescript", "talwindcss", "node", "fastify", "ai"]
   }
 ]
