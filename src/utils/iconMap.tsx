@@ -9,7 +9,6 @@ import {
   FaPython,
   FaGitAlt,
   FaDocker,
-  FaStackExchange,
 } from "react-icons/fa";
 import {
   SiTypescript,
