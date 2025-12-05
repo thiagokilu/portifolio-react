@@ -142,5 +142,21 @@
     "description": "Um aplicativo completo que utiliza Inteligência Artificial para gerar planos alimentares personalizados com base nas informações do usuário.",
     "link": "https://github.com/thiagokilu/app-dieta",
     "techs": ["next", "typescript", "tailwind", "node", "fastify", "ai"]
+  },
+  {
+    "id": 19,
+    "img": "https://res.cloudinary.com/ds4ptms7d/image/upload/v1764934845/Captura_de_tela_de_2025-12-05_08-40-08_jh0r9u.png",
+    "title": "Web Host Landing Page",
+    "description": "Web Host Landing Page",
+    "techs": ["react", "tailwind"],
+    "link": "http://web-host-landig-page.vercel.app/"
+  },
+  {
+    "id": 20,
+    "img": "https://res.cloudinary.com/ds4ptms7d/image/upload/v1764935078/Captura_de_tela_de_2025-12-05_08-44-15_utelu4.png",
+    "title": "Encurtador de url",
+    "description": "Sistema de encurtamento de URLs com geração de QR Code, expiração personalizada e dashboard para gerenciamento.",
+    "techs": ["react", "tailwind", "node", "express", "postgres"],
+    "link": "https://url-shortener-ivory-eight.vercel.app/"
   }
 ]
