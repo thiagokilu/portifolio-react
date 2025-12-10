@@ -1,0 +1,105 @@
+"use client";
+import { GraduationCap, Languages } from "lucide-react";
+import { motion, type Variants } from "framer-motion";
+
+const fadeUp: Variants = {
+  hidden: { opacity: 0, y: 40 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
+
+const staggerContainer = {
+  show: {
+    transition: { staggerChildren: 0.2 },
+  },
+};
+
+export default function About() {
+  return (
+    <section
+      id="About"
+      className="relative flex flex-col items-center justify-center px-4"
+    >
+      {/* Título */}
+      <motion.h2
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.4 }}
+        className="text-4xl font-semibold text-white mb-14 tracking-wide relative"
+      >
+        Sobre mim
+        <span className="block w-16 h-[3px] bg-purple-primary mx-auto mt-3 rounded-full"></span>
+      </motion.h2>
+
+      <motion.div
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.3 }}
+        className="flex flex-col md:flex-row gap-14 max-w-6xl w-full justify-center relative"
+      >
+        {/* Formações */}
+        <motion.div className="flex flex-col gap-10 w-full md:w-1/3">
+          <motion.div
+            variants={fadeUp}
+            className="group bg-white/5 backdrop-blur-md border border-white/10 
+              hover:border-purple-primary/60 hover:shadow-purple-primary/30 
+              shadow-[0_0_20px_-5px_rgba(0,0,0,0.4)]
+              transition-all flex items-center rounded-2xl p-6 gap-4"
+          >
+            <GraduationCap className="text-purple-primary w-8 h-8 group-hover:scale-110 transition-transform" />
+            <span className="text-gray-200 text-lg">
+              Gestão em Tecnologia da Informação
+            </span>
+          </motion.div>
+
+          <motion.div
+            variants={fadeUp}
+            className="group bg-white/5 backdrop-blur-md border border-white/10 
+              hover:border-purple-primary/60 hover:shadow-purple-primary/30 
+              shadow-[0_0_20px_-5px_rgba(0,0,0,0.4)]
+              transition-all flex items-center rounded-2xl p-6 gap-4"
+          >
+            <Languages className="text-purple-primary w-8 h-8 group-hover:scale-110 transition-transform" />
+            <span className="text-gray-200 text-lg">Inglês</span>
+          </motion.div>
+        </motion.div>
+
+        {/* Linha vertical */}
+        <motion.div
+          variants={fadeUp}
+          className="hidden md:flex items-center justify-center"
+        >
+          <div className="relative flex items-center">
+            <div className="h-full w-[3px] bg-gradient-to-b from-purple-primary to-purple-400 rounded-full"></div>
+          </div>
+        </motion.div>
+
+        {/* Texto */}
+        <motion.div variants={fadeUp} className="md:w-1/2 relative">
+          <div className="absolute -top-6 -right-6 w-20 h-20 border border-purple-primary/20 rounded-xl rotate-12"></div>
+
+          <p className="text-gray-300 leading-relaxed text-lg tracking-wide relative z-10">
+            Sou um desenvolvedor apaixonado por tecnologia e movido pelo desejo
+            de criar interfaces elegantes, rápidas e funcionais. Tenho grande
+            interesse em experiência do usuário, performance e boas práticas de
+            desenvolvimento.
+            <br />
+            <br />
+            Gosto de transformar ideias em projetos reais, explorando novas
+            ferramentas, frameworks modernos e padrões que tornam o código mais
+            limpo e escalável.
+            <br />
+            <br />
+            Busco sempre evoluir minhas habilidades e participar de projetos que
+            unam criatividade, inovação e impacto real para pessoas e empresas.
+          </p>
+        </motion.div>
+      </motion.div>
+    </section>
+  );
+}

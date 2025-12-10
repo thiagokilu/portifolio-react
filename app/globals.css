@@ -2,12 +2,20 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #000000;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-purple-primary: #b058fd;
+  --color-purple-secondary: #a058fd;
+  --color-purple-tertiary: #8c5afd;
+  --color-purple-quaternary: #7c4efd;
+  --color-purple-quinary: #6c3efd;
+  --color-purple-senary: #5c2efd;
+  --font-geist-sans: "Geist Sans", sans-serif;
+  --font-geist-mono: "Geist Mono", monospace;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -22,5 +30,22 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth !important;
+}
+
+/* Adicione ao seu globals.css */
+@layer utilities {
+  .bg-grid-pattern {
+    background-color: transparent;
+    background-image: linear-gradient(
+        to right,
+        rgba(147, 51, 234, 0.03) 1px,
+        transparent 1px
+      ),
+      linear-gradient(to bottom, rgba(147, 51, 234, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
 }

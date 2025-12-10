@@ -1,0 +1,138 @@
+[
+  {
+    "id": 3,
+    "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/5_Furniture_Web_Page_ttrckj.png",
+    "title": "Furniture Web Page",
+    "description": "Landing page de e-commerce para móveis com design responsivo e foco na experiência mobile.",
+    "link": "https://furniture-web-page.vercel.app",
+    "techs": ["Html", "Css", "Javascript"]
+  },
+  {
+    "id": 4,
+    "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/6_Daily_Coffee_aesypi.png",
+    "title": "Daily Coffee",
+    "description": "Site de cafeteria com layout moderno e responsivo, destacando produtos e promoções diárias.",
+    "link": "https://daily-coffee-tau.vercel.app",
+    "techs": ["Html", "Css", "Javascript"]
+  },
+  {
+    "id": 2,
+    "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/4_Kanban_lyaywv.png",
+    "title": "Kanban",
+    "description": "Sistema de organização de tarefas estilo Kanban com colunas dinâmicas e arrastar e soltar.",
+    "link": "https://kanban-beta-murex.vercel.app",
+    "techs": ["React", "Javascript", "Tailwind"]
+  },
+  {
+    "id": 5,
+    "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745436571/21_React-books_tf6x5d.png",
+    "title": "React books",
+    "description": "Busca de livros usando api do google books e modal com informaçõs do livro.",
+    "link": "https://books-react-sand.vercel.app/",
+    "techs": ["React", "Javascript", "Tailwind"]
+  },
+  {
+    "id": 6,
+    "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/8_Carros_Search_cwtw3u.png",
+    "title": "Carros Search",
+    "description": "Ferramenta de busca de carros com filtros e integração com APIs para exibir modelos e preços.",
+    "link": "https://carros-search.vercel.app",
+    "techs": ["React", "Javascript", "Tailwind"]
+  },
+  {
+    "id": 7,
+    "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/9_Cronômetro_rliavr.png",
+    "title": "Cronômetro",
+    "description": "Aplicação de cronômetro simples com controle de tempo e interface amigável.",
+    "link": "https://cronometro-lovat-six.vercel.app",
+    "techs": ["React", "Javascript", "Tailwind"]
+  },
+  {
+    "id": 11,
+    "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/13_Notes_React_zq4dtn.png",
+    "title": "Notes React",
+    "description": "Aplicativo de anotações feito em React, com suporte para edição, exclusão e armazenamento local.",
+    "link": "https://notes-react-orpin.vercel.app",
+    "techs": ["React", "Typescript", "Tailwind"]
+  },
+  {
+    "id": 16,
+    "img": "https://res.cloudinary.com/ds4ptms7d/image/upload/v1748537447/Captura_de_tela_de_2025-05-29_13-49-20_ifmt56.png",
+    "title": "Form MultiStep",
+    "description": "Formulário multietapas com validação e navegação entre os passos.",
+    "link": "https://form-multistep-gamma.vercel.app/",
+    "techs": ["React", "Javascript", "Tailwind"]
+  },
+  {
+    "id": 17,
+    "img": "https://res.cloudinary.com/ds4ptms7d/image/upload/v1748537447/Captura_de_tela_de_2025-05-29_13-49-36_fgsone.png",
+    "title": "Astroxz Designer",
+    "description": "Portfólio criativo com foco em design e desenvolvimento visual",
+    "link": "https://astroxzdesigner.com.br/",
+    "techs": ["React", "Tailwind"]
+  },
+  {
+    "id": 18,
+    "img": "https://res.cloudinary.com/ds4ptms7d/image/upload/v1761652313/Captura_de_tela_de_2025-10-28_08-50-24_kvjedu.png",
+    "title": "Tickets Api",
+    "description": "Api para gerenciamento de tickets e chamados de suporte.",
+    "link": "https://github.com/thiagokilu/api-tickets-docker",
+    "techs": ["Node", "Express", "Docker", "Postgres"]
+  },
+  {
+    "id": 19,
+    "title": "Soundify",
+    "description": "Plataforma de e-commerce completa com carrinho de compras, autenticação e pagamentos.",
+    "techs": ["Html", "Css", "Javascript", "Node"],
+    "link": "https://soundify-five.vercel.app/",
+    "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1741477590/Soundify-16-9_p9hk7c.png"
+  },
+  {
+    "id": 20,
+    "img": "https://res.cloudinary.com/ds4ptms7d/image/upload/v1762794413/Captura_de_tela_de_2025-11-10_14-06-37_zpkc1e.png",
+    "title": "App Dietas",
+    "description": "Um aplicativo completo que utiliza Inteligência Artificial para gerar planos alimentares personalizados com base nas informações do usuário.",
+    "link": "https://github.com/thiagokilu/app-dieta",
+    "techs": ["Next", "Typescript", "Tailwind", "Node", "Fastify", "Ai"]
+  },
+  {
+    "id": 21,
+    "img": "https://res.cloudinary.com/ds4ptms7d/image/upload/v1764934845/Captura_de_tela_de_2025-12-05_08-40-08_jh0r9u.png",
+    "title": "Web Host Landing Page",
+    "description": "Web Host Landing Page",
+    "techs": ["React", "Tailwind"],
+    "link": "http://web-host-landig-page.vercel.app/"
+  },
+  {
+    "id": 22,
+    "img": "https://res.cloudinary.com/ds4ptms7d/image/upload/v1764935078/Captura_de_tela_de_2025-12-05_08-44-15_utelu4.png",
+    "title": "Encurtador de url",
+    "description": "Sistema de encurtamento de URLs com geração de QR Code, expiração personalizada e dashboard para gerenciamento.",
+    "techs": ["React", "Tailwind", "Node", "Express", "Postgres"],
+    "link": "https://url-shortener-ivory-eight.vercel.app/"
+  },
+  {
+    "id": 23,
+    "img": "https://res.cloudinary.com/ds4ptms7d/image/upload/v1761670908/Captura_de_tela_de_2025-10-28_14-00-03_bb7psc.png",
+    "title": "Nexa System",
+    "description": "Sistema para gerenciamento de tickets e chamados de suporte.",
+    "link": "https://nexa-system.vercel.app/",
+    "techs": [
+      "Next",
+      "Typescript",
+      "Firebase",
+      "Node",
+      "Express",
+      "Docker",
+      "Postgres"
+    ]
+  },
+  {
+    "id": 24,
+    "img": "https://res.cloudinary.com/ds4ptms7d/image/upload/v1752532466/Captura_de_tela_de_2025-07-14_19-30-31_pj93kg.png",
+    "title": "Food Delivery",
+    "description": "Food App é uma aplicação simples e responsiva para pedidos de comida, com foco em usabilidade.",
+    "link": "https://delivery-app-ddvs.vercel.app/",
+    "techs": ["Vue", "Typescript", "Pinia", "Tailwind"]
+  }
+]
