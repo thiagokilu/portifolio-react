@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #000000;
+  --background: #0a0a0a; /* sempre escuro */
+  --foreground: #ededed; /* sempre claro */
 }
 
 @theme inline {
@@ -14,18 +14,22 @@
   --color-purple-quaternary: #7c4efd;
   --color-purple-quinary: #6c3efd;
   --color-purple-senary: #5c2efd;
+
   --font-geist-sans: "Geist Sans", sans-serif;
   --font-geist-mono: "Geist Mono", monospace;
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
+/* Remova completamente esta parte:
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
 }
+*/
 
 body {
   background: var(--background);
@@ -36,7 +40,6 @@ html {
   scroll-behavior: smooth !important;
 }
 
-/* Adicione ao seu globals.css */
 @layer utilities {
   .bg-grid-pattern {
     background-color: transparent;
