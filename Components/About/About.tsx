@@ -29,7 +29,7 @@ export default function About() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.4 }}
-        className="text-4xl font-semibold text-white mb-14 tracking-wide relative"
+        className="text-4xl font-semibold  mb-14 tracking-wide relative"
       >
         Sobre mim
         <span className="block w-16 h-[3px] bg-purple-primary mx-auto mt-3 rounded-full"></span>
@@ -52,9 +52,7 @@ export default function About() {
               transition-all flex items-center rounded-2xl p-6 gap-4"
           >
             <GraduationCap className="text-purple-primary w-8 h-8 group-hover:scale-110 transition-transform" />
-            <span className="text-gray-200 text-lg">
-              Gestão em Tecnologia da Informação
-            </span>
+            <span className="text-lg">Gestão em Tecnologia da Informação</span>
           </motion.div>
 
           <motion.div
@@ -65,7 +63,7 @@ export default function About() {
               transition-all flex items-center rounded-2xl p-6 gap-4"
           >
             <Languages className="text-purple-primary w-8 h-8 group-hover:scale-110 transition-transform" />
-            <span className="text-gray-200 text-lg">Inglês</span>
+            <span className="text-lg">Inglês</span>
           </motion.div>
         </motion.div>
 
@@ -83,7 +81,7 @@ export default function About() {
         <motion.div variants={fadeUp} className="md:w-1/2 relative">
           <div className="absolute -top-6 -right-6 w-20 h-20 border border-purple-primary/20 rounded-xl rotate-12"></div>
 
-          <p className="text-gray-300 leading-relaxed text-lg tracking-wide relative z-10">
+          <p className="leading-relaxed text-lg tracking-wide relative z-10">
             Sou um desenvolvedor apaixonado por tecnologia e movido pelo desejo
             de criar interfaces elegantes, rápidas e funcionais. Tenho grande
             interesse em experiência do usuário, performance e boas práticas de

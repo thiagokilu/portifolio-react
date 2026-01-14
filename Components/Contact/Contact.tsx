@@ -90,7 +90,7 @@ export default function Contact() {
             {/* Título */}
             <motion.h2
               variants={fadeUp}
-              className="text-4xl font-semibold text-white tracking-wide"
+              className="text-4xl font-semibold  tracking-wide"
             >
               Contato
             </motion.h2>
@@ -102,10 +102,7 @@ export default function Contact() {
             />
           </motion.div>
 
-          <motion.p
-            variants={fadeUp}
-            className="text-gray-300 leading-relaxed text-lg"
-          >
+          <motion.p variants={fadeUp} className="leading-relaxed text-lg">
             Se você tem um projeto em mente, precisa de ajuda com
             desenvolvimento front-end ou apenas quer bater um papo sobre ideias
             criativas, estou aqui para ajudar.
@@ -119,7 +116,7 @@ export default function Contact() {
         {/* FORMULÁRIO */}
         <motion.div
           variants={fadeUp}
-          className="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-md"
+          className="glass-surface p-8 rounded-2xl"
         >
           <form
             className="flex flex-col gap-5"
@@ -127,11 +124,11 @@ export default function Contact() {
           >
             {/* Nome */}
             <motion.div variants={fadeUp} className="flex flex-col gap-2">
-              <label className="text-gray-300 text-sm">Seu nome</label>
+              <label className="text-sm">Seu nome</label>
               <input
                 type="text"
                 {...register("name")}
-                className="bg-white/10 border border-white/10 px-4 py-3 rounded-xl text-white focus:outline-none focus:border-purple-primary"
+                className="bg-[var(--background)] border border-foreground/10 px-4 py-3 rounded-xl focus:outline-none focus:border-purple-primary"
               />
               {errors.name && (
                 <span className="text-red-400 text-sm">
@@ -142,11 +139,11 @@ export default function Contact() {
 
             {/* Email */}
             <motion.div variants={fadeUp} className="flex flex-col gap-2">
-              <label className="text-gray-300 text-sm">Seu e-mail</label>
+              <label className="text-sm">Seu e-mail</label>
               <input
                 type="email"
                 {...register("email")}
-                className="bg-white/10 border border-white/10 px-4 py-3 rounded-xl text-white focus:outline-none focus:border-purple-primary"
+                className="bg-[var(--background)] border border-foreground/10 px-4 py-3 rounded-xl focus:outline-none focus:border-purple-primary"
               />
               {errors.email && (
                 <span className="text-red-400 text-sm">
@@ -157,11 +154,11 @@ export default function Contact() {
 
             {/* Mensagem */}
             <motion.div variants={fadeUp} className="flex flex-col gap-2">
-              <label className="text-gray-300 text-sm">Mensagem</label>
+              <label className="text-sm">Mensagem</label>
               <textarea
                 rows={4}
                 {...register("message")}
-                className="bg-white/10 border border-white/10 px-4 py-3 rounded-xl text-white focus:outline-none focus:border-purple-primary"
+                className="bg-[var(--background)] border border-foreground/10 px-4 py-3 rounded-xl focus:outline-none focus:border-purple-primary"
               ></textarea>
             </motion.div>
 
@@ -170,7 +167,7 @@ export default function Contact() {
               variants={fadeUp}
               type="submit"
               disabled={isSubmitting}
-              className="bg-purple-primary hover:bg-purple-600 transition-all py-3 rounded-xl text-white font-semibold flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+              className="bg-purple-primary text-white hover:bg-purple-600 transition-all py-3 rounded-xl  font-semibold flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isSubmitting ? "Enviando..." : "Enviar mensagem"}
             </motion.button>

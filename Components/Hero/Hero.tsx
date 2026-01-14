@@ -58,11 +58,9 @@ export default function Hero() {
               <span className="text-purple-primary drop-shadow-md">Thiago</span>
             </h1>
 
-            <span className="text-xl font-light text-gray-400">
-              Front-end Developer
-            </span>
+            <span className="text-xl font-light">Front-end Developer</span>
 
-            <p className="text-lg text-gray-500">
+            <p className="text-lg">
               Desenvolvedor especializado em interfaces modernas e de alto
               desempenho, com foco em acessibilidade e experiência do usuário.
             </p>
@@ -75,7 +73,7 @@ export default function Hero() {
               <a
                 href="/files/curriculo-thiago-portifolio.pdf"
                 download="curriculo-thiago.pdf"
-                className="bg-purple-primary flex items-center justify-center gap-2 text-white px-8 py-3 rounded-full transition-all duration-300 hover:bg-purple-600 hover:shadow-lg hover:shadow-purple-300/30"
+                className="bg-purple-primary flex items-center justify-center gap-2  px-8 py-3 rounded-full transition-all duration-300 hover:bg-purple-600 hover:shadow-lg hover:shadow-purple-300/30"
               >
                 <FileDown />
                 Download CV
@@ -91,7 +89,7 @@ export default function Hero() {
                 href="https://github.com/thiagokilu"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-purple-primary transition-colors duration-300"
+                className="hover:text-purple-primary transition-colors duration-300"
               >
                 <FaGithub />
               </a>
@@ -100,14 +98,14 @@ export default function Hero() {
                 href="https://www.linkedin.com/in/thiago-alexandre-cavalcante/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-purple-primary transition-colors duration-300"
+                className="hover:text-purple-primary transition-colors duration-300"
               >
                 <FaLinkedin />
               </a>
             </motion.div>
 
             {/* Scroll */}
-            <div className="absolute bottom-20 left-1/2 -translate-x-1/2 flex flex-col items-center text-gray-400">
+            <div className="absolute bottom-20 left-1/2 -translate-x-1/2 flex flex-col items-center">
               <LuMouse className="text-4xl animate-bounce" />
               <span className="mt-2 text-sm tracking-widest animate-pulse">
                 scroll

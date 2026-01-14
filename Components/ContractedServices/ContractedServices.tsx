@@ -30,7 +30,7 @@ export default function ContractedServices() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.5 }}
-        className="text-4xl font-semibold text-white mb-14 tracking-wide"
+        className="text-4xl font-semibold  mb-14 tracking-wide"
       >
         Serviços <span className="text-purple-primary">Contratáveis</span>
       </motion.h2>
@@ -58,10 +58,8 @@ export default function ContractedServices() {
                      hover:border-purple-primary/50"
         >
           <Code2 className="text-purple-primary w-10 h-10 mb-4" />
-          <h3 className="text-xl text-white font-semibold mb-2">
-            Desenvolvimento Web
-          </h3>
-          <p className="text-gray-300 text-sm leading-relaxed">
+          <h3 className="text-xl  font-semibold mb-2">Desenvolvimento Web</h3>
+          <p className="text-sm leading-relaxed">
             Criação de aplicações modernas, rápidas, responsivas e bem
             estruturadas.
           </p>
@@ -75,10 +73,8 @@ export default function ContractedServices() {
                      hover:border-purple-primary/50"
         >
           <MonitorCheck className="text-purple-primary w-10 h-10 mb-4" />
-          <h3 className="text-xl text-white font-semibold mb-2">
-            Melhorias de UI/UX
-          </h3>
-          <p className="text-gray-300 text-sm leading-relaxed">
+          <h3 className="text-xl  font-semibold mb-2">Melhorias de UI/UX</h3>
+          <p className="text-sm leading-relaxed">
             Otimização visual e de usabilidade para uma experiência mais fluida
             e intuitiva.
           </p>
@@ -92,10 +88,8 @@ export default function ContractedServices() {
                      hover:border-purple-primary/50"
         >
           <PenTool className="text-purple-primary w-10 h-10 mb-4" />
-          <h3 className="text-xl text-white font-semibold mb-2">
-            Design de Interfaces
-          </h3>
-          <p className="text-gray-300 text-sm leading-relaxed">
+          <h3 className="text-xl  font-semibold mb-2">Design de Interfaces</h3>
+          <p className="text-sm leading-relaxed">
             Criação de layouts modernos, identidade visual e componentes
             personalizados.
           </p>
@@ -109,10 +103,10 @@ export default function ContractedServices() {
                      hover:border-purple-primary/50"
         >
           <Wrench className="text-purple-primary w-10 h-10 mb-4" />
-          <h3 className="text-xl text-white font-semibold mb-2">
+          <h3 className="text-xl  font-semibold mb-2">
             Manutenção de Sistemas
           </h3>
-          <p className="text-gray-300 text-sm leading-relaxed">
+          <p className="text-sm leading-relaxed">
             Atualizações, correções, melhorias de performance e suporte técnico.
           </p>
         </motion.div>

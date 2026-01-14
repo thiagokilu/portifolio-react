@@ -62,7 +62,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" data-theme="dark">
       <body className={`${inter.variable} antialiased`}>{children}</body>
     </html>
   );

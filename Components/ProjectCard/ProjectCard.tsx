@@ -66,7 +66,7 @@ export default function ProjectCard({ project }: any) {
         <div className="flex flex-col gap-3">
           {/* Título + Tecnologias */}
           <div className="flex flex-col gap-1">
-            <h3 className="text-white text-xl font-semibold tracking-wide">
+            <h3 className=" text-xl font-semibold tracking-wide">
               {project.title}
             </h3>
 
@@ -88,9 +88,7 @@ export default function ProjectCard({ project }: any) {
           </div>
 
           {/* Descrição */}
-          <p className="text-gray-300 text-sm leading-relaxed">
-            {project.description}
-          </p>
+          <p className="text-sm leading-relaxed">{project.description}</p>
         </div>
       </div>
     </a>

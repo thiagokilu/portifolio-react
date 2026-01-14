@@ -47,7 +47,7 @@ export default function Skills() {
       </h2>
 
       {/* Subtítulo / descrição */}
-      <p className="text-gray-400 max-w-2xl mb-12 text-lg">
+      <p className="max-w-2xl mb-12 text-lg">
         Tecnologias que utilizo no meu dia a dia para desenvolver interfaces
         modernas, rápidas e eficientes.
       </p>
@@ -66,17 +66,17 @@ export default function Skills() {
           className="flex flex-wrap w-full items-center justify-center gap-6 text-6xl"
         >
           {[
-            <FaHtml5 className="text-white bg-orange-500 rounded-lg p-3 " />,
-            <FaCss3Alt className="text-white bg-blue-500 rounded-lg p-3 " />,
-            <FaJs className="text-white bg-yellow-500 rounded-lg p-3 " />,
-            <SiTypescript className="text-white bg-blue-600 rounded-lg p-3 " />,
-            <SiVuedotjs className="text-white bg-green-500 rounded-lg p-3 " />,
-            <FaReact className="text-white bg-cyan-500 rounded-lg p-3 " />,
-            <SiNextdotjs className="text-white bg-black rounded-lg p-3 dark:bg-white dark:text-black " />,
-            <SiTailwindcss className="text-white bg-blue-400 rounded-lg p-3 " />,
-            <SiSass className="text-white bg-pink-500 rounded-lg p-3 " />,
-            <FaGitAlt className="text-white bg-orange-600 rounded-lg p-3 " />,
-            <FaLinux className="text-white bg-yellow-600 rounded-lg p-3 " />,
+            <FaHtml5 className=" bg-orange-500 rounded-lg p-3 " />,
+            <FaCss3Alt className=" bg-blue-500 rounded-lg p-3 " />,
+            <FaJs className=" bg-yellow-500 rounded-lg p-3 " />,
+            <SiTypescript className=" bg-blue-600 rounded-lg p-3 " />,
+            <SiVuedotjs className=" bg-green-500 rounded-lg p-3 " />,
+            <FaReact className=" bg-cyan-500 rounded-lg p-3 " />,
+            <SiNextdotjs className=" bg-black rounded-lg p-3 dark:bg-white dark:text-black " />,
+            <SiTailwindcss className=" bg-blue-400 rounded-lg p-3 " />,
+            <SiSass className=" bg-pink-500 rounded-lg p-3 " />,
+            <FaGitAlt className=" bg-orange-600 rounded-lg p-3 " />,
+            <FaLinux className=" bg-yellow-600 rounded-lg p-3 " />,
             // continue com os outros ícones...
           ].map((Icon, i) => (
             <motion.div

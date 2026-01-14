@@ -48,7 +48,7 @@ export default function Projects() {
         viewport={{ once: true, amount: 0.5 }}
         className="flex flex-col max-w-32 mb-10"
       >
-        <h2 className="text-4xl font-semibold text-white">Projetos</h2>
+        <h2 className="text-4xl font-semibold ">Projetos</h2>
         <div className="w-full flex items-center justify-center">
           <span className="block w-16 h-[3px] bg-purple-primary mt-3 rounded-full"></span>
         </div>
