@@ -83,14 +83,16 @@ html {
   }
 
   /* LIGHT MODE — roxo mais forte e definido */
-  :root[data-theme="light"] .purple-glow {
-    box-shadow:
-    /* aro roxo visível */ 0 0 0 4px
-        color-mix(in srgb, var(--purple-primary) 85%, white),
-      /* glow médio */ 0 0 45px
-        color-mix(in srgb, var(--purple-primary) 55%, transparent),
-      /* glow externo */ 0 0 90px
-        color-mix(in srgb, var(--purple-primary) 35%, transparent);
+  /* LIGHT MODE — glass com contraste real */
+  :root[data-theme="light"] .glass-surface {
+    background-color: color-mix(in srgb, var(--background) 88%, gray);
+
+    border: 1px solid color-mix(in srgb, black 35%, transparent);
+
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06),
+      0 0 0 1px color-mix(in srgb, var(--purple-primary) 20%, transparent);
+
+    backdrop-filter: blur(14px);
   }
 
   /* DARK MODE — mantém elegante */

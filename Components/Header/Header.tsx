@@ -44,7 +44,7 @@ export default function Header() {
         </div>
 
         {/* Menu Desktop */}
-        <ul className="hidden md:flex flex-row gap-10 text-lg font-medium ">
+        <ul className="hidden md:flex flex-row gap-10 text-lg font-medium items-center">
           {links.map((item, i) => (
             <li key={i} className="cursor-pointer relative group text-xl">
               <a href={item.href}>{item.label}</a>
@@ -58,27 +58,45 @@ export default function Header() {
               ></span>
             </li>
           ))}
-        </ul>
-        <div className="relative group">
-          <button
-            onClick={handleThemeChange}
-            className="flex items-center justify-center  p-2 rounded "
-          >
-            {theme === "dark" ? (
-              <SunIcon size={20} color="white" />
-            ) : (
-              <MoonIcon size={20} color="black" />
-            )}
-          </button>
+          <li className="relative group flex items-center justify-center">
+            <button
+              onClick={handleThemeChange}
+              aria-label="Mudar tema"
+              className="
+      flex items-center justify-center
+      p-2 rounded-full
+      transition-all duration-300
+      hover:scale-110
+    "
+            >
+              {theme === "dark" ? (
+                <SunIcon
+                  size={24}
+                  className="text-yellow-400 transition-transform duration-300 group-hover:rotate-12"
+                />
+              ) : (
+                <MoonIcon
+                  size={24}
+                  className="text-purple-600 transition-transform duration-300 group-hover:-rotate-12"
+                />
+              )}
+            </button>
 
-          <span
-            className="absolute top-full mt-2 left-1/2 -translate-x-1/2 
-    opacity-0 group-hover:opacity-100 transition
-    bg-zinc-900 text-white text-xs px-2 py-1 rounded whitespace-nowrap"
-          >
-            Mudar tema
-          </span>
-        </div>
+            {/* Tooltip */}
+            <span
+              className="
+      absolute top-full mt-2 left-1/2 -translate-x-1/2
+      opacity-0 group-hover:opacity-100
+      transition-all duration-200
+      bg-zinc-900 text-white text-xs px-2 py-1 rounded
+      whitespace-nowrap
+      pointer-events-none
+    "
+            >
+              Mudar tema
+            </span>
+          </li>
+        </ul>
 
         {/* Botão Mobile */}
         <button className="md:hidden " onClick={() => setOpen(!open)}>
@@ -107,9 +125,19 @@ export default function Header() {
         </ul>
         <button
           onClick={handleThemeChange}
-          className="flex items-center justify-center text-black p-2 rounded hover:bg-zinc-200 0 transition"
+          className="flex items-center justify-center  p-2 rounded "
         >
-          {theme === "dark" ? <SunIcon size={20} /> : <MoonIcon size={20} />}
+          {theme === "dark" ? (
+            <SunIcon
+              size={24}
+              className="text-yellow-400 transition-transform duration-300 group-hover:rotate-12"
+            />
+          ) : (
+            <MoonIcon
+              size={24}
+              className="text-purple-600 transition-transform duration-300 group-hover:-rotate-12"
+            />
+          )}
         </button>
       </div>
     </header>
