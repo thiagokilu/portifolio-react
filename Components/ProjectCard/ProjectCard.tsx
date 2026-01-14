@@ -1,6 +1,4 @@
 import React, { JSX } from "react";
-import { BiLogoTypescript } from "react-icons/bi";
-// icons.ts
 import {
   FaReact,
   FaVuejs,
@@ -16,7 +14,6 @@ import { RiNextjsLine } from "react-icons/ri";
 import {
   SiTypescript,
   SiTailwindcss,
-  SiNextdotjs,
   SiExpress,
   SiFastify,
   SiPostgresql,
@@ -48,16 +45,27 @@ export default function ProjectCard({ project }: any) {
   return (
     <a href={project.link} target="_blank" rel="noopener noreferrer">
       <div
-        className="group bg-white/5 backdrop-blur-md border border-white/10 
-                 hover:border-purple-primary/60 hover:shadow-purple-primary/30 
-                 shadow-[0_0_20px_-5px_rgba(0,0,0,0.4)]
-                 transition-all rounded-2xl p-5 flex flex-col gap-5 w-full max-w-sm"
+        className="
+          group
+          glass-surface
+          transition-all
+          rounded-2xl
+          p-5
+          flex
+          flex-col
+          gap-5
+          w-full
+          max-w-sm
+          hover:scale-[1.02]
+          hover:border-purple-primary/60
+          hover:shadow-lg
+        "
       >
         {/* Imagem */}
         <div className="w-full aspect-video overflow-hidden rounded-xl">
           <img
             src={project.img}
-            alt="Projeto"
+            alt={project.title}
             className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
           />
         </div>
@@ -65,8 +73,8 @@ export default function ProjectCard({ project }: any) {
         {/* Conteúdo */}
         <div className="flex flex-col gap-3">
           {/* Título + Tecnologias */}
-          <div className="flex flex-col gap-1">
-            <h3 className=" text-xl font-semibold tracking-wide">
+          <div className="flex flex-col gap-2">
+            <h3 className="text-xl font-semibold tracking-wide">
               {project.title}
             </h3>
 
@@ -74,9 +82,15 @@ export default function ProjectCard({ project }: any) {
               {project.techs.map((tech: string) => (
                 <span
                   key={tech}
-                  className="px-3 py-1 flex items-center gap-1 text-sm 
-               bg-purple-primary/20 text-purple-primary rounded-lg 
-               border border-purple-primary/30"
+                  className="
+                    px-3 py-1
+                    flex items-center gap-1
+                    text-sm
+                    rounded-lg
+                    bg-purple-primary/15
+                    text-purple-primary
+                    border border-purple-primary/30
+                  "
                 >
                   {techIcons[tech] && (
                     <span className="text-lg">{techIcons[tech]}</span>
@@ -88,7 +102,9 @@ export default function ProjectCard({ project }: any) {
           </div>
 
           {/* Descrição */}
-          <p className="text-sm leading-relaxed">{project.description}</p>
+          <p className="text-sm leading-relaxed opacity-80">
+            {project.description}
+          </p>
         </div>
       </div>
     </a>

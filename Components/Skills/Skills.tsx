@@ -63,7 +63,7 @@ export default function Skills() {
             amount: 0.5, // só anima quando metade está visível
             margin: "-50px",
           }}
-          className="flex flex-wrap w-full items-center justify-center gap-6 text-6xl"
+          className="flex flex-wrap w-full items-center justify-center gap-6 text-6xl text-white"
         >
           {[
             <FaHtml5 className=" bg-orange-500 rounded-lg p-3 " />,
@@ -72,7 +72,14 @@ export default function Skills() {
             <SiTypescript className=" bg-blue-600 rounded-lg p-3 " />,
             <SiVuedotjs className=" bg-green-500 rounded-lg p-3 " />,
             <FaReact className=" bg-cyan-500 rounded-lg p-3 " />,
-            <SiNextdotjs className=" bg-black rounded-lg p-3 dark:bg-white dark:text-black " />,
+            <SiNextdotjs
+              className="
+    bg-foreground
+    text-background
+    rounded-lg
+    p-3
+  "
+            />,
             <SiTailwindcss className=" bg-blue-400 rounded-lg p-3 " />,
             <SiSass className=" bg-pink-500 rounded-lg p-3 " />,
             <FaGitAlt className=" bg-orange-600 rounded-lg p-3 " />,

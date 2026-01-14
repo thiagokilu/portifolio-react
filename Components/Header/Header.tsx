@@ -2,7 +2,8 @@
 import { useEffect, useState } from "react";
 import { Menu, MoonIcon, SunIcon, X } from "lucide-react";
 import Image from "next/image";
-import Logo from "../../public/icons/logo-ta-white.png";
+import LogoWhite from "../../public/icons/logo-ta-white.png";
+import LogoDark from "../../public/icons/logo.png";
 
 type AvaliableThemes = "dark" | "light";
 
@@ -35,7 +36,11 @@ export default function Header() {
       <nav className="flex items-center justify-between max-w-6xl mx-auto px-6">
         {/* Logo */}
         <div className="w-32">
-          <Image src={Logo} alt="Logo" priority />
+          {theme === "dark" ? (
+            <Image src={LogoWhite} alt="Logo" priority />
+          ) : (
+            <Image src={LogoDark} alt="Logo" priority />
+          )}
         </div>
 
         {/* Menu Desktop */}
@@ -55,21 +60,25 @@ export default function Header() {
           ))}
         </ul>
         <div className="relative group">
-  <button
-    onClick={handleThemeChange}
-    className="flex items-center justify-center text-white p-2 rounded hover:bg-zinc-200 dark:hover:bg-zinc-700 transition"
-  >
-    {theme === "dark" ? <SunIcon size={20} /> : <MoonIcon size={20} />}
-  </button>
+          <button
+            onClick={handleThemeChange}
+            className="flex items-center justify-center  p-2 rounded "
+          >
+            {theme === "dark" ? (
+              <SunIcon size={20} color="white" />
+            ) : (
+              <MoonIcon size={20} color="black" />
+            )}
+          </button>
 
-  <span className="absolute top-full mt-2 left-1/2 -translate-x-1/2 
+          <span
+            className="absolute top-full mt-2 left-1/2 -translate-x-1/2 
     opacity-0 group-hover:opacity-100 transition
-    bg-zinc-900 text-white text-xs px-2 py-1 rounded whitespace-nowrap">
-    Mudar tema
-  </span>
-</div>
-
-        
+    bg-zinc-900 text-white text-xs px-2 py-1 rounded whitespace-nowrap"
+          >
+            Mudar tema
+          </span>
+        </div>
 
         {/* Botão Mobile */}
         <button className="md:hidden " onClick={() => setOpen(!open)}>
@@ -80,6 +89,7 @@ export default function Header() {
       {/* Menu Mobile */}
       <div
         className={`
+          flex flex-col items-center gap-6
           md:hidden transition-all duration-300 overflow-hidden bg-[var(--background)]
           ${open ? "max-h-96 py-6" : "max-h-0 py-0"}
         `}
@@ -95,6 +105,12 @@ export default function Header() {
             </li>
           ))}
         </ul>
+        <button
+          onClick={handleThemeChange}
+          className="flex items-center justify-center text-black p-2 rounded hover:bg-zinc-200 0 transition"
+        >
+          {theme === "dark" ? <SunIcon size={20} /> : <MoonIcon size={20} />}
+        </button>
       </div>
     </header>
   );

@@ -73,7 +73,7 @@ export default function Hero() {
               <a
                 href="/files/curriculo-thiago-portifolio.pdf"
                 download="curriculo-thiago.pdf"
-                className="bg-purple-primary flex items-center justify-center gap-2  px-8 py-3 rounded-full transition-all duration-300 hover:bg-purple-600 hover:shadow-lg hover:shadow-purple-300/30"
+                className="bg-purple-primary text-white flex items-center justify-center gap-2  px-8 py-3 rounded-full transition-all duration-300 hover:bg-purple-600 hover:shadow-lg hover:shadow-purple-300/30"
               >
                 <FileDown />
                 Download CV

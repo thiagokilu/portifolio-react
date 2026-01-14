@@ -29,7 +29,7 @@ export default function About() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.4 }}
-        className="text-4xl font-semibold  mb-14 tracking-wide relative"
+        className="text-4xl font-semibold mb-14 tracking-wide relative"
       >
         Sobre mim
         <span className="block w-16 h-[3px] bg-purple-primary mx-auto mt-3 rounded-full"></span>
@@ -46,24 +46,42 @@ export default function About() {
         <motion.div className="flex flex-col gap-10 w-full md:w-1/3">
           <motion.div
             variants={fadeUp}
-            className="group bg-white/5 backdrop-blur-md border border-white/10 
-              hover:border-purple-primary/60 hover:shadow-purple-primary/30 
-              shadow-[0_0_20px_-5px_rgba(0,0,0,0.4)]
-              transition-all flex items-center rounded-2xl p-6 gap-4"
+            className="
+              group
+              glass-surface
+              transition-all
+              flex
+              items-center
+              rounded-2xl
+              p-6
+              gap-4
+              hover:border-purple-primary/60
+              hover:shadow-lg
+            "
           >
             <GraduationCap className="text-purple-primary w-8 h-8 group-hover:scale-110 transition-transform" />
-            <span className="text-lg">Gestão em Tecnologia da Informação</span>
+            <span className="text-lg font-medium">
+              Gestão em Tecnologia da Informação
+            </span>
           </motion.div>
 
           <motion.div
             variants={fadeUp}
-            className="group bg-white/5 backdrop-blur-md border border-white/10 
-              hover:border-purple-primary/60 hover:shadow-purple-primary/30 
-              shadow-[0_0_20px_-5px_rgba(0,0,0,0.4)]
-              transition-all flex items-center rounded-2xl p-6 gap-4"
+            className="
+              group
+              glass-surface
+              transition-all
+              flex
+              items-center
+              rounded-2xl
+              p-6
+              gap-4
+              hover:border-purple-primary/60
+              hover:shadow-lg
+            "
           >
             <Languages className="text-purple-primary w-8 h-8 group-hover:scale-110 transition-transform" />
-            <span className="text-lg">Inglês</span>
+            <span className="text-lg font-medium">Inglês</span>
           </motion.div>
         </motion.div>
 
@@ -72,16 +90,14 @@ export default function About() {
           variants={fadeUp}
           className="hidden md:flex items-center justify-center"
         >
-          <div className="relative flex items-center">
-            <div className="h-full w-[3px] bg-gradient-to-b from-purple-primary to-purple-400 rounded-full"></div>
-          </div>
+          <div className="h-full w-[3px] bg-gradient-to-b from-purple-primary to-purple-400 rounded-full" />
         </motion.div>
 
         {/* Texto */}
         <motion.div variants={fadeUp} className="md:w-1/2 relative">
           <div className="absolute -top-6 -right-6 w-20 h-20 border border-purple-primary/20 rounded-xl rotate-12"></div>
 
-          <p className="leading-relaxed text-lg tracking-wide relative z-10">
+          <p className="leading-relaxed text-lg tracking-wide opacity-90 relative z-10">
             Sou um desenvolvedor apaixonado por tecnologia e movido pelo desejo
             de criar interfaces elegantes, rápidas e funcionais. Tenho grande
             interesse em experiência do usuário, performance e boas práticas de

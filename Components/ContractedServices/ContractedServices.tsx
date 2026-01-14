@@ -30,7 +30,7 @@ export default function ContractedServices() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.5 }}
-        className="text-4xl font-semibold  mb-14 tracking-wide"
+        className="text-4xl font-semibold mb-14 tracking-wide"
       >
         Serviços <span className="text-purple-primary">Contratáveis</span>
       </motion.h2>
@@ -40,76 +40,49 @@ export default function ContractedServices() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.3 }}
-        className="
-          grid
-          grid-cols-1
-          sm:grid-cols-2
-          lg:grid-cols-4
-          gap-8
-          max-w-6xl
-          w-full
-        "
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl w-full"
       >
-        {/* Card 1 */}
-        <motion.div
-          variants={card}
-          className="group bg-white/5 border border-white/10 p-6 rounded-2xl
-                     backdrop-blur-md transition-all hover:scale-105
-                     hover:border-purple-primary/50"
-        >
-          <Code2 className="text-purple-primary w-10 h-10 mb-4" />
-          <h3 className="text-xl  font-semibold mb-2">Desenvolvimento Web</h3>
-          <p className="text-sm leading-relaxed">
-            Criação de aplicações modernas, rápidas, responsivas e bem
-            estruturadas.
-          </p>
-        </motion.div>
-
-        {/* Card 2 */}
-        <motion.div
-          variants={card}
-          className="group bg-white/5 border border-white/10 p-6 rounded-2xl
-                     backdrop-blur-md transition-all hover:scale-105
-                     hover:border-purple-primary/50"
-        >
-          <MonitorCheck className="text-purple-primary w-10 h-10 mb-4" />
-          <h3 className="text-xl  font-semibold mb-2">Melhorias de UI/UX</h3>
-          <p className="text-sm leading-relaxed">
-            Otimização visual e de usabilidade para uma experiência mais fluida
-            e intuitiva.
-          </p>
-        </motion.div>
-
-        {/* Card 3 */}
-        <motion.div
-          variants={card}
-          className="group bg-white/5 border border-white/10 p-6 rounded-2xl
-                     backdrop-blur-md transition-all hover:scale-105
-                     hover:border-purple-primary/50"
-        >
-          <PenTool className="text-purple-primary w-10 h-10 mb-4" />
-          <h3 className="text-xl  font-semibold mb-2">Design de Interfaces</h3>
-          <p className="text-sm leading-relaxed">
-            Criação de layouts modernos, identidade visual e componentes
-            personalizados.
-          </p>
-        </motion.div>
-
-        {/* Card 4 */}
-        <motion.div
-          variants={card}
-          className="group bg-white/5 border border-white/10 p-6 rounded-2xl
-                     backdrop-blur-md transition-all hover:scale-105
-                     hover:border-purple-primary/50"
-        >
-          <Wrench className="text-purple-primary w-10 h-10 mb-4" />
-          <h3 className="text-xl  font-semibold mb-2">
-            Manutenção de Sistemas
-          </h3>
-          <p className="text-sm leading-relaxed">
-            Atualizações, correções, melhorias de performance e suporte técnico.
-          </p>
-        </motion.div>
+        {/* Card */}
+        {[
+          {
+            icon: Code2,
+            title: "Desenvolvimento Web",
+            desc: "Criação de aplicações modernas, rápidas, responsivas e bem estruturadas.",
+          },
+          {
+            icon: MonitorCheck,
+            title: "Melhorias de UI/UX",
+            desc: "Otimização visual e de usabilidade para uma experiência mais fluida e intuitiva.",
+          },
+          {
+            icon: PenTool,
+            title: "Design de Interfaces",
+            desc: "Criação de layouts modernos, identidade visual e componentes personalizados.",
+          },
+          {
+            icon: Wrench,
+            title: "Manutenção de Sistemas",
+            desc: "Atualizações, correções, melhorias de performance e suporte técnico.",
+          },
+        ].map(({ icon: Icon, title, desc }) => (
+          <motion.div
+            key={title}
+            variants={card}
+            className="
+              group
+              glass-surface
+              p-6
+              rounded-2xl
+              transition-all
+              hover:scale-105
+              hover:border-purple-primary/50
+            "
+          >
+            <Icon className="text-purple-primary w-10 h-10 mb-4" />
+            <h3 className="text-xl font-semibold mb-2">{title}</h3>
+            <p className="text-sm leading-relaxed opacity-80">{desc}</p>
+          </motion.div>
+        ))}
       </motion.div>
     </section>
   );
