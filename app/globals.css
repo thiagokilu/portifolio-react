@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+<<<<<<< HEAD
 /* =========================
    THEME TOKENS
 ========================= */
@@ -16,6 +17,11 @@
   --purple-quaternary: #7c4efd;
   --purple-quinary: #6c3efd;
   --purple-senary: #5c2efd;
+=======
+:root {
+  --background: #0a0a0a; /* sempre escuro */
+  --foreground: #ededed; /* sempre claro */
+>>>>>>> a92987fb8f6c1fb18a52e57782a214e214f1b327
 }
 
 /* DARK */
@@ -38,6 +44,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+<<<<<<< HEAD
 
   --color-purple-primary: var(--purple-primary);
   --color-purple-secondary: var(--purple-secondary);
@@ -45,16 +52,36 @@
   --color-purple-quaternary: var(--purple-quaternary);
   --color-purple-quinary: var(--purple-quinary);
   --color-purple-senary: var(--purple-senary);
+=======
+  --color-purple-primary: #b058fd;
+  --color-purple-secondary: #a058fd;
+  --color-purple-tertiary: #8c5afd;
+  --color-purple-quaternary: #7c4efd;
+  --color-purple-quinary: #6c3efd;
+  --color-purple-senary: #5c2efd;
+>>>>>>> a92987fb8f6c1fb18a52e57782a214e214f1b327
 
   --font-geist-sans: "Geist Sans", sans-serif;
   --font-geist-mono: "Geist Mono", monospace;
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
+<<<<<<< HEAD
 /* =========================
    GLOBAL STYLES
 ========================= */
+=======
+/* Remova completamente esta parte:
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+*/
+>>>>>>> a92987fb8f6c1fb18a52e57782a214e214f1b327
 
 body {
   background-color: var(--background);
@@ -65,10 +92,13 @@ html {
   scroll-behavior: smooth !important;
 }
 
+<<<<<<< HEAD
 /* =========================
    UTILITIES
 ========================= */
 
+=======
+>>>>>>> a92987fb8f6c1fb18a52e57782a214e214f1b327
 @layer utilities {
   .bg-grid-pattern {
     background-color: transparent;
