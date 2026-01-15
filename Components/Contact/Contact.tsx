@@ -35,13 +35,39 @@ interface FormDataProps {
   message: string;
 }
 
-const subscriptionSchema = z.object({
-  name: z.string().min(2, "Digite seu nome completo"),
-  email: z.string().email("Digite um email válido"),
-  message: z.string().min(10, { message: "A mensagem não pode estar vazia." }),
-});
+interface ContactProps {
+  title: string;
+  description: string;
+  nameLabel: string;
+  emailLabel: string;
+  messageLabel: string;
+  nameError: string;
+  emailError: string;
+  messageError: string;
+  sending: string;
+  send: string;
+  success: string;
+}
 
-export default function Contact() {
+export default function Contact({
+  title,
+  description,
+  nameLabel,
+  emailLabel,
+  messageLabel,
+  nameError,
+  emailError,
+  messageError,
+  sending,
+  send,
+  success,
+}: ContactProps) {
+  const subscriptionSchema = z.object({
+    name: z.string().min(2, nameError),
+    email: z.string().email(emailError),
+    message: z.string().min(10, { message: messageError }),
+  });
+
   const {
     register,
     handleSubmit,
@@ -58,7 +84,7 @@ export default function Contact() {
       headers: { "Content-Type": "application/json" },
     })
       .then(() => {
-        toast.success("Mensagem enviada com sucesso!", {
+        toast.success(success, {
           position: "bottom-right",
           autoClose: 3000,
           theme: "colored",
@@ -92,7 +118,7 @@ export default function Contact() {
               variants={fadeUp}
               className="text-4xl font-semibold  tracking-wide"
             >
-              Contato
+              {title}
             </motion.h2>
 
             {/* Barrinha */}
@@ -103,9 +129,7 @@ export default function Contact() {
           </motion.div>
 
           <motion.p variants={fadeUp} className="leading-relaxed text-lg">
-            Se você tem um projeto em mente, precisa de ajuda com
-            desenvolvimento front-end ou apenas quer bater um papo sobre ideias
-            criativas, estou aqui para ajudar.
+            {description}
           </motion.p>
 
           <motion.div variants={fadeUp}>
@@ -114,24 +138,28 @@ export default function Contact() {
         </div>
 
         {/* FORMULÁRIO */}
-        <motion.div
-          variants={fadeUp}
-          className="glass-surface p-8 rounded-2xl"
-        >
+        <motion.div variants={fadeUp} className="glass-surface p-8 rounded-2xl">
           <form
             className="flex flex-col gap-5"
             onSubmit={handleSubmit(onSubmit)}
           >
             {/* Nome */}
             <motion.div variants={fadeUp} className="flex flex-col gap-2">
-              <label className="text-sm">Seu nome</label>
+              <label htmlFor="name" className="text-sm">
+                {nameLabel}
+              </label>
+
               <input
+                id="name"
                 type="text"
                 {...register("name")}
+                aria-invalid={!!errors.name}
+                aria-describedby={errors.name ? "name-error" : undefined}
                 className="bg-[var(--background)] border border-foreground/10 px-4 py-3 rounded-xl focus:outline-none focus:border-purple-primary"
               />
+
               {errors.name && (
-                <span className="text-red-400 text-sm">
+                <span id="name-error" className="text-red-400 text-sm">
                   {errors.name.message}
                 </span>
               )}
@@ -139,14 +167,21 @@ export default function Contact() {
 
             {/* Email */}
             <motion.div variants={fadeUp} className="flex flex-col gap-2">
-              <label className="text-sm">Seu e-mail</label>
+              <label htmlFor="email" className="text-sm">
+                {emailLabel}
+              </label>
+
               <input
+                id="email"
                 type="email"
                 {...register("email")}
+                aria-invalid={!!errors.email}
+                aria-describedby={errors.email ? "email-error" : undefined}
                 className="bg-[var(--background)] border border-foreground/10 px-4 py-3 rounded-xl focus:outline-none focus:border-purple-primary"
               />
+
               {errors.email && (
-                <span className="text-red-400 text-sm">
+                <span id="email-error" className="text-red-400 text-sm">
                   {errors.email.message}
                 </span>
               )}
@@ -154,12 +189,24 @@ export default function Contact() {
 
             {/* Mensagem */}
             <motion.div variants={fadeUp} className="flex flex-col gap-2">
-              <label className="text-sm">Mensagem</label>
+              <label htmlFor="message" className="text-sm">
+                {messageLabel}
+              </label>
+
               <textarea
+                id="message"
                 rows={4}
                 {...register("message")}
+                aria-invalid={!!errors.message}
+                aria-describedby={errors.message ? "message-error" : undefined}
                 className="bg-[var(--background)] border border-foreground/10 px-4 py-3 rounded-xl focus:outline-none focus:border-purple-primary"
-              ></textarea>
+              />
+
+              {errors.message && (
+                <span id="message-error" className="text-red-400 text-sm">
+                  {errors.message.message}
+                </span>
+              )}
             </motion.div>
 
             {/* Botão */}
@@ -169,7 +216,7 @@ export default function Contact() {
               disabled={isSubmitting}
               className="bg-purple-primary text-white hover:bg-purple-600 transition-all py-3 rounded-xl  font-semibold flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {isSubmitting ? "Enviando..." : "Enviar mensagem"}
+              {isSubmitting ? sending : send}
             </motion.button>
           </form>
         </motion.div>

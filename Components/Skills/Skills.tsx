@@ -17,7 +17,13 @@ import {
   SiVuedotjs,
 } from "react-icons/si";
 
-export default function Skills() {
+interface SkillsProps {
+  title: string;
+  titleHighlight: string;
+  description: string;
+}
+
+export default function Skills({ title, titleHighlight, description }: SkillsProps) {
   const container: Variants = {
     hidden: { opacity: 0, y: 20 },
     show: {
@@ -43,14 +49,11 @@ export default function Skills() {
     >
       {/* Título */}
       <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
-        Minhas <span className="text-purple-primary">Skills</span>
+        {title} <span className="text-purple-primary">{titleHighlight}</span>
       </h2>
 
       {/* Subtítulo / descrição */}
-      <p className="max-w-2xl mb-12 text-lg">
-        Tecnologias que utilizo no meu dia a dia para desenvolver interfaces
-        modernas, rápidas e eficientes.
-      </p>
+      <p className="max-w-2xl mb-12 text-lg">{description}</p>
 
       {/* Ícones */}
       <section className="flex items-center justify-center">

@@ -24,7 +24,23 @@ const container: Variants = {
   },
 };
 
-export default function Hero() {
+interface HeroProps {
+  greeting: string;
+  name: string;
+  role: string;
+  description: string;
+  downloadCv: string;
+  scroll: string;
+}
+
+export default function Hero({
+  greeting,
+  name,
+  role,
+  description,
+  downloadCv,
+  scroll,
+}: HeroProps) {
   return (
     <div>
       <Header />
@@ -54,16 +70,13 @@ export default function Hero() {
             className="flex flex-col gap-5 max-w-xl"
           >
             <h1 className="text-5xl md:text-7xl font-extrabold leading-tight">
-              Hello I'm{" "}
-              <span className="text-purple-primary drop-shadow-md">Thiago</span>
+              {greeting}{" "}
+              <span className="text-purple-primary drop-shadow-md">{name}</span>
             </h1>
 
-            <span className="text-xl font-light">Front-end Developer</span>
+            <span className="text-xl font-light">{role}</span>
 
-            <p className="text-lg">
-              Desenvolvedor especializado em interfaces modernas e de alto
-              desempenho, com foco em acessibilidade e experiência do usuário.
-            </p>
+            <p className="text-lg">{description}</p>
 
             {/* Botão */}
             <motion.div
@@ -76,7 +89,7 @@ export default function Hero() {
                 className="bg-purple-primary text-white flex items-center justify-center gap-2  px-8 py-3 rounded-full transition-all duration-300 hover:bg-purple-600 hover:shadow-lg hover:shadow-purple-300/30"
               >
                 <FileDown />
-                Download CV
+                {downloadCv}
               </a>
             </motion.div>
 
@@ -90,6 +103,7 @@ export default function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-purple-primary transition-colors duration-300"
+                aria-label="GitHub"
               >
                 <FaGithub />
               </a>
@@ -99,6 +113,7 @@ export default function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-purple-primary transition-colors duration-300"
+                aria-label="LinkedIn"
               >
                 <FaLinkedin />
               </a>
@@ -108,7 +123,7 @@ export default function Hero() {
             <div className="absolute bottom-20 left-1/2 -translate-x-1/2 flex flex-col items-center">
               <LuMouse className="text-4xl animate-bounce" />
               <span className="mt-2 text-sm tracking-widest animate-pulse">
-                scroll
+                {scroll}
               </span>
             </div>
           </motion.div>

@@ -3,12 +3,12 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
-  variable: "--font-Inter",
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://thiagodev.site/"), // coloque seu domínio final aqui
+  metadataBase: new URL("https://thiagodev.site/"),
   title: {
     default: "Thiago Dev | Front-end Developer",
     template: "%s | Thiago Dev",
@@ -58,11 +58,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="pt-BR" data-theme="dark">
+    <html data-theme="dark" suppressHydrationWarning>
       <body className={`${inter.variable} antialiased`}>{children}</body>
     </html>
   );

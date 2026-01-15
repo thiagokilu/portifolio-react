@@ -1,85 +1,40 @@
-"use client";
+import { headers } from "next/headers";
+import ProjectsClient from "./ProjectsClient";
 
-import { useEffect, useState } from "react";
-import ProjectCard from "../ProjectCard/ProjectCard";
-import { motion, type Variants } from "framer-motion";
+export interface Project {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  link?: string;
+}
 
-export default function Projects() {
-  const [projects, setProjects] = useState([]);
+interface ProjectsProps {
+  title: string;
+}
 
-  useEffect(() => {
-    fetch("/files/projetos.json")
-      .then((res) => res.json())
-      .then((data) => {
-        console.log("Projetos carregados:", data); // <-- log certo
-        setProjects(data);
-      })
-      .catch((err) => console.error("Erro ao carregar projetos:", err));
-  }, []);
+export default async function Projects({ title }: ProjectsProps) {
+  // headers() é async
+  const headersList = await headers();
+  const host = headersList.get("host");
 
-  const cardVariant: Variants = {
-    hidden: { opacity: 0, y: 30, scale: 0.95 },
-    show: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: { duration: 0.4, ease: "easeOut" },
-    },
-  };
+  if (!host) {
+    throw new Error("Host não encontrado nos headers");
+  }
 
-  const fadeUp: Variants = {
-    hidden: { opacity: 0, y: 40 },
-    show: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
-    },
-  };
+  const protocol = process.env.NODE_ENV === "development" ? "http" : "https";
 
-  return (
-    <section
-      id="Projects"
-      className="flex flex-col items-center justify-center px-4"
-    >
-      <motion.div
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.5 }}
-        className="flex flex-col max-w-32 mb-10"
-      >
-        <h2 className="text-4xl font-semibold ">Projetos</h2>
-        <div className="w-full flex items-center justify-center">
-          <span className="block w-16 h-[3px] bg-purple-primary mt-3 rounded-full"></span>
-        </div>
-      </motion.div>
+  const res = await fetch(`${protocol}://${host}/files/projetos.json`, {
+    cache: "force-cache",
+  });
 
-      <div
-        className="
-          grid 
-          grid-cols-1 
-          sm:grid-cols-2 
-          lg:grid-cols-3 
-          gap-10 
-          max-w-6xl 
-          w-full
-        "
-      >
-        {projects
-          .slice()
-          .reverse()
-          .map((project: any) => (
-            <motion.div
-              key={project.id}
-              variants={cardVariant}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, amount: 0.3 }}
-            >
-              <ProjectCard project={project} />
-            </motion.div>
-          ))}
-      </div>
-    </section>
-  );
+  if (!res.ok) {
+    throw new Error("Erro ao carregar projetos");
+  }
+
+  const projects: Project[] = await res.json();
+
+  const orderedProjects = [...projects].reverse();
+
+  return <ProjectsClient title={title} projects={orderedProjects} />;
 }

@@ -19,7 +19,31 @@ const card: Variants = {
   },
 };
 
-export default function ContractedServices() {
+interface ContractedServicesProps {
+  title: string;
+  titleHighlight: string;
+  webDevelopmentTitle: string;
+  webDevelopmentDesc: string;
+  uiuxTitle: string;
+  uiuxDesc: string;
+  interfaceDesignTitle: string;
+  interfaceDesignDesc: string;
+  maintenanceTitle: string;
+  maintenanceDesc: string;
+}
+
+export default function ContractedServices({
+  title,
+  titleHighlight,
+  webDevelopmentTitle,
+  webDevelopmentDesc,
+  uiuxTitle,
+  uiuxDesc,
+  interfaceDesignTitle,
+  interfaceDesignDesc,
+  maintenanceTitle,
+  maintenanceDesc,
+}: ContractedServicesProps) {
   return (
     <section
       id="Services"
@@ -32,7 +56,7 @@ export default function ContractedServices() {
         viewport={{ once: true, amount: 0.5 }}
         className="text-4xl font-semibold mb-14 tracking-wide"
       >
-        Serviços <span className="text-purple-primary">Contratáveis</span>
+        {title} <span className="text-purple-primary">{titleHighlight}</span>
       </motion.h2>
 
       <motion.div
@@ -46,23 +70,23 @@ export default function ContractedServices() {
         {[
           {
             icon: Code2,
-            title: "Desenvolvimento Web",
-            desc: "Criação de aplicações modernas, rápidas, responsivas e bem estruturadas.",
+            title: webDevelopmentTitle,
+            desc: webDevelopmentDesc,
           },
           {
             icon: MonitorCheck,
-            title: "Melhorias de UI/UX",
-            desc: "Otimização visual e de usabilidade para uma experiência mais fluida e intuitiva.",
+            title: uiuxTitle,
+            desc: uiuxDesc,
           },
           {
             icon: PenTool,
-            title: "Design de Interfaces",
-            desc: "Criação de layouts modernos, identidade visual e componentes personalizados.",
+            title: interfaceDesignTitle,
+            desc: interfaceDesignDesc,
           },
           {
             icon: Wrench,
-            title: "Manutenção de Sistemas",
-            desc: "Atualizações, correções, melhorias de performance e suporte técnico.",
+            title: maintenanceTitle,
+            desc: maintenanceDesc,
           },
         ].map(({ icon: Icon, title, desc }) => (
           <motion.div

@@ -1,0 +1,64 @@
+{
+  "home": {
+    "title": "Welcome to my site",
+    "description": "This is an internationalized website"
+  },
+  "hero": {
+    "greeting": "Hello I'm",
+    "name": "Thiago",
+    "role": "Front-end Developer",
+    "description": "Developer specialized in modern and high-performance interfaces, with a focus on accessibility and user experience.",
+    "downloadCv": "Download CV",
+    "scroll": "scroll"
+  },
+  "skills": {
+    "title": "My",
+    "titleHighlight": "Skills",
+    "description": "Technologies I use daily to develop modern, fast and efficient interfaces."
+  },
+  "about": {
+    "title": "About me",
+    "education": "Information Technology Management",
+    "language": "English",
+    "description": "I'm a developer passionate about technology and driven by the desire to create elegant, fast and functional interfaces. I have great interest in user experience, performance and development best practices.\n\nI like to turn ideas into real projects, exploring new tools, modern frameworks and patterns that make code cleaner and more scalable.\n\nI always seek to evolve my skills and participate in projects that combine creativity, innovation and real impact for people and companies."
+  },
+  "projects": {
+    "title": "Projects"
+  },
+  "services": {
+    "title": "Hireable",
+    "titleHighlight": "Services",
+    "webDevelopment": {
+      "title": "Web Development",
+      "description": "Creation of modern, fast, responsive and well-structured applications."
+    },
+    "uiux": {
+      "title": "UI/UX Improvements",
+      "description": "Visual and usability optimization for a smoother and more intuitive experience."
+    },
+    "interfaceDesign": {
+      "title": "Interface Design",
+      "description": "Creation of modern layouts, visual identity and custom components."
+    },
+    "maintenance": {
+      "title": "System Maintenance",
+      "description": "Updates, fixes, performance improvements and technical support."
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "If you have a project in mind, need help with front-end development or just want to chat about creative ideas, I'm here to help.",
+    "nameLabel": "Your name",
+    "emailLabel": "Your e-mail",
+    "messageLabel": "Message",
+    "nameError": "Enter your full name",
+    "emailError": "Enter a valid email",
+    "messageError": "The message cannot be empty.",
+    "sending": "Sending...",
+    "send": "Send message",
+    "success": "Message sent successfully!"
+  },
+  "footer": {
+    "copyright": "© {year} Thiago Alexandre"
+  }
+}

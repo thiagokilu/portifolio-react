@@ -17,7 +17,14 @@ const staggerContainer = {
   },
 };
 
-export default function About() {
+interface AboutProps {
+  title: string;
+  education: string;
+  language: string;
+  description: string;
+}
+
+export default function About({ title, education, language, description }: AboutProps) {
   return (
     <section
       id="About"
@@ -31,7 +38,7 @@ export default function About() {
         viewport={{ once: true, amount: 0.4 }}
         className="text-4xl font-semibold mb-14 tracking-wide relative"
       >
-        Sobre mim
+        {title}
         <span className="block w-16 h-[3px] bg-purple-primary mx-auto mt-3 rounded-full"></span>
       </motion.h2>
 
@@ -60,9 +67,7 @@ export default function About() {
             "
           >
             <GraduationCap className="text-purple-primary w-8 h-8 group-hover:scale-110 transition-transform" />
-            <span className="text-lg font-medium">
-              Gestão em Tecnologia da Informação
-            </span>
+            <span className="text-lg font-medium">{education}</span>
           </motion.div>
 
           <motion.div
@@ -81,7 +86,7 @@ export default function About() {
             "
           >
             <Languages className="text-purple-primary w-8 h-8 group-hover:scale-110 transition-transform" />
-            <span className="text-lg font-medium">Inglês</span>
+            <span className="text-lg font-medium">{language}</span>
           </motion.div>
         </motion.div>
 
@@ -97,20 +102,8 @@ export default function About() {
         <motion.div variants={fadeUp} className="md:w-1/2 relative">
           <div className="absolute -top-6 -right-6 w-20 h-20 border border-purple-primary/20 rounded-xl rotate-12"></div>
 
-          <p className="leading-relaxed text-lg tracking-wide opacity-90 relative z-10">
-            Sou um desenvolvedor apaixonado por tecnologia e movido pelo desejo
-            de criar interfaces elegantes, rápidas e funcionais. Tenho grande
-            interesse em experiência do usuário, performance e boas práticas de
-            desenvolvimento.
-            <br />
-            <br />
-            Gosto de transformar ideias em projetos reais, explorando novas
-            ferramentas, frameworks modernos e padrões que tornam o código mais
-            limpo e escalável.
-            <br />
-            <br />
-            Busco sempre evoluir minhas habilidades e participar de projetos que
-            unam criatividade, inovação e impacto real para pessoas e empresas.
+          <p className="leading-relaxed text-lg tracking-wide opacity-90 relative z-10 whitespace-pre-line">
+            {description}
           </p>
         </motion.div>
       </motion.div>

@@ -1,0 +1,64 @@
+{
+  "home": {
+    "title": "Bem-vindo ao meu site",
+    "description": "Este é um site com múltiplos idiomas"
+  },
+  "hero": {
+    "greeting": "Hello I'm",
+    "name": "Thiago",
+    "role": "Front-end Developer",
+    "description": "Desenvolvedor especializado em interfaces modernas e de alto desempenho, com foco em acessibilidade e experiência do usuário.",
+    "downloadCv": "Download CV",
+    "scroll": "scroll"
+  },
+  "skills": {
+    "title": "Minhas",
+    "titleHighlight": "Skills",
+    "description": "Tecnologias que utilizo no meu dia a dia para desenvolver interfaces modernas, rápidas e eficientes."
+  },
+  "about": {
+    "title": "Sobre mim",
+    "education": "Gestão em Tecnologia da Informação",
+    "language": "Inglês",
+    "description": "Sou um desenvolvedor apaixonado por tecnologia e movido pelo desejo de criar interfaces elegantes, rápidas e funcionais. Tenho grande interesse em experiência do usuário, performance e boas práticas de desenvolvimento.\n\nGosto de transformar ideias em projetos reais, explorando novas ferramentas, frameworks modernos e padrões que tornam o código mais limpo e escalável.\n\nBusco sempre evoluir minhas habilidades e participar de projetos que unam criatividade, inovação e impacto real para pessoas e empresas."
+  },
+  "projects": {
+    "title": "Projetos"
+  },
+  "services": {
+    "title": "Serviços",
+    "titleHighlight": "Contratáveis",
+    "webDevelopment": {
+      "title": "Desenvolvimento Web",
+      "description": "Criação de aplicações modernas, rápidas, responsivas e bem estruturadas."
+    },
+    "uiux": {
+      "title": "Melhorias de UI/UX",
+      "description": "Otimização visual e de usabilidade para uma experiência mais fluida e intuitiva."
+    },
+    "interfaceDesign": {
+      "title": "Design de Interfaces",
+      "description": "Criação de layouts modernos, identidade visual e componentes personalizados."
+    },
+    "maintenance": {
+      "title": "Manutenção de Sistemas",
+      "description": "Atualizações, correções, melhorias de performance e suporte técnico."
+    }
+  },
+  "contact": {
+    "title": "Contato",
+    "description": "Se você tem um projeto em mente, precisa de ajuda com desenvolvimento front-end ou apenas quer bater um papo sobre ideias criativas, estou aqui para ajudar.",
+    "nameLabel": "Seu nome",
+    "emailLabel": "Seu e-mail",
+    "messageLabel": "Mensagem",
+    "nameError": "Digite seu nome completo",
+    "emailError": "Digite um email válido",
+    "messageError": "A mensagem não pode estar vazia.",
+    "sending": "Enviando...",
+    "send": "Enviar mensagem",
+    "success": "Mensagem enviada com sucesso!"
+  },
+  "footer": {
+    "copyright": "© {year} Thiago Alexandre"
+  }
+}
