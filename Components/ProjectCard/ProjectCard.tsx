@@ -1,4 +1,5 @@
 import React, { JSX } from "react";
+import Image from "next/image";
 import {
   FaReact,
   FaVuejs,
@@ -62,11 +63,15 @@ export default function ProjectCard({ project }: any) {
         "
       >
         {/* Imagem */}
-        <div className="w-full aspect-video overflow-hidden rounded-xl">
-          <img
+        <div className="w-full aspect-video overflow-hidden rounded-xl relative">
+          <Image
             src={project.img}
             alt={project.title}
-            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+            fill
+            className="object-cover transition-transform duration-300 group-hover:scale-105"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            loading="lazy"
+            quality={80}
           />
         </div>
 

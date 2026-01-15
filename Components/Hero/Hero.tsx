@@ -63,6 +63,7 @@ export default function Hero({
           initial="hidden"
           animate="show"
           className="relative z-10 min-h-screen flex flex-col md:flex-row items-center justify-evenly px-10 gap-14"
+          style={{ willChange: "transform" }}
         >
           {/* Texto */}
           <motion.div
@@ -137,8 +138,13 @@ export default function Hero({
               <Image
                 src={photo}
                 alt="Perfil"
+                width={384}
+                height={384}
                 className="object-cover w-full h-full"
                 priority
+                quality={100}
+                sizes="(max-width: 768px) 320px, 384px"
+                unoptimized={false}
               />
             </div>
 
