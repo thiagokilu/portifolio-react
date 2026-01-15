@@ -6,7 +6,7 @@ import LogoWhite from "../../public/icons/logo-ta-white.png";
 import LogoDark from "../../public/icons/logo.png";
 import { useRouter } from "next/navigation";
 import { useLocale } from "next-intl";
-import Flag from 'react-world-flags'
+import Flag from "react-world-flags";
 
 type AvaliableThemes = "dark" | "light";
 
@@ -99,37 +99,42 @@ export default function Header() {
             >
               Mudar tema
             </span>
-            
           </li>
           <li className="relative group flex items-center justify-center">
-
-          <span
-                className="
+            <span
+              className="
                 absolute left-0 -bottom-1 w-0 h-[2px]
                 bg-purple-primary transition-all duration-300 group-hover:w-full
               "
-              ></span>
+            ></span>
 
-              <button onClick={() => {
+            <button
+              type="button"
+              onClick={() => {
                 router.push(locale === "pt" ? "/en" : "/pt");
-              }} aria-label="Mudar idioma" className="flex items-center justify-center">
-                {locale === "pt" ? (
-                  <Flag code="BR" className="w-6 h-6" />
-                ) : (
-                  <Flag code="US" className="w-6 h-6" />
-                )}
-              </button>
+              }}
+              aria-label={
+                locale === "pt"
+                  ? "Mudar idioma para Inglês"
+                  : "Mudar idioma para Português"
+              }
+              title={locale === "pt" ? "English" : "Português"}
+              className="flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 rounded-full"
+            >
+              {locale === "pt" ? (
+                <Flag code="BR" className="w-6 h-6" aria-hidden="true" />
+              ) : (
+                <Flag code="US" className="w-6 h-6" aria-hidden="true" />
+              )}
+            </button>
 
-              <span
-                className="
+            <span
+              className="
                 absolute left-0 -bottom-1 w-0 h-[2px]
                 bg-purple-primary transition-all duration-300 group-hover:w-full
               "
-              ></span>
-
-
-
-            </li>
+            ></span>
+          </li>
         </ul>
 
         {/* Botão Mobile */}
@@ -155,57 +160,61 @@ export default function Header() {
             >
               <a href={item.href}>{item.label}</a>
             </li>
-            
           ))}
           <li>
-          <button
-          onClick={handleThemeChange}
-          className="flex items-center justify-center  p-2 rounded "
-        >
-          {theme === "dark" ? (
-            <SunIcon
-              size={24}
-              className="text-yellow-400 transition-transform duration-300 group-hover:rotate-12"
-            />
-          ) : (
-            <MoonIcon
-              size={24}
-              className="text-purple-600 transition-transform duration-300 group-hover:-rotate-12"
-            />
-          )}
-        </button>
+            <button
+              onClick={handleThemeChange}
+              className="flex items-center justify-center  p-2 rounded "
+            >
+              {theme === "dark" ? (
+                <SunIcon
+                  size={24}
+                  className="text-yellow-400 transition-transform duration-300 group-hover:rotate-12"
+                />
+              ) : (
+                <MoonIcon
+                  size={24}
+                  className="text-purple-600 transition-transform duration-300 group-hover:-rotate-12"
+                />
+              )}
+            </button>
           </li>
-                    <li className="relative group flex items-center justify-center">
-
-<span
-      className="
+          <li className="relative group flex items-center justify-center">
+            <span
+              className="
       absolute left-0 -bottom-1 w-0 h-[2px]
       bg-purple-primary transition-all duration-300 group-hover:w-full
     "
-    ></span>
+            ></span>
 
-    <button onClick={() => {
-      router.push(locale === "pt" ? "/en" : "/pt");
-    }} aria-label="Mudar idioma" className="flex items-center justify-center">
-      {locale === "pt" ? (
-        <Flag code="BR" className="w-6 h-6" />
-      ) : (
-        <Flag code="US" className="w-6 h-6" />
-      )}
-    </button>
+            <button
+              type="button"
+              onClick={() => {
+                router.push(locale === "pt" ? "/en" : "/pt");
+              }}
+              aria-label={
+                locale === "pt"
+                  ? "Mudar idioma para Inglês"
+                  : "Mudar idioma para Português"
+              }
+              title={locale === "pt" ? "English" : "Português"}
+              className="flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 rounded-full"
+            >
+              {locale === "pt" ? (
+                <Flag code="BR" className="w-6 h-6" aria-hidden="true" />
+              ) : (
+                <Flag code="US" className="w-6 h-6" aria-hidden="true" />
+              )}
+            </button>
 
-    <span
-      className="
+            <span
+              className="
       absolute left-0 -bottom-1 w-0 h-[2px]
       bg-purple-primary transition-all duration-300 group-hover:w-full
     "
-    ></span>
-
-
-
-  </li>
+            ></span>
+          </li>
         </ul>
-
       </div>
     </header>
   );
