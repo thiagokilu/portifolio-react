@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
+    "@next/third-parties": "^16.1.2",
     "country-flag-icons": "^1.6.4",
     "framer-motion": "^12.23.26",
     "lucide-react": "^0.556.0",
