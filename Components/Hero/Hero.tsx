@@ -147,7 +147,7 @@ export default function Hero({
             <div className="w-full h-full rounded-full overflow-hidden border-4 border-white/10">
               <Image
                 src={photo}
-                alt="Perfil"
+                alt={`${name} - ${role}`}
                 width={384}
                 height={384}
                 className="object-cover w-full h-full"

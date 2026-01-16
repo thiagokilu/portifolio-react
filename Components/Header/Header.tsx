@@ -41,9 +41,9 @@ export default function Header() {
         {/* Logo */}
         <div className="w-32">
           {theme === "dark" ? (
-            <Image src={LogoWhite} alt="Logo" priority />
+            <Image src={LogoWhite} alt="Thiago Dev - Logo" priority />
           ) : (
-            <Image src={LogoDark} alt="Logo" priority />
+            <Image src={LogoDark} alt="Thiago Dev - Logo" priority />
           )}
         </div>
 

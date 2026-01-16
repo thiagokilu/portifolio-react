@@ -133,7 +133,12 @@ export default function Contact({
           </motion.p>
 
           <motion.div variants={fadeUp}>
-            <Image src={giphy} alt="giphy" width={300} height={200} />
+            <Image 
+              src={giphy} 
+              alt="Contato - Entre em contato com Thiago Alexandre, Desenvolvedor Front-end" 
+              width={300} 
+              height={200} 
+            />
           </motion.div>
         </div>
 
