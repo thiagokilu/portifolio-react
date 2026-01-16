@@ -4,11 +4,13 @@ import { motion, Variants } from "framer-motion";
 import ProjectCard from "../ProjectCard/ProjectCard";
 
 interface Project {
-  id: string;
+  id: number;
   title: string;
-  description: string;
-  image: string;
+  description_pt: string;
+  description_en: string;
+  img: string;
   link?: string;
+  techs: string[];
 }
 
 interface ProjectsClientProps {

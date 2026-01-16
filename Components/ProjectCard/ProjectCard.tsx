@@ -1,5 +1,9 @@
+"use client";
+
 import React, { JSX } from "react";
 import Image from "next/image";
+import { useLocale } from "next-intl";
+
 import {
   FaReact,
   FaVuejs,
@@ -22,6 +26,28 @@ import {
 } from "react-icons/si";
 import { TbBrandFirebase } from "react-icons/tb";
 
+/* =========================
+   TIPOS
+========================= */
+
+export interface Project {
+  id: string | number;
+  title: string;
+  description_pt: string;
+  description_en: string;
+  img: string;
+  link?: string;
+  techs: string[];
+}
+
+interface ProjectCardProps {
+  project: Project;
+}
+
+/* =========================
+   ÍCONES DE TECNOLOGIA
+========================= */
+
 export const techIcons: Record<string, JSX.Element> = {
   Html: <FaHtml5 />,
   Css: <FaCss3 />,
@@ -42,9 +68,24 @@ export const techIcons: Record<string, JSX.Element> = {
   Ai: <FaBrain />,
 };
 
-export default function ProjectCard({ project }: any) {
+/* =========================
+   COMPONENTE
+========================= */
+
+export default function ProjectCard({ project }: ProjectCardProps) {
+  const locale = useLocale();
+
+  const description = locale.startsWith("pt")
+    ? project.description_pt ?? project.description_en
+    : project.description_en ?? project.description_pt;
+
   return (
-    <a href={project.link} target="_blank" rel="noopener noreferrer">
+    <a
+      href={project.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block"
+    >
       <div
         className="
           group
@@ -62,7 +103,7 @@ export default function ProjectCard({ project }: any) {
           hover:shadow-lg
         "
       >
-        {/* Imagem */}
+        {/* IMAGEM */}
         <div className="w-full aspect-video overflow-hidden rounded-xl relative">
           <Image
             src={project.img}
@@ -75,41 +116,38 @@ export default function ProjectCard({ project }: any) {
           />
         </div>
 
-        {/* Conteúdo */}
+        {/* CONTEÚDO */}
         <div className="flex flex-col gap-3">
-          {/* Título + Tecnologias */}
-          <div className="flex flex-col gap-2">
-            <h3 className="text-xl font-semibold tracking-wide">
-              {project.title}
-            </h3>
+          {/* TÍTULO */}
+          <h3 className="text-xl font-semibold tracking-wide">
+            {project.title}
+          </h3>
 
-            <div className="flex flex-row flex-wrap gap-2">
-              {project.techs.map((tech: string) => (
-                <span
-                  key={tech}
-                  className="
-                    px-3 py-1
-                    flex items-center gap-1
-                    text-sm
-                    rounded-lg
-                    bg-purple-primary/15
-                    text-purple-primary
-                    border border-purple-primary/30
-                  "
-                >
-                  {techIcons[tech] && (
-                    <span className="text-lg">{techIcons[tech]}</span>
-                  )}
-                  {tech}
-                </span>
-              ))}
-            </div>
+          {/* TECNOLOGIAS */}
+          <div className="flex flex-row flex-wrap gap-2">
+            {project.techs.map((tech) => (
+              <span
+                key={tech}
+                className="
+                  px-3 py-1
+                  flex items-center gap-1
+                  text-sm
+                  rounded-lg
+                  bg-purple-primary/15
+                  text-purple-primary
+                  border border-purple-primary/30
+                "
+              >
+                {techIcons[tech] && (
+                  <span className="text-lg">{techIcons[tech]}</span>
+                )}
+                {tech}
+              </span>
+            ))}
           </div>
 
-          {/* Descrição */}
-          <p className="text-sm leading-relaxed opacity-80">
-            {project.description}
-          </p>
+          {/* DESCRIÇÃO */}
+          <p className="text-sm leading-relaxed opacity-80">{description}</p>
         </div>
       </div>
     </a>

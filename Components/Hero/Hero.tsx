@@ -7,6 +7,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { LuMouse } from "react-icons/lu";
 import Header from "../Header/Header";
 import { motion, type Variants } from "framer-motion";
+import { useLocale } from "next-intl";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 40 },
@@ -41,6 +42,7 @@ export default function Hero({
   downloadCv,
   scroll,
 }: HeroProps) {
+  const locale = useLocale();
   return (
     <div>
       <Header />
@@ -85,8 +87,16 @@ export default function Hero({
               className="flex flex-row gap-5 text-lg font-semibold mt-3"
             >
               <a
-                href="/files/curriculo-thiago-portifolio.pdf"
-                download="curriculo-thiago.pdf"
+                href={
+                  locale === "pt"
+                    ? "/files/curriculo-thiago-pt.pdf"
+                    : "/files/curriculo-thiago-en.pdf"
+                }
+                download={
+                  locale === "pt"
+                    ? "curriculo-thiago-pt.pdf"
+                    : "curriculo-thiago-en.pdf"
+                }
                 className="bg-purple-primary text-white flex items-center justify-center gap-2  px-8 py-3 rounded-full transition-all duration-300 hover:bg-purple-600 hover:shadow-lg hover:shadow-purple-300/30"
               >
                 <FileDown />

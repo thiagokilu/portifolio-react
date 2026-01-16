@@ -1,121 +1,136 @@
 [
   {
-    "id": 3,
+    "id": 1,
     "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/5_Furniture_Web_Page_ttrckj.png",
     "title": "Furniture Web Page",
-    "description": "Landing page de e-commerce para móveis com design responsivo e foco na experiência mobile.",
+    "description_pt": "Landing page de e-commerce para móveis com design responsivo e foco na experiência mobile.",
+    "description_en": "E-commerce landing page for furniture with a responsive design and strong focus on mobile user experience.",
     "link": "https://furniture-web-page.vercel.app",
     "techs": ["Html", "Css", "Javascript"]
   },
   {
-    "id": 4,
+    "id": 2,
     "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/6_Daily_Coffee_aesypi.png",
     "title": "Daily Coffee",
-    "description": "Site de cafeteria com layout moderno e responsivo, destacando produtos e promoções diárias.",
+    "description_pt": "Site de cafeteria com layout moderno e responsivo, destacando produtos e promoções diárias.",
+    "description_en": "Coffee shop website with a modern and responsive layout, highlighting products and daily promotions.",
     "link": "https://daily-coffee-tau.vercel.app",
     "techs": ["Html", "Css", "Javascript"]
   },
   {
-    "id": 2,
+    "id": 3,
     "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/4_Kanban_lyaywv.png",
     "title": "Kanban",
-    "description": "Sistema de organização de tarefas estilo Kanban com colunas dinâmicas e arrastar e soltar.",
+    "description_pt": "Sistema de organização de tarefas estilo Kanban com colunas dinâmicas e arrastar e soltar.",
+    "description_en": "Kanban-style task management system with dynamic columns and drag-and-drop functionality.",
     "link": "https://kanban-beta-murex.vercel.app",
     "techs": ["React", "Javascript", "Tailwind"]
   },
   {
-    "id": 5,
+    "id": 4,
     "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745436571/21_React-books_tf6x5d.png",
-    "title": "React books",
-    "description": "Busca de livros usando api do google books e modal com informaçõs do livro.",
+    "title": "React Books",
+    "description_pt": "Busca de livros usando a API do Google Books com modal de informações do livro.",
+    "description_en": "Book search application using the Google Books API, featuring a modal with detailed book information.",
     "link": "https://books-react-sand.vercel.app/",
     "techs": ["React", "Javascript", "Tailwind"]
   },
   {
-    "id": 6,
+    "id": 5,
     "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/8_Carros_Search_cwtw3u.png",
     "title": "Carros Search",
-    "description": "Ferramenta de busca de carros com filtros e integração com APIs para exibir modelos e preços.",
+    "description_pt": "Ferramenta de busca de carros com filtros e integração com APIs para exibir modelos e preços.",
+    "description_en": "Car search tool with filters and API integration to display vehicle models and prices.",
     "link": "https://carros-search.vercel.app",
     "techs": ["React", "Javascript", "Tailwind"]
   },
   {
-    "id": 7,
+    "id": 6,
     "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/9_Cronômetro_rliavr.png",
     "title": "Cronômetro",
-    "description": "Aplicação de cronômetro simples com controle de tempo e interface amigável.",
+    "description_pt": "Aplicação de cronômetro simples com controle de tempo e interface amigável.",
+    "description_en": "Simple stopwatch application with time controls and a user-friendly interface.",
     "link": "https://cronometro-lovat-six.vercel.app",
     "techs": ["React", "Javascript", "Tailwind"]
   },
   {
-    "id": 11,
+    "id": 7,
     "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1745364028/13_Notes_React_zq4dtn.png",
     "title": "Notes React",
-    "description": "Aplicativo de anotações feito em React, com suporte para edição, exclusão e armazenamento local.",
+    "description_pt": "Aplicativo de anotações feito em React, com suporte para edição, exclusão e armazenamento local.",
+    "description_en": "Notes application built with React, featuring edit, delete, and local storage support.",
     "link": "https://notes-react-orpin.vercel.app",
     "techs": ["React", "Typescript", "Tailwind"]
   },
   {
-    "id": 16,
+    "id": 8,
     "img": "https://res.cloudinary.com/ds4ptms7d/image/upload/v1748537447/Captura_de_tela_de_2025-05-29_13-49-20_ifmt56.png",
     "title": "Form MultiStep",
-    "description": "Formulário multietapas com validação e navegação entre os passos.",
+    "description_pt": "Formulário multietapas com validação e navegação entre os passos.",
+    "description_en": "Multi-step form with validation and step-by-step navigation.",
     "link": "https://form-multistep-gamma.vercel.app/",
     "techs": ["React", "Javascript", "Tailwind"]
   },
   {
-    "id": 17,
+    "id": 9,
     "img": "https://res.cloudinary.com/ds4ptms7d/image/upload/v1748537447/Captura_de_tela_de_2025-05-29_13-49-36_fgsone.png",
     "title": "Astroxz Designer",
-    "description": "Portfólio criativo com foco em design e desenvolvimento visual",
+    "description_pt": "Portfólio criativo com foco em design e desenvolvimento visual.",
+    "description_en": "Creative portfolio focused on design and visual development.",
     "link": "https://astroxzdesigner.com.br/",
     "techs": ["React", "Tailwind"]
   },
   {
-    "id": 18,
+    "id": 10,
     "img": "https://res.cloudinary.com/ds4ptms7d/image/upload/v1761652313/Captura_de_tela_de_2025-10-28_08-50-24_kvjedu.png",
-    "title": "Tickets Api",
-    "description": "Api para gerenciamento de tickets e chamados de suporte.",
+    "title": "Tickets API",
+    "description_pt": "API para gerenciamento de tickets e chamados de suporte.",
+    "description_en": "API for managing support tickets and help desk requests.",
     "link": "https://github.com/thiagokilu/api-tickets-docker",
     "techs": ["Node", "Express", "Docker", "Postgres"]
   },
   {
-    "id": 19,
+    "id": 11,
     "title": "Soundify",
-    "description": "Plataforma de e-commerce completa com carrinho de compras, autenticação e pagamentos.",
+    "description_pt": "Plataforma de e-commerce completa com carrinho de compras, autenticação e pagamentos.",
+    "description_en": "Full-featured e-commerce platform with shopping cart, authentication, and payment integration.",
     "techs": ["Html", "Css", "Javascript", "Node"],
     "link": "https://soundify-five.vercel.app/",
     "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1741477590/Soundify-16-9_p9hk7c.png"
   },
   {
-    "id": 20,
+    "id": 12,
     "img": "https://res.cloudinary.com/ds4ptms7d/image/upload/v1762794413/Captura_de_tela_de_2025-11-10_14-06-37_zpkc1e.png",
     "title": "App Dietas",
-    "description": "Um aplicativo completo que utiliza Inteligência Artificial para gerar planos alimentares personalizados com base nas informações do usuário.",
+    "description_pt": "Aplicativo que utiliza Inteligência Artificial para gerar planos alimentares personalizados.",
+    "description_en": "Application that uses Artificial Intelligence to generate personalized diet plans.",
     "link": "https://github.com/thiagokilu/app-dieta",
     "techs": ["Next", "Typescript", "Tailwind", "Node", "Fastify", "Ai"]
   },
   {
-    "id": 21,
+    "id": 13,
     "img": "https://res.cloudinary.com/ds4ptms7d/image/upload/v1764934845/Captura_de_tela_de_2025-12-05_08-40-08_jh0r9u.png",
     "title": "Web Host Landing Page",
-    "description": "Web Host Landing Page",
+    "description_pt": "Landing page para serviço de hospedagem web.",
+    "description_en": "Landing page for a web hosting service focused on clarity and conversion.",
     "techs": ["React", "Tailwind"],
     "link": "http://web-host-landig-page.vercel.app/"
   },
   {
-    "id": 22,
+    "id": 14,
     "img": "https://res.cloudinary.com/ds4ptms7d/image/upload/v1764935078/Captura_de_tela_de_2025-12-05_08-44-15_utelu4.png",
-    "title": "Encurtador de url",
-    "description": "Sistema de encurtamento de URLs com geração de QR Code, expiração personalizada e dashboard para gerenciamento.",
+    "title": "Encurtador de URL",
+    "description_pt": "Sistema de encurtamento de URLs com QR Code, expiração personalizada e dashboard.",
+    "description_en": "URL shortening system with QR code generation, custom expiration, and a management dashboard.",
     "techs": ["React", "Tailwind", "Node", "Express", "Postgres"],
     "link": "https://url-shortener-ivory-eight.vercel.app/"
   },
   {
-    "id": 23,
+    "id": 15,
     "img": "https://res.cloudinary.com/ds4ptms7d/image/upload/v1761670908/Captura_de_tela_de_2025-10-28_14-00-03_bb7psc.png",
     "title": "Nexa System",
-    "description": "Sistema para gerenciamento de tickets e chamados de suporte.",
+    "description_pt": "Sistema para gerenciamento de tickets e chamados de suporte.",
+    "description_en": "System for managing support tickets and help desk requests.",
     "link": "https://nexa-system.vercel.app/",
     "techs": [
       "Next",
@@ -128,10 +143,11 @@
     ]
   },
   {
-    "id": 24,
+    "id": 16,
     "img": "https://res.cloudinary.com/ds4ptms7d/image/upload/v1752532466/Captura_de_tela_de_2025-07-14_19-30-31_pj93kg.png",
     "title": "Food Delivery",
-    "description": "Food App é uma aplicação simples e responsiva para pedidos de comida, com foco em usabilidade.",
+    "description_pt": "Aplicação simples e responsiva para pedidos de comida, com foco em usabilidade.",
+    "description_en": "Simple and responsive food ordering application focused on usability.",
     "link": "https://delivery-app-ddvs.vercel.app/",
     "techs": ["Vue", "Typescript", "Pinia", "Tailwind"]
   }
