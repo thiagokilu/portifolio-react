@@ -1,4 +1,9 @@
 {
+  "nav": {
+    "projects": "Projetos",
+    "services": "Serviços contratáveis",
+    "contact": "Contato"
+  },
   "home": {
     "title": "Bem-vindo ao meu site",
     "description": "Este é um site com múltiplos idiomas"

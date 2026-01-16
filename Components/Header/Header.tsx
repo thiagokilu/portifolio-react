@@ -5,7 +5,7 @@ import Image from "next/image";
 import LogoWhite from "../../public/icons/logo-ta-white.png";
 import LogoDark from "../../public/icons/logo.png";
 import { useRouter } from "next/navigation";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Flag from "react-world-flags";
 
 type AvaliableThemes = "dark" | "light";
@@ -14,11 +14,11 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const router = useRouter();
   const locale = useLocale();
+  const t = useTranslations("nav");
   const links = [
-    { label: "Skills", href: "#Skills" },
-    { label: "Projetos", href: "#Projects" },
-    { label: "Serviços contratáveis", href: "#Services" },
-    { label: "Contato", href: "#Contact" },
+    { label: t("projects"), href: "#projects" },
+    { label: t("services"), href: "#services" },
+    { label: t("contact"), href: "#contact" },
   ];
 
   const [theme, setTheme] = useState<AvaliableThemes>("dark");
