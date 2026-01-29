@@ -87,9 +87,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  verification: {
-    google: "your-google-verification-code", // Adicione seu código de verificação do Google Search Console
-  },
 };
 
 export default function RootLayout({
@@ -99,6 +96,10 @@ export default function RootLayout({
 }) {
   return (
     <html data-theme="dark" suppressHydrationWarning>
+      <meta
+        name="google-site-verification"
+        content="UFjQxjA8G3WGGYaHktuobl0fkekKd5OKaK5877Bw8H4"
+      />
       <body className={`${inter.variable} antialiased`}>{children}</body>
       <GoogleAnalytics gaId="G-4G55N5WQYM" />
       <GoogleTagManager gtmId="G-4G55N5WQYM" />

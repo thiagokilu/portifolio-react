@@ -9,7 +9,7 @@
     "description": "Este é um site com múltiplos idiomas"
   },
   "hero": {
-    "greeting": "Hello I'm",
+    "greeting": "Olá eu sou",
     "name": "Thiago",
     "role": "Front-end Developer",
     "description": "Desenvolvedor especializado em interfaces modernas e de alto desempenho, com foco em acessibilidade e experiência do usuário.",
