@@ -7,6 +7,7 @@ import {
   FaReact,
   FaGitAlt,
   FaLinux,
+  FaDocker,
 } from "react-icons/fa";
 
 import {
@@ -23,7 +24,11 @@ interface SkillsProps {
   description: string;
 }
 
-export default function Skills({ title, titleHighlight, description }: SkillsProps) {
+export default function Skills({
+  title,
+  titleHighlight,
+  description,
+}: SkillsProps) {
   const container: Variants = {
     hidden: { opacity: 0, y: 20 },
     show: {
@@ -86,7 +91,8 @@ export default function Skills({ title, titleHighlight, description }: SkillsPro
             <SiTailwindcss className=" bg-blue-400 rounded-lg p-3 " />,
             <SiSass className=" bg-pink-500 rounded-lg p-3 " />,
             <FaGitAlt className=" bg-orange-600 rounded-lg p-3 " />,
-            <FaLinux className=" bg-yellow-600 rounded-lg p-3 " />,
+            <FaLinux className=" bg-[#FEB400] rounded-lg p-3 " />,
+            <FaDocker className="bg-[#0272C1] rounded-lg p-3" />,
             // continue com os outros ícones...
           ].map((Icon, i) => (
             <motion.div
