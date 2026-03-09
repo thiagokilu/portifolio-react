@@ -49,7 +49,7 @@ export default function Companies() {
           {loopCompanies.map((company, index) => (
             <a
               key={`${company.name}-${index}`}
-              className="glass-surface rounded-2xl p-8 min-h-40 w-[280px] shrink-0 flex items-center justify-center"
+              className="glass-surface rounded-2xl p-8 min-h-40 w-[280px] shrink-0 flex items-center justify-center hover:scale-105 transition-all duration-300 ease-in-out"
               href={company.href}
               target="_blank"
               rel="noopener noreferrer"
