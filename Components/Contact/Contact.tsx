@@ -95,7 +95,7 @@ export default function Contact({
   };
 
   return (
-    <section id="Contact" className="mb-32 px-4 flex flex-col items-center">
+    <section id="contact" className="mb-32 px-4 flex flex-col items-center">
       <motion.div
         variants={staggerContainer}
         initial="hidden"

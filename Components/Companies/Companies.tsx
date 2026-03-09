@@ -20,21 +20,20 @@ const companies = [
   {
     name: "Plarte",
     src: "/companies/plarte.png",
-    href: "",
+    href: "https://embreve-mu.vercel.app/",
   },
 ];
 
 export default function Companies() {
-  const loopCompanies = [...companies, ...companies];
+  const loopCompanies = [...companies, ...companies, ...companies];
   const distance = (CARD_WIDTH + GAP) * companies.length;
 
   return (
-    <section id="Companies" className="px-4 flex flex-col items-center">
-      <h2 className="text-4xl font-semibold mb-14 tracking-wide text-center">
+    <section id="Companies" className="w-full flex flex-col items-center">
+      <h2 className="text-4xl font-semibold tracking-wide text-center">
         Empresas
       </h2>
-
-      <div className="w-full max-w-6xl overflow-x-hidden overflow-y-visible relative py-4">
+      <div className="w-full overflow-x-hidden overflow-y-visible relative py-4 px-4 md:px-6">
         <motion.div
           className="flex gap-8 w-max"
           animate={{ x: [0, -distance] }}
@@ -48,10 +47,11 @@ export default function Companies() {
           {loopCompanies.map((company, index) => (
             <a
               key={`${company.name}-${index}`}
-              className="glass-surface rounded-2xl p-8 min-h-40 w-[280px] shrink-0 flex items-center justify-center hover:scale-105 transition-all duration-300 ease-in-out"
+              className="group glass-surface rounded-2xl p-8 min-h-40 w-[280px] shrink-0 flex items-center justify-center hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer relative"
               href={company.href}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label={`Visitar site da empresa ${company.name}`}
             >
               <Image
                 src={company.src}
@@ -61,6 +61,9 @@ export default function Companies() {
                 className="h-auto w-auto max-h-16 object-contain"
                 loading="lazy"
               />
+              <span className="absolute bottom-3 right-4 text-xs font-medium opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                Clique para abrir
+              </span>
             </a>
           ))}
         </motion.div>

@@ -42,7 +42,7 @@ export default function ProjectsClient({
   projects,
 }: ProjectsClientProps) {
   return (
-    <section id="Projects" className="flex flex-col items-center px-4">
+    <section id="projects" className="flex flex-col items-center px-4">
       {/* TÍTULO */}
       <motion.div
         initial={{ opacity: 0, y: 32 }}

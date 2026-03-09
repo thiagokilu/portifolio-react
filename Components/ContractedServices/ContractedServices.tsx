@@ -46,7 +46,7 @@ export default function ContractedServices({
 }: ContractedServicesProps) {
   return (
     <section
-      id="Services"
+      id="services"
       className="flex flex-col items-center justify-center px-4"
     >
       <motion.h2
