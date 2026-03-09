@@ -1,4 +1,5 @@
 import About from "@/Components/About/About";
+import Companies from "@/Components/Companies/Companies";
 import Contact from "@/Components/Contact/Contact";
 import ContractedServices from "@/Components/ContractedServices/ContractedServices";
 import Footer from "@/Components/Footer/Footer";
@@ -45,6 +46,7 @@ export default function Home() {
           maintenanceTitle={t("services.maintenance.title")}
           maintenanceDesc={t("services.maintenance.description")}
         />
+        <Companies />
         <Contact
           title={t("contact.title")}
           description={t("contact.description")}
