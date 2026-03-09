@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { hr } from "framer-motion/client";
 
 const CARD_WIDTH = 280;
 const GAP = 32;
@@ -35,7 +34,7 @@ export default function Companies() {
         Empresas
       </h2>
 
-      <div className="w-full max-w-6xl overflow-hidden relative">
+      <div className="w-full max-w-6xl overflow-x-hidden overflow-y-visible relative py-4">
         <motion.div
           className="flex gap-8 w-max"
           animate={{ x: [0, -distance] }}
