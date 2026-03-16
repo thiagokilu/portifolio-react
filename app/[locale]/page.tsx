@@ -33,7 +33,7 @@ export default function Home() {
           language={t("about.language")}
           description={t("about.description")}
         />
-        <Projects title={t("projects.title")} />
+        <Companies />
         <ContractedServices
           title={t("services.title")}
           titleHighlight={t("services.titleHighlight")}
@@ -46,7 +46,8 @@ export default function Home() {
           maintenanceTitle={t("services.maintenance.title")}
           maintenanceDesc={t("services.maintenance.description")}
         />
-        <Companies />
+
+        <Projects title={t("projects.title")} />
         <Contact
           title={t("contact.title")}
           description={t("contact.description")}

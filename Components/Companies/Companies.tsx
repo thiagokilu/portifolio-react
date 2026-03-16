@@ -3,8 +3,9 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const CARD_WIDTH = 280;
+const CARD_WIDTH = 240;
 const GAP = 32;
+const LOOP_COUNT = 4;
 
 const companies = [
   {
@@ -25,7 +26,7 @@ const companies = [
 ];
 
 export default function Companies() {
-  const loopCompanies = [...companies, ...companies, ...companies];
+const loopCompanies = Array(LOOP_COUNT).fill(companies).flat();
   const distance = (CARD_WIDTH + GAP) * companies.length;
 
   return (
@@ -47,7 +48,7 @@ export default function Companies() {
           {loopCompanies.map((company, index) => (
             <a
               key={`${company.name}-${index}`}
-              className="group glass-surface rounded-2xl p-8 min-h-40 w-[280px] shrink-0 flex items-center justify-center hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer relative"
+              className="group glass-surface rounded-2xl p-6 min-h-32 w-60 shrink-0 flex items-center justify-center hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer relative"
               href={company.href}
               target="_blank"
               rel="noopener noreferrer"
