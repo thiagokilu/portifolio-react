@@ -18,17 +18,8 @@ import {
   SiVuedotjs,
 } from "react-icons/si";
 
-interface SkillsProps {
-  title: string;
-  titleHighlight: string;
-  description: string;
-}
 
-export default function Skills({
-  title,
-  titleHighlight,
-  description,
-}: SkillsProps) {
+export default function Skills() {
   const container: Variants = {
     hidden: { opacity: 0, y: 20 },
     show: {
@@ -54,11 +45,11 @@ export default function Skills({
     >
       {/* Título */}
       <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
-        {title} <span className="text-purple-primary">{titleHighlight}</span>
+        Minhas <span className="text-purple-primary">Habilidades</span>
       </h2>
 
       {/* Subtítulo / descrição */}
-      <p className="max-w-2xl mb-12 text-lg">{description}</p>
+      <p className="max-w-2xl mb-12 text-lg">Tecnologias que domino para criar soluções web modernas e eficientes.</p>
 
       {/* Ícones */}
       <section className="flex items-center justify-center">

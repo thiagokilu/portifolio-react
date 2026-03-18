@@ -11,12 +11,8 @@ export interface Project {
   techs: string[];
 }
 
-interface ProjectsProps {
-  title: string;
-}
-
-export default function Projects({ title }: ProjectsProps) {
+export default function Projects() {
   const orderedProjects = [...projects].reverse();
 
-  return <ProjectsClient title={title} projects={orderedProjects} />;
+  return <ProjectsClient title="Projetos" projects={orderedProjects} />;
 }

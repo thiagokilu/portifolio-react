@@ -7,7 +7,6 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { LuMouse } from "react-icons/lu";
 import Header from "../Header/Header";
 import { motion, type Variants } from "framer-motion";
-import { useLocale } from "next-intl";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 40 },
@@ -25,24 +24,7 @@ const container: Variants = {
   },
 };
 
-interface HeroProps {
-  greeting: string;
-  name: string;
-  role: string;
-  description: string;
-  downloadCv: string;
-  scroll: string;
-}
-
-export default function Hero({
-  greeting,
-  name,
-  role,
-  description,
-  downloadCv,
-  scroll,
-}: HeroProps) {
-  const locale = useLocale();
+export default function Hero() {
   return (
     <div>
       <Header />
@@ -73,13 +55,13 @@ export default function Hero({
             className="flex flex-col gap-5 max-w-xl"
           >
             <h1 className="text-5xl md:text-7xl font-extrabold leading-tight">
-              {greeting}{" "}
-              <span className="text-purple-primary drop-shadow-md">{name}</span>
+              Olá, eu sou{" "}
+              <span className="text-purple-primary drop-shadow-md">Thiago Alexandre</span>
             </h1>
 
-            <span className="text-xl font-light">{role}</span>
+            <span className="text-xl font-light">Desenvolvedor Front-end</span>
 
-            <p className="text-lg">{description}</p>
+            <p className="text-lg">Criando experiências digitais modernas e acessíveis com React, Next.js e TypeScript.</p>
 
             {/* Botão */}
             <motion.div
@@ -87,20 +69,12 @@ export default function Hero({
               className="flex flex-row gap-5 text-lg font-semibold mt-3"
             >
               <a
-                href={
-                  locale === "pt"
-                    ? "/files/curriculo-thiago-pt.pdf"
-                    : "/files/curriculo-thiago-en.pdf"
-                }
-                download={
-                  locale === "pt"
-                    ? "curriculo-thiago-pt.pdf"
-                    : "curriculo-thiago-en.pdf"
-                }
+                href="/files/curriculo-thiago-pt.pdf"
+                download="curriculo-thiago-pt.pdf"
                 className="bg-purple-primary text-white flex items-center justify-center gap-2  px-8 py-3 rounded-full transition-all duration-300 hover:bg-purple-600 hover:shadow-lg hover:shadow-purple-300/30"
               >
                 <FileDown />
-                {downloadCv}
+                Baixar CV
               </a>
             </motion.div>
 
@@ -134,7 +108,7 @@ export default function Hero({
             <div className="absolute bottom-20 left-1/2 -translate-x-1/2 flex flex-col items-center">
               <LuMouse className="text-4xl animate-bounce" />
               <span className="mt-2 text-sm tracking-widest animate-pulse">
-                {scroll}
+                Role para ver mais
               </span>
             </div>
           </motion.div>
@@ -147,7 +121,7 @@ export default function Hero({
             <div className="w-full h-full rounded-full overflow-hidden border-4 border-white/10">
               <Image
                 src={photo}
-                alt={`${name} - ${role}`}
+                alt="Thiago Alexandre - Desenvolvedor Front-end"
                 width={384}
                 height={384}
                 className="object-cover w-full h-full"

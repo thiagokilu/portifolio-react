@@ -19,31 +19,8 @@ const card: Variants = {
   },
 };
 
-interface ContractedServicesProps {
-  title: string;
-  titleHighlight: string;
-  webDevelopmentTitle: string;
-  webDevelopmentDesc: string;
-  uiuxTitle: string;
-  uiuxDesc: string;
-  interfaceDesignTitle: string;
-  interfaceDesignDesc: string;
-  maintenanceTitle: string;
-  maintenanceDesc: string;
-}
 
-export default function ContractedServices({
-  title,
-  titleHighlight,
-  webDevelopmentTitle,
-  webDevelopmentDesc,
-  uiuxTitle,
-  uiuxDesc,
-  interfaceDesignTitle,
-  interfaceDesignDesc,
-  maintenanceTitle,
-  maintenanceDesc,
-}: ContractedServicesProps) {
+export default function ContractedServices() {
   return (
     <section
       id="services"
@@ -56,7 +33,7 @@ export default function ContractedServices({
         viewport={{ once: true, amount: 0.5 }}
         className="text-4xl font-semibold mb-14 tracking-wide"
       >
-        {title} <span className="text-purple-primary">{titleHighlight}</span>
+        Serviços <span className="text-purple-primary">Oferecidos</span>
       </motion.h2>
 
       <motion.div
@@ -70,23 +47,23 @@ export default function ContractedServices({
         {[
           {
             icon: Code2,
-            title: webDevelopmentTitle,
-            desc: webDevelopmentDesc,
+            title: "Desenvolvimento Web",
+            desc: "Criação de aplicações web modernas e responsivas usando as melhores tecnologias do mercado.",
           },
           {
             icon: MonitorCheck,
-            title: uiuxTitle,
-            desc: uiuxDesc,
+            title: "UI/UX Design",
+            desc: "Design de interfaces intuitivas e experientes de usuário que encantam e convertem.",
           },
           {
             icon: PenTool,
-            title: interfaceDesignTitle,
-            desc: interfaceDesignDesc,
+            title: "Design de Interface",
+            desc: "Criação de interfaces visualmente atrativas e funcionais que proporcionam excelente experiência ao usuário.",
           },
           {
             icon: Wrench,
-            title: maintenanceTitle,
-            desc: maintenanceDesc,
+            title: "Manutenção",
+            desc: "Suporte contínuo e manutenção para garantir que sua aplicação sempre funcione perfeitamente.",
           },
         ].map(({ icon: Icon, title, desc }) => (
           <motion.div

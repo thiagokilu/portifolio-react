@@ -1,6 +1,26 @@
-import { redirect } from "next/navigation";
+import About from "@/Components/About/About";
+import Companies from "@/Components/Companies/Companies";
+import Contact from "@/Components/Contact/Contact";
+import ContractedServices from "@/Components/ContractedServices/ContractedServices";
+import Footer from "@/Components/Footer/Footer";
+import Hero from "@/Components/Hero/Hero";
+import Projects from "@/Components/Projects/Projects";
+import Skills from "@/Components/Skills/Skills";
 
-export default function RootPage() {
-  redirect("/pt");
+export default function Home() {
+  return (
+    <main>
+      <div className="flex flex-col gap-44">
+        <Hero />
+        <Skills />
+        <About />
+        <Companies />
+        <ContractedServices />
+        <Projects />
+        <Contact />
+        <Footer />
+      </div>
+    </main>
+  );
 }
 

@@ -41,11 +41,6 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://thiagodev.site",
-    languages: {
-      pt: "https://thiagodev.site/pt",
-      en: "https://thiagodev.site/en",
-      "x-default": "https://thiagodev.site/pt",
-    },
   },
   openGraph: {
     title: "Thiago Dev | Desenvolvedor Front-end",
@@ -94,15 +89,51 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Thiago Alexandre",
+    jobTitle: "Desenvolvedor Front-end",
+    url: "https://thiagodev.site",
+    image: "https://thiagodev.site/imagens/perfil.png",
+    sameAs: [
+      "https://github.com/thiagokilu",
+      "https://www.linkedin.com/in/thiago-alexandre-cavalcante/",
+    ],
+    knowsAbout: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Tailwind CSS",
+      "Front-end Development",
+      "UI/UX",
+    ],
+    alumniOf: {
+      "@type": "EducationalOrganization",
+      name: "Gestão em Tecnologia da Informação",
+    },
+  };
+
   return (
-    <html data-theme="dark" suppressHydrationWarning>
-      <meta
-        name="google-site-verification"
-        content="UFjQxjA8G3WGGYaHktuobl0fkekKd5OKaK5877Bw8H4"
-      />
-      <body className={`${inter.variable} antialiased`}>{children}</body>
-      <GoogleAnalytics gaId="G-4G55N5WQYM" />
-      <GoogleTagManager gtmId="G-4G55N5WQYM" />
+    <html lang="pt-BR" data-theme="dark" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+        <meta
+          name="google-site-verification"
+          content="UFjQxjA8G3WGGYaHktuobl0fkekKd5OKaK5877Bw8H4"
+        />
+      </head>
+      <body className={`${inter.variable} antialiased`}>
+        {children}
+        <GoogleAnalytics gaId="G-4G55N5WQYM" />
+        <GoogleTagManager gtmId="G-4G55N5WQYM" />
+      </body>
     </html>
   );
 }

@@ -17,14 +17,8 @@ const staggerContainer = {
   },
 };
 
-interface AboutProps {
-  title: string;
-  education: string;
-  language: string;
-  description: string;
-}
 
-export default function About({ title, education, language, description }: AboutProps) {
+export default function About() {
   return (
     <section
       id="About"
@@ -38,7 +32,7 @@ export default function About({ title, education, language, description }: About
         viewport={{ once: true, amount: 0.4 }}
         className="text-4xl font-semibold mb-14 tracking-wide relative"
       >
-        {title}
+        Sobre
         <span className="block w-16 h-[3px] bg-purple-primary mx-auto mt-3 rounded-full"></span>
       </motion.h2>
 
@@ -67,7 +61,7 @@ export default function About({ title, education, language, description }: About
             "
           >
             <GraduationCap className="text-purple-primary w-8 h-8 group-hover:scale-110 transition-transform" />
-            <span className="text-lg font-medium">{education}</span>
+            <span className="text-lg font-medium">Graduação em Gestão em Tecnologia da Informação</span>
           </motion.div>
 
           <motion.div
@@ -86,7 +80,7 @@ export default function About({ title, education, language, description }: About
             "
           >
             <Languages className="text-purple-primary w-8 h-8 group-hover:scale-110 transition-transform" />
-            <span className="text-lg font-medium">{language}</span>
+            <span className="text-lg font-medium">Português (Nativo) / Inglês (Intermediário)</span>
           </motion.div>
         </motion.div>
 
@@ -103,7 +97,7 @@ export default function About({ title, education, language, description }: About
           <div className="absolute -top-6 -right-6 w-20 h-20 border border-purple-primary/20 rounded-xl rotate-12"></div>
 
           <p className="leading-relaxed text-lg tracking-wide opacity-90 relative z-10 whitespace-pre-line">
-            {description}
+            Desenvolvedor Front-end apaixonado por criar interfaces intuitivas e performáticas, com foco em experiência do usuário e código limpo.
           </p>
         </motion.div>
       </motion.div>

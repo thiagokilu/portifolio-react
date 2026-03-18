@@ -35,37 +35,12 @@ interface FormDataProps {
   message: string;
 }
 
-interface ContactProps {
-  title: string;
-  description: string;
-  nameLabel: string;
-  emailLabel: string;
-  messageLabel: string;
-  nameError: string;
-  emailError: string;
-  messageError: string;
-  sending: string;
-  send: string;
-  success: string;
-}
 
-export default function Contact({
-  title,
-  description,
-  nameLabel,
-  emailLabel,
-  messageLabel,
-  nameError,
-  emailError,
-  messageError,
-  sending,
-  send,
-  success,
-}: ContactProps) {
+export default function Contact() {
   const subscriptionSchema = z.object({
-    name: z.string().min(2, nameError),
-    email: z.string().email(emailError),
-    message: z.string().min(10, { message: messageError }),
+    name: z.string().min(2, "Nome é obrigatório"),
+    email: z.string().email("E-mail inválido"),
+    message: z.string().min(10, { message: "Mensagem é obrigatória" }),
   });
 
   const {
@@ -84,7 +59,7 @@ export default function Contact({
       headers: { "Content-Type": "application/json" },
     })
       .then(() => {
-        toast.success(success, {
+        toast.success("Mensagem enviada com sucesso!", {
           position: "bottom-right",
           autoClose: 3000,
           theme: "colored",
@@ -118,7 +93,7 @@ export default function Contact({
               variants={fadeUp}
               className="text-4xl font-semibold  tracking-wide"
             >
-              {title}
+              Contato
             </motion.h2>
 
             {/* Barrinha */}
@@ -129,7 +104,7 @@ export default function Contact({
           </motion.div>
 
           <motion.p variants={fadeUp} className="leading-relaxed text-lg">
-            {description}
+            Vamos conversar sobre seu próximo projeto? Entre em contato!
           </motion.p>
 
           <motion.div variants={fadeUp}>
@@ -151,7 +126,7 @@ export default function Contact({
             {/* Nome */}
             <motion.div variants={fadeUp} className="flex flex-col gap-2">
               <label htmlFor="name" className="text-sm">
-                {nameLabel}
+                Nome
               </label>
 
               <input
@@ -173,7 +148,7 @@ export default function Contact({
             {/* Email */}
             <motion.div variants={fadeUp} className="flex flex-col gap-2">
               <label htmlFor="email" className="text-sm">
-                {emailLabel}
+                E-mail
               </label>
 
               <input
@@ -195,7 +170,7 @@ export default function Contact({
             {/* Mensagem */}
             <motion.div variants={fadeUp} className="flex flex-col gap-2">
               <label htmlFor="message" className="text-sm">
-                {messageLabel}
+                Mensagem
               </label>
 
               <textarea
@@ -221,7 +196,7 @@ export default function Contact({
               disabled={isSubmitting}
               className="bg-purple-primary text-white hover:bg-purple-600 transition-all py-3 rounded-xl  font-semibold flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {isSubmitting ? sending : send}
+              {isSubmitting ? "Enviando..." : "Enviar mensagem"}
             </motion.button>
           </form>
         </motion.div>

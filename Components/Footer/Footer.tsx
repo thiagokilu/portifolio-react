@@ -1,13 +1,11 @@
-interface FooterProps {
-  copyright: string;
-}
-
-export default function Footer({ copyright }: FooterProps) {
+export default function Footer() {
   return (
     <footer className=" py-8 px-6 flex flex-col items-center gap-4">
       <div className="w-full max-w-4xl h-px bg-gradient-to-r from-transparent via-purple-primary to-transparent" />
 
-      <span className=" text-sm tracking-wide">{copyright}</span>
+      <span className=" text-sm tracking-wide">
+        © {new Date().getFullYear()} Thiago Dev. Todos os direitos reservados.
+      </span>
     </footer>
   );
 }
