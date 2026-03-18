@@ -5,20 +5,16 @@ import Image from "next/image";
 import LogoWhite from "../../public/icons/logo-ta-white.png";
 import LogoDark from "../../public/icons/logo.png";
 import { useRouter } from "next/navigation";
-import { useLocale, useTranslations } from "next-intl";
-import Flag from "react-world-flags";
 
 type AvaliableThemes = "dark" | "light";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   const router = useRouter();
-  const locale = useLocale();
-  const t = useTranslations("nav");
   const links = [
-    { label: t("projects"), href: "#projects" },
-    { label: t("services"), href: "#services" },
-    { label: t("contact"), href: "#contact" },
+    { label: "Projetos", href: "#projects" },
+    { label: "Serviços", href: "#services" },
+    { label: "Contato", href: "#contact" },
   ];
 
   const [theme, setTheme] = useState<AvaliableThemes>("dark");
@@ -56,7 +52,7 @@ export default function Header() {
               {/* Efeito linha */}
               <span
                 className="
-                absolute left-0 -bottom-1 w-0 h-[2px]
+                absolute left-0 -bottom-1 w-0 h-0.5
                 bg-purple-primary transition-all duration-300 group-hover:w-full
               "
               ></span>
@@ -66,71 +62,18 @@ export default function Header() {
             <button
               onClick={handleThemeChange}
               aria-label="Mudar tema"
-              className="
-      flex items-center justify-center
-      p-2 rounded-full
-      transition-all duration-300
-      hover:scale-110
-    "
+              className="p-2 rounded-full hover:bg-purple-primary/10 transition-colors"
             >
               {theme === "dark" ? (
-                <SunIcon
-                  size={24}
-                  className="text-yellow-400 transition-transform duration-300 group-hover:rotate-12"
-                />
+                <SunIcon className="w-5 h-5" />
               ) : (
-                <MoonIcon
-                  size={24}
-                  className="text-purple-600 transition-transform duration-300 group-hover:-rotate-12"
-                />
-              )}
-            </button>
-
-            {/* Tooltip */}
-            <span
-              className="
-      absolute top-full mt-2 left-1/2 -translate-x-1/2
-      opacity-0 group-hover:opacity-100
-      transition-all duration-200
-      bg-zinc-900 text-white text-xs px-2 py-1 rounded
-      whitespace-nowrap
-      pointer-events-none
-    "
-            >
-              Mudar tema
-            </span>
-          </li>
-          <li className="relative group flex items-center justify-center">
-            <span
-              className="
-                absolute left-0 -bottom-1 w-0 h-[2px]
-                bg-purple-primary transition-all duration-300 group-hover:w-full
-              "
-            ></span>
-
-            <button
-              type="button"
-              onClick={() => {
-                router.push(locale === "pt" ? "/en" : "/pt");
-              }}
-              aria-label={
-                locale === "pt"
-                  ? "Mudar idioma para Inglês"
-                  : "Mudar idioma para Português"
-              }
-              title={locale === "pt" ? "English" : "Português"}
-              className="flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 rounded-full"
-            >
-              {locale === "pt" ? (
-                <Flag code="BR" className="w-6 h-6" aria-hidden="true" />
-              ) : (
-                <Flag code="US" className="w-6 h-6" aria-hidden="true" />
+                <MoonIcon className="w-5 h-5" />
               )}
             </button>
 
             <span
               className="
-                absolute left-0 -bottom-1 w-0 h-[2px]
+                absolute left-0 -bottom-1 w-0 h-0.5
                 bg-purple-primary transition-all duration-300 group-hover:w-full
               "
             ></span>
@@ -147,74 +90,43 @@ export default function Header() {
       <div
         className={`
           flex flex-col items-center gap-6
-          md:hidden transition-all duration-300 overflow-hidden bg-[var(--background)]
+          md:hidden transition-all duration-300 overflow-hidden bg-background
           ${open ? "max-h-96 py-6" : "max-h-0 py-0"}
         `}
       >
-        <ul className="flex flex-col items-center gap-6 text-xl font-medium ">
-          {links.map((item, i) => (
-            <li
-              key={i}
-              className="cursor-pointer hover:text-purple-primary transition-colors"
-              onClick={() => setOpen(false)}
-            >
-              <a href={item.href}>{item.label}</a>
-            </li>
-          ))}
-          <li>
-            <button
-              onClick={handleThemeChange}
-              className="flex items-center justify-center  p-2 rounded "
-            >
-              {theme === "dark" ? (
-                <SunIcon
-                  size={24}
-                  className="text-yellow-400 transition-transform duration-300 group-hover:rotate-12"
-                />
-              ) : (
-                <MoonIcon
-                  size={24}
-                  className="text-purple-600 transition-transform duration-300 group-hover:-rotate-12"
-                />
-              )}
-            </button>
-          </li>
-          <li className="relative group flex items-center justify-center">
+        {links.map((item, i) => (
+          <li key={i} className="cursor-pointer relative group text-xl">
+            <a href={item.href}>{item.label}</a>
+
+            {/* Efeito linha */}
             <span
               className="
-      absolute left-0 -bottom-1 w-0 h-[2px]
-      bg-purple-primary transition-all duration-300 group-hover:w-full
-    "
-            ></span>
-
-            <button
-              type="button"
-              onClick={() => {
-                router.push(locale === "pt" ? "/en" : "/pt");
-              }}
-              aria-label={
-                locale === "pt"
-                  ? "Mudar idioma para Inglês"
-                  : "Mudar idioma para Português"
-              }
-              title={locale === "pt" ? "English" : "Português"}
-              className="flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 rounded-full"
-            >
-              {locale === "pt" ? (
-                <Flag code="BR" className="w-6 h-6" aria-hidden="true" />
-              ) : (
-                <Flag code="US" className="w-6 h-6" aria-hidden="true" />
-              )}
-            </button>
-
-            <span
-              className="
-      absolute left-0 -bottom-1 w-0 h-[2px]
-      bg-purple-primary transition-all duration-300 group-hover:w-full
-    "
+                absolute left-0 -bottom-1 w-0 h-0.5
+                bg-purple-primary transition-all duration-300 group-hover:w-full
+              "
             ></span>
           </li>
-        </ul>
+        ))}
+        <li className="relative group flex items-center justify-center">
+          <button
+            onClick={handleThemeChange}
+            aria-label="Mudar tema"
+            className="p-2 rounded-full hover:bg-purple-primary/10 transition-colors"
+          >
+            {theme === "dark" ? (
+              <SunIcon className="w-5 h-5" />
+            ) : (
+              <MoonIcon className="w-5 h-5" />
+            )}
+          </button>
+
+          <span
+            className="
+              absolute left-0 -bottom-1 w-0 h-0.5
+              bg-purple-primary transition-all duration-300 group-hover:w-full
+            "
+            ></span>
+        </li>
       </div>
     </header>
   );

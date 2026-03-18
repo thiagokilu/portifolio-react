@@ -2,7 +2,6 @@
 
 import React, { JSX } from "react";
 import Image from "next/image";
-import { useLocale } from "next-intl";
 
 import {
   FaReact,
@@ -73,11 +72,7 @@ export const techIcons: Record<string, JSX.Element> = {
 ========================= */
 
 export default function ProjectCard({ project }: ProjectCardProps) {
-  const locale = useLocale();
-
-  const description = locale.startsWith("pt")
-    ? project.description_pt ?? project.description_en
-    : project.description_en ?? project.description_pt;
+  const description = project.description_pt || project.description_en;
 
   return (
     <a
