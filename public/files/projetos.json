@@ -73,15 +73,6 @@
   },
   {
     "id": 9,
-    "img": "https://res.cloudinary.com/ds4ptms7d/image/upload/v1748537447/Captura_de_tela_de_2025-05-29_13-49-36_fgsone.png",
-    "title": "Astroxz Designer",
-    "description_pt": "Portfólio criativo com foco em design e desenvolvimento visual.",
-    "description_en": "Creative portfolio focused on design and visual development.",
-    "link": "https://astroxzdesigner.com.br/",
-    "techs": ["React", "Tailwind"]
-  },
-  {
-    "id": 10,
     "img": "https://res.cloudinary.com/ds4ptms7d/image/upload/v1761652313/Captura_de_tela_de_2025-10-28_08-50-24_kvjedu.png",
     "title": "Tickets API",
     "description_pt": "API para gerenciamento de tickets e chamados de suporte.",
@@ -90,7 +81,7 @@
     "techs": ["Node", "Express", "Docker", "Postgres"]
   },
   {
-    "id": 11,
+    "id": 10,
     "title": "Soundify",
     "description_pt": "Plataforma de e-commerce completa com carrinho de compras, autenticação e pagamentos.",
     "description_en": "Full-featured e-commerce platform with shopping cart, authentication, and payment integration.",
@@ -99,7 +90,7 @@
     "img": "https://res.cloudinary.com/dbwz36bcf/image/upload/v1741477590/Soundify-16-9_p9hk7c.png"
   },
   {
-    "id": 12,
+    "id": 11,
     "img": "https://res.cloudinary.com/ds4ptms7d/image/upload/v1762794413/Captura_de_tela_de_2025-11-10_14-06-37_zpkc1e.png",
     "title": "App Dietas",
     "description_pt": "Aplicativo que utiliza Inteligência Artificial para gerar planos alimentares personalizados.",
@@ -108,7 +99,7 @@
     "techs": ["Next", "Typescript", "Tailwind", "Node", "Fastify", "Ai"]
   },
   {
-    "id": 13,
+    "id": 12,
     "img": "https://res.cloudinary.com/ds4ptms7d/image/upload/v1764934845/Captura_de_tela_de_2025-12-05_08-40-08_jh0r9u.png",
     "title": "Web Host Landing Page",
     "description_pt": "Landing page para serviço de hospedagem web.",
@@ -117,7 +108,7 @@
     "link": "http://web-host-landig-page.vercel.app/"
   },
   {
-    "id": 14,
+    "id": 13,
     "img": "https://res.cloudinary.com/ds4ptms7d/image/upload/v1764935078/Captura_de_tela_de_2025-12-05_08-44-15_utelu4.png",
     "title": "Encurtador de URL",
     "description_pt": "Sistema de encurtamento de URLs com QR Code, expiração personalizada e dashboard.",
@@ -126,7 +117,7 @@
     "link": "https://url-shortener-ivory-eight.vercel.app/"
   },
   {
-    "id": 15,
+    "id": 14,
     "img": "https://res.cloudinary.com/ds4ptms7d/image/upload/v1761670908/Captura_de_tela_de_2025-10-28_14-00-03_bb7psc.png",
     "title": "Nexa System",
     "description_pt": "Sistema para gerenciamento de tickets e chamados de suporte.",
@@ -143,7 +134,7 @@
     ]
   },
   {
-    "id": 16,
+    "id": 15,
     "img": "https://res.cloudinary.com/ds4ptms7d/image/upload/v1752532466/Captura_de_tela_de_2025-07-14_19-30-31_pj93kg.png",
     "title": "Food Delivery",
     "description_pt": "Aplicação simples e responsiva para pedidos de comida, com foco em usabilidade.",
