@@ -194,7 +194,7 @@ export default function Contact() {
               variants={fadeUp}
               type="submit"
               disabled={isSubmitting}
-              className="bg-purple-primary text-white hover:bg-purple-600 transition-all py-3 rounded-xl  font-semibold flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+              className="bg-purple-700 text-white hover:bg-purple-800 transition-all py-3 rounded-xl font-semibold flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed border border-purple-600"
             >
               {isSubmitting ? "Enviando..." : "Enviar mensagem"}
             </motion.button>

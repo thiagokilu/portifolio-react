@@ -96,7 +96,7 @@ export default function About() {
         <motion.div variants={fadeUp} className="md:w-1/2 relative">
           <div className="absolute -top-6 -right-6 w-20 h-20 border border-purple-primary/20 rounded-xl rotate-12"></div>
 
-          <p className="leading-relaxed text-lg tracking-wide opacity-90 relative z-10 whitespace-pre-line">
+          <p className="leading-relaxed text-lg tracking-wide opacity-95 relative z-10 whitespace-pre-line">
             Desenvolvedor Front-end apaixonado por criar interfaces intuitivas e performáticas, com foco em experiência do usuário e código limpo.
           </p>
         </motion.div>

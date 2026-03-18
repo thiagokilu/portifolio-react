@@ -71,7 +71,7 @@ export default function Hero() {
               <a
                 href="/files/curriculo-thiago-pt.pdf"
                 download="curriculo-thiago-pt.pdf"
-                className="bg-purple-primary text-white flex items-center justify-center gap-2  px-8 py-3 rounded-full transition-all duration-300 hover:bg-purple-600 hover:shadow-lg hover:shadow-purple-300/30"
+                className="bg-purple-700 text-white flex items-center justify-center gap-2 px-8 py-3 rounded-full transition-all duration-300 hover:bg-purple-800 hover:shadow-lg hover:shadow-purple-400/30 border border-purple-600"
               >
                 <FileDown />
                 Baixar CV

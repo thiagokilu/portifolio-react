@@ -81,7 +81,7 @@ export default function ContractedServices() {
           >
             <Icon className="text-purple-primary w-10 h-10 mb-4" />
             <h3 className="text-xl font-semibold mb-2">{title}</h3>
-            <p className="text-sm leading-relaxed opacity-80">{desc}</p>
+            <p className="text-sm leading-relaxed opacity-100">{desc}</p>
           </motion.div>
         ))}
       </motion.div>
