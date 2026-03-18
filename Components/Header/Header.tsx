@@ -81,7 +81,12 @@ export default function Header() {
         </ul>
 
         {/* Botão Mobile */}
-        <button className="md:hidden " onClick={() => setOpen(!open)}>
+        <button 
+          className="md:hidden " 
+          onClick={() => setOpen(!open)}
+          aria-label={open ? "Fechar menu" : "Abrir menu"}
+          aria-expanded={open}
+        >
           {open ? <X size={40} /> : <Menu size={40} />}
         </button>
       </nav>
