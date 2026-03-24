@@ -58,7 +58,7 @@ export default function Companies() {
           </span>
         </div>
 
-        <h2 className="text-[clamp(2.8rem,7vw,6rem)] font-light leading-[0.9] tracking-[-0.02em]">
+        <h2 className="text-[clamp(1.8rem,10vw,4rem)] font-semibold leading-[1.3] tracking-[-0.02em] w-full break-words hyphens-auto">
           Empresas
         </h2>
       </motion.div>

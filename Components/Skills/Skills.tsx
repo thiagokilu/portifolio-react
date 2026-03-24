@@ -59,7 +59,7 @@ export default function Skills() {
   return (
     <section
       id="Skills"
-      className="relative w-full px-6 md:px-16 lg:px-24 py-20 md:py-24 overflow-hidden"
+      className="relative w-full px-6 md:px-16 lg:px-24 py-20 md:py-24"
       style={{ fontFamily: "var(--font-editorial-serif)" }}
     >
       {/* ── PALAVRA DECORATIVA ── */}
@@ -94,7 +94,7 @@ export default function Skills() {
               {String(skills.length).padStart(2, "0")}
             </span>
           </div>
-          <h2 className="text-[clamp(2.8rem,7vw,6rem)] font-light leading-[0.88] tracking-[-0.02em]">
+          <h2 className="text-[clamp(2.5rem,8vw,5rem)] font-semibold leading-[1.1] tracking-[-0.02em] break-words">
             Habilidades
           </h2>
         </motion.header>

@@ -33,7 +33,7 @@ export default function About() {
   return (
     <section
       id="About"
-      className="relative w-full px-6 md:px-12 lg:px-20 py-16 md:py-20 overflow-hidden"
+      className="relative w-full px-6 md:px-12 lg:px-20 py-16 md:py-20"
       style={{ fontFamily: "var(--font-editorial-serif)" }}
     >
       {/* ── PALAVRA DECORATIVA DE FUNDO ── */}
@@ -74,7 +74,7 @@ export default function About() {
             <div className="flex items-start gap-3 max-w-prose">
               {/* drop cap como elemento separado */}
               <span
-                className="shrink-0 text-[5rem] font-normal leading-none mt-1"
+                className="shrink-0 text-[clamp(2rem,12vw,3.5rem)] font-semibold leading-none mt-1"
                 style={{
                   fontFamily: "var(--font-editorial-serif)",
                   lineHeight: 1,

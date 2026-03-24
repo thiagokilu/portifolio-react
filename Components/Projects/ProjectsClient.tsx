@@ -75,7 +75,7 @@ export default function ProjectsClient({
         {/* título principal */}
         <div className="flex flex-col sm:flex-row sm:items-baseline gap-3 sm:gap-6">
           <h2
-            className="text-[clamp(2.8rem,7vw,6rem)] font-normal leading-[0.95] tracking-tight"
+            className="text-[clamp(1.8rem,10vw,4rem)] font-semibold leading-[1.3] tracking-tight w-full break-words hyphens-auto"
             style={{ fontFamily: "var(--font-editorial-serif)" }}
           >
             {title}
