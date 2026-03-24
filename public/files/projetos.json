@@ -141,5 +141,23 @@
     "description_en": "Simple and responsive food ordering application focused on usability.",
     "link": "https://delivery-app-ddvs.vercel.app/",
     "techs": ["Vue", "Typescript", "Pinia", "Tailwind"]
+  },
+  {
+    "id": 16,
+    "img": "https://res.cloudinary.com/ds4ptms7d/image/upload/v1774373328/Screenshot_2026-03-24_14-28-36_wfrcyq.png",
+    "title": "Chronos Pomodoro",
+    "description_pt": "Web app de técnica Pomodoro com timer, estatísticas de produtividade e notificações usando Web Workers.",
+    "description_en": "Pomodoro technique web app with timer, productivity statistics, and notifications using Web Workers.",
+    "techs": ["React", "Typescript", "Tailwind"],
+    "link": "https://chronos-pomodoro-roan-xi.vercel.app/"
+  },
+  {
+    "id": 17,
+    "img": "https://res.cloudinary.com/ds4ptms7d/image/upload/v1774373084/Screenshot_2026-03-24_14-23-51_mpl8sh.png",
+    "title": "Copa 2026",
+    "description_pt": "Aplicativo com informações sobre a Copa do Mundo de 2026, incluindo dados de times, estádios e calendário de jogos.",
+    "description_en": "App with information about the 2026 World Cup, including team data, stadiums, and match schedule.",
+    "techs": ["React", "Typescript", "Tailwind"],
+    "link": "https://copa2026-smvn.vercel.app/"
   }
 ]

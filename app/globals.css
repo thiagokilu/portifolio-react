@@ -1,6 +1,14 @@
 @import "tailwindcss";
 
 /* =========================
+   FONT VARIABLES
+========================= */
+:root {
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-sora);
+}
+
+/* =========================
    THEME TOKENS
 ========================= */
 
@@ -46,11 +54,75 @@
   --color-purple-quinary: var(--purple-quinary);
   --color-purple-senary: var(--purple-senary);
 
-  --font-geist-sans: "Geist Sans", sans-serif;
-  --font-geist-mono: "Geist Mono", monospace;
+  --font-editorial-serif: var(--font-roboto);
+  --font-editorial-sans: var(--font-roboto);
+  --font-sans: var(--font-roboto);
+  --font-mono: var(--font-roboto);
+}
 
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* =========================
+   LIGHT THEME CONTRAST FIXES
+========================= */
+/* DARK THEME mantém as cores existentes */
+:root[data-theme="dark"] {
+  --color-text-primary: #ededed;
+  --color-text-secondary: #dddddd;
+  --color-text-muted: #cccccc;
+  --theme-filter: none;
+}
+
+/* LIGHT THEME - logos pretos e contraste */
+:root[data-theme="light"] {
+  --color-text-primary: #0a0a0a;
+  --color-text-secondary: #1a1a1a;
+  --color-text-muted: #2a2a2a;
+  --theme-filter: brightness(0) saturate(100%);
+}
+
+/* =========================
+   THEME-SPECIFIC OPACITY FIXES
+========================= */
+
+/* Light theme - melhorar contraste de opacidades */
+:root[data-theme="light"] .opacity-20 {
+  opacity: 0.4 !important;
+}
+
+:root[data-theme="light"] .opacity-25 {
+  opacity: 0.5 !important;
+}
+
+:root[data-theme="light"] .opacity-30 {
+  opacity: 0.6 !important;
+}
+
+:root[data-theme="light"] .opacity-35 {
+  opacity: 0.7 !important;
+}
+
+:root[data-theme="light"] .opacity-40 {
+  opacity: 0.8 !important;
+}
+
+/* Dark theme - manter opacidades originais */
+:root[data-theme="dark"] .opacity-20 {
+  opacity: 0.2;
+}
+
+:root[data-theme="dark"] .opacity-25 {
+  opacity: 0.25;
+}
+
+:root[data-theme="dark"] .opacity-30 {
+  opacity: 0.3;
+}
+
+:root[data-theme="dark"] .opacity-35 {
+  opacity: 0.35;
+}
+
+:root[data-theme="dark"] .opacity-40 {
+  opacity: 0.4;
 }
 
 /* =========================
@@ -60,6 +132,7 @@
 body {
   background-color: var(--background);
   color: var(--foreground);
+  font-family: var(--font-roboto), sans-serif;
 }
 
 html {
@@ -82,16 +155,12 @@ html {
     background-size: 60px 60px;
   }
 
-  /* LIGHT MODE — roxo mais forte e definido */
-  /* LIGHT MODE — glass com contraste real */
+  /* LIGHT MODE — glass com melhor contraste */
   :root[data-theme="light"] .glass-surface {
-    background-color: color-mix(in srgb, var(--background) 88%, gray);
-
-    border: 1px solid color-mix(in srgb, black 35%, transparent);
-
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06),
-      0 0 0 1px color-mix(in srgb, var(--purple-primary) 20%, transparent);
-
+    background-color: color-mix(in srgb, var(--background) 92%, rgba(0,0,0,0.05));
+    border: 1px solid color-mix(in srgb, black 25%, transparent);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08),
+      0 0 0 1px color-mix(in srgb, var(--purple-primary) 30%, transparent);
     backdrop-filter: blur(14px);
   }
 

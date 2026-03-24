@@ -1,11 +1,20 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Sora } from "next/font/google";
 import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import "./globals.css";
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+  preload: true,
+});
+
+const sora = Sora({
+  variable: "--font-sora",
+  subsets: ["latin"],
+  weight: ["600", "700", "800"],
   display: "swap",
   preload: true,
 });
@@ -13,7 +22,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://thiagodev.site"),
   title: {
-    default: "Thiago Dev | Front-end Developer",
+    default: "Thiago Dev | Desenvolvedor Front-end",
     template: "%s | Thiago Dev",
   },
   description:
@@ -29,7 +38,7 @@ export const metadata: Metadata = {
     "UI/UX",
     "Portfolio",
     "Desenvolvedor Web",
-    "Front-end Developer",
+    "Desenvolvedor Front-end",
   ],
   authors: [{ name: "Thiago Alexandre" }],
   creator: "Thiago Alexandre",
@@ -61,7 +70,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Thiago Dev | Front-end Developer",
+    title: "Thiago Dev | Desenvolvedor Front-end",
     description:
       "Portfólio de Thiago Alexandre — Desenvolvedor Front-end especializado em criar interfaces modernas, rápidas e acessíveis.",
     images: ["/imagens/perfil.png"],
@@ -129,7 +138,7 @@ export default function RootLayout({
           content="UFjQxjA8G3WGGYaHktuobl0fkekKd5OKaK5877Bw8H4"
         />
       </head>
-      <body className={`${inter.variable} antialiased`}>
+      <body className={`${inter.variable} ${sora.variable} antialiased`}>
         {children}
         <GoogleAnalytics gaId="G-4G55N5WQYM" />
         <GoogleTagManager gtmId="G-4G55N5WQYM" />

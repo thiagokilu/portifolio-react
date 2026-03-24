@@ -10,7 +10,7 @@ import Skills from "@/Components/Skills/Skills";
 export default function Home() {
   return (
     <main>
-      <div className="flex flex-col gap-44">
+      <div className="flex flex-col gap-16 md:gap-20">
         <Hero />
         <Skills />
         <About />
@@ -23,4 +23,3 @@ export default function Home() {
     </main>
   );
 }
-

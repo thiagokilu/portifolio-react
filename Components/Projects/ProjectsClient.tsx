@@ -1,5 +1,4 @@
 "use client";
-
 import { motion, Variants } from "framer-motion";
 import ProjectCard from "../ProjectCard/ProjectCard";
 
@@ -22,18 +21,17 @@ const containerVariants: Variants = {
   hidden: {},
   show: {
     transition: {
-      staggerChildren: 0.12,
+      staggerChildren: 0.1,
     },
   },
 };
 
 const cardVariants: Variants = {
-  hidden: { opacity: 0, y: 24, scale: 0.96 },
+  hidden: { opacity: 0, y: 40 },
   show: {
     opacity: 1,
     y: 0,
-    scale: 1,
-    transition: { duration: 0.35, ease: "easeOut" },
+    transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] },
   },
 };
 
@@ -42,38 +40,97 @@ export default function ProjectsClient({
   projects,
 }: ProjectsClientProps) {
   return (
-    <section id="projects" className="flex flex-col items-center px-4">
-      {/* TÍTULO */}
-      <motion.div
-        initial={{ opacity: 0, y: 32 }}
+    <section
+      id="projects"
+      className="relative w-full px-6 md:px-12 lg:px-20 py-12 md:py-16 overflow-hidden"
+      style={{ fontFamily: "var(--font-editorial-serif)" }}
+    >
+      {/* ── FUNDO TIPOGRÁFICO DECORATIVO ── */}
+      <span
+        aria-hidden
+        className="pointer-events-none select-none absolute -top-8 right-4 text-[clamp(6rem,18vw,14rem)] font-black leading-none tracking-tighter opacity-[0.04] text-current"
+      >
+        WORK
+      </span>
+
+      {/* ── CABEÇALHO EDITORIAL ── */}
+      <motion.header
+        initial={{ opacity: 0, y: 28 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-        className="flex flex-col items-center mb-10"
+        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        className="mb-12"
       >
-        <h2 className="text-4xl font-semibold">{title}</h2>
-        <span className="block w-16 h-[3px] bg-purple-primary mt-3 rounded-full" />
-      </motion.div>
+        {/* linha + issue label */}
+        <div className="flex items-center gap-4 mb-6">
+          <div className="h-px flex-1 bg-current opacity-20" />
+          <span
+            className="text-[10px] uppercase tracking-[0.25em] opacity-50 font-sans"
+            style={{ fontFamily: "var(--font-editorial-sans)", letterSpacing: "0.25em" }}
+          >
+            Selected Projects
+          </span>
+        </div>
 
-      {/* GRID */}
+        {/* título principal */}
+        <div className="flex flex-col sm:flex-row sm:items-baseline gap-3 sm:gap-6">
+          <h2
+            className="text-[clamp(2.8rem,7vw,6rem)] font-normal leading-[0.95] tracking-tight"
+            style={{ fontFamily: "var(--font-editorial-serif)" }}
+          >
+            {title}
+          </h2>
+          {/* contagem editorial */}
+          <span
+            className="self-end sm:self-baseline text-sm opacity-40 font-sans tabular-nums mb-1"
+            style={{ fontFamily: "var(--font-editorial-sans)" }}
+          >
+            {String(projects.length).padStart(2, "0")} projetos
+          </span>
+        </div>
+
+        {/* subtítulo decorativo */}
+        <p
+          className="mt-4 text-sm opacity-40 max-w-xs font-sans italic"
+          style={{ fontFamily: "var(--font-editorial-sans)" }}
+        >
+          Uma seleção cuidadosa de trabalhos — design, código & craft.
+        </p>
+      </motion.header>
+
+      {/* ── GRID EDITORIAL ── */}
       <motion.div
         variants={containerVariants}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true, margin: "-100px" }}
-        className="
-          grid 
-          grid-cols-1 
-          sm:grid-cols-2 
-          lg:grid-cols-3 
-          gap-10 
-          max-w-6xl 
-          w-full
-        "
+        viewport={{ once: true, margin: "-80px" }}
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-0 max-w-7xl items-center mx-auto"
       >
-        {projects.map((project) => (
-          <motion.div key={project.id} variants={cardVariants}>
+        {projects.map((project, index) => (
+          <motion.div
+            key={project.id}
+            variants={cardVariants}
+            className="group relative border-t border-current border-opacity-15 pt-6 pb-10"
+          >
+            {/* número de índice */}
+            <span
+              className="block text-[10px] tabular-nums opacity-30 mb-4 font-sans tracking-widest"
+              style={{ fontFamily: "var(--font-editorial-sans)" }}
+            >
+              {String(index + 1).padStart(2, "0")} /
+            </span>
+
+            {/* card */}
             <ProjectCard project={project} />
+
+            {/* linha animada no hover */}
+            <span
+              className="
+                absolute bottom-0 left-0 h-px w-0 bg-purple-primary
+                transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]
+                group-hover:w-full
+              "
+            />
           </motion.div>
         ))}
       </motion.div>
