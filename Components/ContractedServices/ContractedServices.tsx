@@ -32,7 +32,9 @@ const services = [
 
 export default function EditorialDarkServices() {
   return (
-    <section className="px-6 md:px-16 lg:px-24 py-16 md:py-20 overflow-hidden"
+    <section
+      id="services"
+      className="scroll-mt-24 px-6 md:px-16 lg:px-24 py-16 md:py-20 overflow-hidden"
       style={{ fontFamily: "var(--font-sans)" }}>
       <motion.div
         variants={stagger}

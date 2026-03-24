@@ -60,7 +60,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative w-full px-6 md:px-16 lg:px-24 py-20 md:py-24 overflow-hidden"
+      className="relative w-full scroll-mt-24 px-6 md:px-16 lg:px-24 py-20 md:py-24 overflow-hidden"
       style={{ fontFamily: "var(--font-editorial-serif)" }}
     >
       <motion.div

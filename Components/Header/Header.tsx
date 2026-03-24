@@ -4,6 +4,7 @@ import { MoonIcon, SunIcon, Menu, X } from "lucide-react";
 import Image from "next/image";
 import LogoWhite from "../../public/icons/logo-ta-white.png";
 import LogoDark from "../../public/icons/logo.png";
+import Link from "next/link";
 
 type AvailableThemes = "dark" | "light";
 
@@ -35,11 +36,13 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-6 md:px-16 lg:px-24 flex items-center justify-between h-16">
         {/* ── LOGO ── */}
         <div className="w-24 opacity-80 hover:opacity-100 transition-opacity duration-300">
-          <Image
-            src={theme === "dark" ? LogoWhite : LogoDark}
-            alt="Thiago Dev"
-            priority
-          />
+          <Link href="/">
+            <Image
+              src={theme === "dark" ? LogoWhite : LogoDark}
+              alt="Thiago Dev"
+              priority
+            />
+          </Link>
         </div>
 
         {/* ── NAV DESKTOP ── */}

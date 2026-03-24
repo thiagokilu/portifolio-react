@@ -58,8 +58,8 @@ const skills = [
 export default function Skills() {
   return (
     <section
-      id="Skills"
-      className="relative w-full px-6 md:px-16 lg:px-24 py-20 md:py-24"
+      id="skills"
+      className="relative w-full scroll-mt-24 px-6 md:px-16 lg:px-24 py-20 md:py-24"
       style={{ fontFamily: "var(--font-editorial-serif)" }}
     >
       {/* ── PALAVRA DECORATIVA ── */}
@@ -109,7 +109,7 @@ export default function Skills() {
               key={name}
               variants={itemVariant}
               whileHover="hover"
-              className="group relative flex flex-col items-center justify-center gap-3 py-6 px-4 border-b border-r border-current border-opacity-10 cursor-default overflow-hidden"
+              className="group relative flex flex-col items-center justify-center gap-3 py-6 px-4 border-b border-r border-current border-opacity-10 overflow-hidden"
             >
               {/* fill no hover */}
               <span className="absolute inset-0 bg-purple-primary opacity-0 group-hover:opacity-5 transition-opacity duration-500" />

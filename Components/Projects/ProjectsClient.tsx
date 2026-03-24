@@ -42,7 +42,7 @@ export default function ProjectsClient({
   return (
     <section
       id="projects"
-      className="relative w-full px-6 md:px-12 lg:px-20 py-12 md:py-16"
+      className="relative w-full scroll-mt-24 px-6 md:px-12 lg:px-20 py-12 md:py-16"
       style={{ fontFamily: "var(--font-editorial-serif)" }}
     >
       {/* ── FUNDO TIPOGRÁFICO DECORATIVO ── */}

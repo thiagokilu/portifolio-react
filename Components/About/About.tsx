@@ -32,8 +32,8 @@ const credentials = [
 export default function About() {
   return (
     <section
-      id="About"
-      className="relative w-full px-6 md:px-12 lg:px-20 py-16 md:py-20"
+      id="about"
+      className="relative w-full scroll-mt-24 px-6 md:px-12 lg:px-20 py-16 md:py-20"
       style={{ fontFamily: "var(--font-editorial-serif)" }}
     >
       {/* ── PALAVRA DECORATIVA DE FUNDO ── */}
