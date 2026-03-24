@@ -4,6 +4,7 @@ import Contact from "@/Components/Contact/Contact";
 import ContractedServices from "@/Components/ContractedServices/ContractedServices";
 import Footer from "@/Components/Footer/Footer";
 import Hero from "@/Components/Hero/Hero";
+import LoadingPage from "@/Components/LoadingPage";
 import Projects from "@/Components/Projects/Projects";
 import Skills from "@/Components/Skills/Skills";
 
@@ -11,6 +12,7 @@ export default function Home() {
   return (
     <main>
       <div className="flex flex-col gap-16 md:gap-20">
+        <LoadingPage />
         <Hero />
         <Skills />
         <About />

@@ -42,7 +42,7 @@ export default function ProjectsClient({
   return (
     <section
       id="projects"
-      className="relative w-full px-6 md:px-12 lg:px-20 py-12 md:py-16 overflow-hidden"
+      className="relative w-full px-6 md:px-12 lg:px-20 py-12 md:py-16"
       style={{ fontFamily: "var(--font-editorial-serif)" }}
     >
       {/* ── FUNDO TIPOGRÁFICO DECORATIVO ── */}
@@ -66,7 +66,10 @@ export default function ProjectsClient({
           <div className="h-px flex-1 bg-current opacity-20" />
           <span
             className="text-[10px] uppercase tracking-[0.25em] opacity-50 font-sans"
-            style={{ fontFamily: "var(--font-editorial-sans)", letterSpacing: "0.25em" }}
+            style={{
+              fontFamily: "var(--font-editorial-sans)",
+              letterSpacing: "0.25em",
+            }}
           >
             Selected Projects
           </span>
