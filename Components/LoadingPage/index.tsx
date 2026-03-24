@@ -28,7 +28,7 @@ export default function LoadingPage() {
 
   useEffect(() => {
     // 2. Listener de movimento do mouse
-    const moveMouse = (e) => {
+    const moveMouse = (e: any) => {
       cursorX.set(e.clientX);
       cursorY.set(e.clientY);
     };
