@@ -51,7 +51,7 @@ export default function Header() {
             <li key={item.href}>
               <a
                 href={item.href}
-                className="group relative flex items-center px-4 h-16 text-[9px] uppercase tracking-[0.3em] opacity-40 hover:opacity-90 transition-opacity duration-300"
+                className="group relative flex items-center px-4 h-16 text-[9px] uppercase tracking-[0.3em] opacity-100 transition-opacity duration-300"
                 style={{ fontFamily: "var(--font-sans)" }}
               >
                 {item.label}
@@ -69,7 +69,7 @@ export default function Header() {
             <button
               onClick={toggleTheme}
               aria-label="Mudar tema"
-              className="group flex items-center justify-center w-10 h-10 opacity-30 hover:opacity-80 transition-opacity duration-300"
+              className="group flex items-center justify-center w-10 h-10 opacity-100 transition-opacity duration-300"
             >
               {theme === "dark" ? (
                 <SunIcon className="w-3.5 h-3.5" strokeWidth={1.5} />
@@ -82,7 +82,7 @@ export default function Header() {
 
         {/* ── BOTÃO MOBILE ── */}
         <button
-          className="md:hidden opacity-40 hover:opacity-90 transition-opacity duration-300"
+          className="md:hidden opacity-100 transition-opacity duration-300"
           onClick={() => setOpen((o) => !o)}
           aria-label={open ? "Fechar menu" : "Abrir menu"}
           aria-expanded={open}
@@ -112,12 +112,12 @@ export default function Header() {
               <a
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="group relative flex items-center justify-between py-4 text-[9px] uppercase tracking-[0.3em] opacity-40 hover:opacity-90 transition-opacity duration-300"
+                className="group relative flex items-center justify-between py-4 text-[9px] uppercase tracking-[0.3em] opacity-100 transition-opacity duration-300"
                 style={{ fontFamily: "var(--font-sans)" }}
               >
                 <span>{item.label}</span>
                 <span
-                  className="text-[8px] opacity-30 tabular-nums"
+                  className="text-[8px] opacity-100 tabular-nums"
                   style={{ fontFamily: "var(--font-sans)" }}
                 >
                   {String(i + 1).padStart(2, "0")}
@@ -129,7 +129,7 @@ export default function Header() {
           {/* tema mobile */}
           <li className="pt-4 flex items-center justify-between">
             <span
-              className="text-[9px] uppercase tracking-[0.3em] opacity-30"
+              className="text-[9px] uppercase tracking-[0.3em] opacity-100"
               style={{ fontFamily: "system-ui, sans-serif" }}
             >
               Tema
@@ -137,7 +137,7 @@ export default function Header() {
             <button
               onClick={toggleTheme}
               aria-label="Mudar tema"
-              className="opacity-30 hover:opacity-80 transition-opacity duration-300"
+              className="opacity-100 transition-opacity duration-300"
             >
               {theme === "dark" ? (
                 <SunIcon className="w-3.5 h-3.5" strokeWidth={1.5} />
