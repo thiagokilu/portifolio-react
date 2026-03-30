@@ -49,14 +49,21 @@ export default function Contact() {
       headers: { "Content-Type": "application/json" },
     })
       .then(() => {
-        toast.success("Mensagem enviada.", {
+        toast.success("Mensagem enviada com sucesso!", {
           position: "bottom-right",
           autoClose: 3000,
           theme: "colored",
         });
-        reset();
+        reset(); // Limpa todos os campos após envio bem-sucedido
       })
-      .catch((err) => console.error(err));
+      .catch((err) => {
+        console.error(err);
+        toast.error("Erro ao enviar mensagem. Tente novamente.", {
+          position: "bottom-right",
+          autoClose: 3000,
+          theme: "colored",
+        });
+      });
   };
 
   return (
