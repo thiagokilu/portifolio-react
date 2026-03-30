@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { ToastContainer, toast } from "react-toastify";
 import { motion, type Variants } from "framer-motion";
+import { FaWhatsapp } from "react-icons/fa";
 
 const stagger: Variants = {
   hidden: {},
@@ -24,6 +25,7 @@ const fadeUp: Variants = {
 const subscriptionSchema = z.object({
   name: z.string().min(2, "Nome é obrigatório"),
   email: z.string().email("E-mail inválido"),
+  phone: z.string().min(11, "Celular é obrigatório"),
   message: z.string().min(10, "Mensagem é obrigatória"),
 });
 
@@ -191,6 +193,36 @@ export default function Contact() {
               )}
             </motion.div>
 
+            {/* campo celular */}
+            <motion.div variants={fadeUp} className="flex flex-col gap-2">
+              <label
+                htmlFor="phone"
+                className="text-[9px] uppercase tracking-[0.35em] opacity-30"
+                style={{ fontFamily: "var(--font-editorial-sans)" }}
+              >
+                Celular
+              </label>
+              <input
+                id="phone"
+                type="tel"
+                placeholder="(00) 00000-0000"
+                {...register("phone")}
+                className={fieldBase}
+                style={{ fontFamily: "var(--font-editorial-sans)" }}
+              />
+              {errors.phone && (
+                <span
+                  className="text-[10px] opacity-50 tracking-wide"
+                  style={{
+                    fontFamily: "var(--font-editorial-sans)",
+                    color: "var(--color-red-400, #f87171)",
+                  }}
+                >
+                  {errors.phone.message}
+                </span>
+              )}
+            </motion.div>
+
             {/* campo mensagem */}
             <motion.div variants={fadeUp} className="flex flex-col gap-2">
               <label
@@ -251,6 +283,24 @@ export default function Contact() {
       </motion.div>
 
       <ToastContainer />
+      
+      {/* WhatsApp Button Flutuante */}
+      <a
+        href="https://wa.me/551161982633158?text=Ol%C3%A1!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto."
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-8 right-8 z-50 group"
+        aria-label="Contato via WhatsApp"
+      >
+        <div className="relative w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110">
+          <FaWhatsapp className="w-7 h-7 text-white" />
+          
+          {/* Tooltip */}
+          <div className="absolute bottom-full right-0 mb-2 px-3 py-1 bg-gray-800 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
+            Fale comigo no WhatsApp
+          </div>
+        </div>
+      </a>
     </section>
   );
 }
