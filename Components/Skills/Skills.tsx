@@ -15,6 +15,7 @@ import {
   SiTailwindcss,
   SiSass,
   SiVuedotjs,
+  SiWordpress,
 } from "react-icons/si";
 
 const stagger: Variants = {
@@ -53,6 +54,7 @@ const skills = [
   { icon: FaGitAlt, name: "Git", category: "Controle" },
   { icon: FaLinux, name: "Linux", category: "Sistema" },
   { icon: FaDocker, name: "Docker", category: "DevOps" },
+  { icon: SiWordpress, name: "WordPress", category: "CMS" },
 ];
 
 export default function Skills() {

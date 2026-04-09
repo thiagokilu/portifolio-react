@@ -304,7 +304,7 @@ export default function Contact() {
           
           {/* Tooltip */}
           <div className="absolute bottom-full right-0 mb-2 px-3 py-1 bg-gray-800 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
-            Fale comigo no WhatsApp
+            Fale comigo  no WhatsApp
           </div>
         </div>
       </a>
