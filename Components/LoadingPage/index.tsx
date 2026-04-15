@@ -9,9 +9,27 @@ import {
 
 const TEXT = "CREATIVE • PROJECTS • ";
 
+export function useIsMobile() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    check(); // roda na primeira vez
+    window.addEventListener("resize", check);
+
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
+  return isMobile;
+}
+
 export default function LoadingPage() {
   const [percent, setPercent] = useState(0);
   const [isDone, setIsDone] = useState(false);
+  const isMobile = useIsMobile();
 
   // 1. Configuração do Cursor
   const cursorX = useMotionValue(-100);
@@ -27,24 +45,38 @@ export default function LoadingPage() {
   const cursorYSpring = useSpring(cursorY, springConfig);
 
   useEffect(() => {
-    // 2. Listener de movimento do mouse
-    const moveMouse = (e: any) => {
+    if (isMobile) return; // 👈 mobile não precisa de cursor
+
+    const moveMouse = (e: MouseEvent) => {
       cursorX.set(e.clientX);
       cursorY.set(e.clientY);
     };
 
     window.addEventListener("mousemove", moveMouse);
 
-    // Lógica do contador (seu código original)
-    const interval = setInterval(() => {
-      setPercent((prev) => (prev >= 100 ? 100 : prev + 2));
-    }, 50);
-
-    setTimeout(() => setIsDone(true), 3500);
-
     return () => {
       window.removeEventListener("mousemove", moveMouse);
+    };
+  }, [isMobile]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setPercent((prev) => {
+        if (prev >= 100) {
+          clearInterval(interval);
+          return 100;
+        }
+        return prev + 2;
+      });
+    }, 50);
+
+    const timeout = setTimeout(() => {
+      setIsDone(true);
+    }, 3500);
+
+    return () => {
       clearInterval(interval);
+      clearTimeout(timeout);
     };
   }, []);
 
@@ -52,30 +84,33 @@ export default function LoadingPage() {
     <>
       {/* 3. O Cursor Branco */}
       {/* Cursor Container (O círculo com borda) */}
-      <motion.div
-        className="fixed top-0 left-0 w-12 h-12 border-2 border-white rounded-full pointer-events-none z-[10000] mix-blend-difference flex items-center justify-center"
-        style={{
-          x: cursorXSpring,
-          y: cursorYSpring,
-          translateX: "-50%",
-          translateY: "-50%",
-        }}
-      >
-        {/* A Bolinha Branca (O preenchimento central) */}
-        <div className="w-8 h-8 bg-white rounded-full" />
-      </motion.div>
+      {!isMobile && (
+        <motion.div
+          className="fixed top-0 left-0 w-12 h-12 border-2 border-white rounded-full pointer-events-none z-[10000] mix-blend-difference flex items-center justify-center"
+          style={{
+            x: cursorXSpring,
+            y: cursorYSpring,
+            translateX: "-50%",
+            translateY: "-50%",
+          }}
+        >
+          <div className="w-8 h-8 bg-white rounded-full" />
+        </motion.div>
+      )}
 
       {/* Esconde o cursor padrão em toda a tela */}
-      <style jsx global>{`
-        html,
-        body {
-          cursor: none !important;
-        }
-        button,
-        a {
-          cursor: none !important;
-        }
-      `}</style>
+      {!isMobile && (
+        <style jsx global>{`
+          html,
+          body {
+            cursor: none !important;
+          }
+          button,
+          a {
+            cursor: none !important;
+          }
+        `}</style>
+      )}
 
       <AnimatePresence>
         {!isDone && (
