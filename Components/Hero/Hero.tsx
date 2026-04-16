@@ -134,16 +134,16 @@ export default function Hero() {
                     px-8 py-3
                     text-[9px] uppercase tracking-[0.35em] font-sans
                     flex items-center gap-3
-                    transition-all duration-500 hover:border-opacity-50
+                    md:transition-all md:duration-500 hover:border-opacity-50
                   "
                   style={{ fontFamily: "var(--font-sans)" }}
                 >
-                  <span className="absolute inset-0 bg-purple-primary translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]" />
+                  <span className="absolute inset-0 bg-purple-primary translate-y-full group-hover:translate-y-0 md:transition-transform md:duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]" />
                   <FileDown
-                    className="w-3.5 h-3.5 relative z-10 group-hover:text-white transition-colors duration-300"
+                    className="w-3.5 h-3.5 relative z-10 group-hover:text-white md:transition-colors md:duration-300"
                     strokeWidth={1.5}
                   />
-                  <span className="relative z-10 group-hover:text-white transition-colors duration-300">
+                  <span className="relative z-10 group-hover:text-white md:transition-colors md:duration-300">
                     Baixar CV
                   </span>
                 </a>
@@ -155,7 +155,7 @@ export default function Hero() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="GitHub"
-                    className="opacity-30 hover:opacity-80 hover:text-purple-primary transition-all duration-300"
+                    className="opacity-30 hover:opacity-80 hover:text-purple-primary md:transition-all md:duration-300"
                   >
                     <FaGithub className="w-5 h-5" />
                   </a>
@@ -164,7 +164,7 @@ export default function Hero() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="LinkedIn"
-                    className="opacity-30 hover:opacity-80 hover:text-purple-primary transition-all duration-300"
+                    className="opacity-30 hover:opacity-80 hover:text-purple-primary md:transition-all md:duration-300"
                   >
                     <FaLinkedin className="w-5 h-5" />
                   </a>
@@ -178,8 +178,8 @@ export default function Hero() {
               className="group relative w-64 h-80 md:w-72 md:h-96 shrink-0 self-end"
             >
               {/* moldura dupla deslocada */}
-              <div className="absolute -top-3 -left-3 w-full h-full border border-current opacity-10 group-hover:opacity-20 transition-opacity duration-500" />
-              <div className="absolute -top-1.5 -left-1.5 w-full h-full border border-purple-primary opacity-0 group-hover:opacity-20 transition-opacity duration-500" />
+              <div className="absolute -top-3 -left-3 w-full h-full border border-current opacity-10 group-hover:opacity-20 md:transition-opacity md:duration-500" />
+              <div className="absolute -top-1.5 -left-1.5 w-full h-full border border-purple-primary opacity-0 group-hover:opacity-20 md:transition-opacity md:duration-500" />
 
               {/* imagem */}
               <div className="relative w-full h-full overflow-hidden">
@@ -188,7 +188,9 @@ export default function Hero() {
                   alt="Thiago Alexandre - Desenvolvedor Front-end"
                   fill
                   priority
-                  className="object-cover grayscale-[0.3] group-hover:grayscale-0 transition-all duration-700 object-top"
+                  fetchPriority="high"
+                  sizes="100vw"
+                  className="object-cover grayscale-[0.3] group-hover:grayscale-0 md:transition-all md:duration-700"
                 />
                 {/* overlay sutil */}
                 <div className="absolute inset-0 bg-gradient-to-t from-background/30 to-transparent" />

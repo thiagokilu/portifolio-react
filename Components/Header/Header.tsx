@@ -34,7 +34,7 @@ export default function Header() {
     >
       <nav className="max-w-7xl mx-auto px-6 md:px-16 lg:px-24 flex items-center justify-between h-16">
         {/* ── LOGO ── */}
-        <div className="w-32 opacity-80 hover:opacity-100 transition-opacity duration-300">
+        <div className="w-32 opacity-80 hover:opacity-100 md:transition-opacity md:duration-300">
           <Link href="/">
             <Image src={Logo} alt="Thiago Dev" className="dark:invert" />
           </Link>
@@ -46,12 +46,12 @@ export default function Header() {
             <li key={item.href}>
               <a
                 href={item.href}
-                className="group relative flex items-center px-4 h-16 text-[9px] uppercase tracking-[0.3em] opacity-100 transition-opacity duration-300"
+                className="group relative flex items-center px-4 h-16 text-[9px] uppercase tracking-[0.3em] opacity-100 md:transition-opacity md:duration-300"
                 style={{ fontFamily: "var(--font-sans)" }}
               >
                 {item.label}
                 {/* linha inferior crescente */}
-                <span className="absolute bottom-0 left-0 h-[1px] w-0 bg-purple-primary group-hover:w-full transition-all duration-400 ease-[cubic-bezier(0.16,1,0.3,1)]" />
+                <span className="absolute bottom-0 left-0 h-[1px] w-0 bg-purple-primary group-hover:w-full md:transition-all md:duration-400 ease-[cubic-bezier(0.16,1,0.3,1)]" />
               </a>
             </li>
           ))}
@@ -64,7 +64,7 @@ export default function Header() {
             <button
               onClick={toggleTheme}
               aria-label="Mudar tema"
-              className="group flex items-center justify-center w-10 h-10 opacity-100 transition-opacity duration-300"
+              className="group flex items-center justify-center w-10 h-10 opacity-100 md:transition-opacity md:duration-300"
             >
               {theme === "dark" ? (
                 <SunIcon className="w-3.5 h-3.5" strokeWidth={1.5} />
@@ -77,7 +77,7 @@ export default function Header() {
 
         {/* ── BOTÃO MOBILE ── */}
         <button
-          className="md:hidden opacity-100 transition-opacity duration-300"
+          className="md:hidden opacity-100"
           onClick={() => setOpen((o) => !o)}
           aria-label={open ? "Fechar menu" : "Abrir menu"}
           aria-expanded={open}
@@ -107,7 +107,7 @@ export default function Header() {
               <a
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="group relative flex items-center justify-between py-4 text-[9px] uppercase tracking-[0.3em] opacity-100 transition-opacity duration-300"
+                className="group relative flex items-center justify-between py-4 text-[9px] uppercase tracking-[0.3em] opacity-100"
                 style={{ fontFamily: "var(--font-sans)" }}
               >
                 <span>{item.label}</span>
@@ -132,7 +132,7 @@ export default function Header() {
             <button
               onClick={toggleTheme}
               aria-label="Mudar tema"
-              className="opacity-100 transition-opacity duration-300"
+              className="opacity-100"
             >
               {theme === "dark" ? (
                 <SunIcon className="w-3.5 h-3.5" strokeWidth={1.5} />
