@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import giphy from "../../public/giphy.gif";
+import giphy from "../../public/imagens/contact-animation.webp";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -119,6 +119,7 @@ export default function Contact() {
                 width={260}
                 height={180}
                 unoptimized
+                sizes="(max-width: 768px) 220px, 260px"
                 className=" relative z-10"
               />
             </div>

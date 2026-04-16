@@ -6,17 +6,15 @@ import "./globals.css";
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "600"],
   display: "swap",
-  preload: true,
 });
 
 const sora = Sora({
   variable: "--font-sora",
   subsets: ["latin"],
-  weight: ["600", "700", "800"],
+  weight: ["700"],
   display: "swap",
-  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -39,6 +37,7 @@ export const metadata: Metadata = {
     "Portfolio",
     "Desenvolvedor Web",
     "Desenvolvedor Front-end",
+    "Desenvolvimento de sites",
   ],
   authors: [{ name: "Thiago Alexandre" }],
   creator: "Thiago Alexandre",
@@ -119,6 +118,7 @@ export default function RootLayout({
       "Tailwind CSS",
       "Front-end Development",
       "UI/UX",
+      "Desenvolvimento de sites",
     ],
     alumniOf: {
       "@type": "EducationalOrganization",

@@ -1,7 +1,7 @@
 "use client";
 
 import { FileDown } from "lucide-react";
-import photo from "../../public/imagens/perfil.png";
+import photo from "../../public/imagens/perfil-hero.webp";
 import Image from "next/image";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { IoCodeSlash } from "react-icons/io5";
@@ -37,7 +37,7 @@ export default function Hero() {
 
         {/* ── NÚMERO DECORATIVO ── */}
 
-       <IoCodeSlash className="pointer-events-none select-none absolute bottom-8 right-8 text-[clamp(6rem,18vw,16rem)] opacity-[0.025] text-current" />
+        <IoCodeSlash className="pointer-events-none select-none absolute bottom-8 right-8 text-[clamp(6rem,18vw,16rem)] opacity-[0.025] text-current" />
 
         {/* ── CONTEÚDO ── */}
         <motion.div
@@ -45,7 +45,7 @@ export default function Hero() {
           initial="hidden"
           animate="show"
           className="relative z-10 min-h-screen max-w-7xl mx-auto px-6 md:px-16 lg:px-24 flex flex-col justify-center gap-0"
-        style={{ fontFamily: "var(--font-sans)" }}
+          style={{ fontFamily: "var(--font-sans)" }}
         >
           {/* eyebrow */}
           <motion.div
@@ -79,8 +79,10 @@ export default function Hero() {
                 >
                   Olá, eu sou
                 </span>
-                <h1 className="text-[clamp(3.5rem,8vw,7rem)] font-semibold leading-[0.88] tracking-[-0.02em]"
-                style={{ fontFamily: "var(--font-display)" }}>
+                <h1
+                  className="text-[clamp(3.5rem,8vw,7rem)] font-semibold leading-[0.88] tracking-[-0.02em]"
+                  style={{ fontFamily: "var(--font-display)" }}
+                >
                   Thiago
                   <br />
                   <em
@@ -185,6 +187,7 @@ export default function Hero() {
                   src={photo}
                   alt="Thiago Alexandre - Desenvolvedor Front-end"
                   fill
+                  priority
                   className="object-cover grayscale-[0.3] group-hover:grayscale-0 transition-all duration-700 object-top"
                 />
                 {/* overlay sutil */}
