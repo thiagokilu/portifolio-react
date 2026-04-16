@@ -72,13 +72,13 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         {/* ── IMAGEM ── */}
         <div className="relative aspect-[4/3] overflow-hidden">
           {/* grayscale que some no hover */}
-          <div className="absolute inset-0 grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out z-10" />
+          <div className="absolute inset-0 md:grayscale md:group-hover:grayscale-0 md:transition-all md:duration-700 ease-in-out z-10" />
 
           <Image
             src={project.img}
             alt={project.title}
             fill
-            className="object-cover transition-transform duration-1000 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105"
+            className="object-cover md:transition-transform md:duration-1000 ease-[cubic-bezier(0.22,1,0.36,1)] md:group-hover:scale-105"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           />
 
@@ -88,8 +88,8 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             absolute inset-0 z-20
             flex items-end justify-between p-5
             bg-gradient-to-t from-black/60 via-black/10 to-transparent
-            opacity-0 group-hover:opacity-100
-            transition-opacity duration-500
+            md:opacity-0 md:group-hover:opacity-100
+            md:transition-opacity md:duration-500
           "
           >
             <span
@@ -100,7 +100,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             </span>
             {/* seta diagonal */}
             <svg
-              className="w-5 h-5 text-white translate-y-1 translate-x-1 group-hover:translate-y-0 group-hover:translate-x-0 transition-transform duration-300"
+              className="w-5 h-5 text-white md:translate-y-1 md:translate-x-1 md:group-hover:translate-y-0 md:group-hover:translate-x-0 md:transition-transform md:duration-300"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -122,8 +122,8 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             <div
               className="
               absolute left-0 top-0 h-full w-0 bg-purple-primary
-              transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]
-              group-hover:w-full
+              md:transition-all md:duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]
+              md:group-hover:w-full
             "
             />
           </div>
@@ -133,7 +133,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             <h3
               className="
                 text-xl leading-tight tracking-tight font-normal uppercase
-                group-hover:text-purple-primary transition-colors duration-300
+                md:group-hover:text-purple-primary md:transition-colors md:duration-300
               "
               style={{ fontFamily: "var(--font-editorial-serif)" }}
             >
@@ -144,9 +144,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             <div
               className="
               flex items-center gap-1.5 shrink-0 mt-0.5
-              opacity-0 group-hover:opacity-100
-              translate-x-2 group-hover:translate-x-0
-              transition-all duration-400
+              md:opacity-0 md:group-hover:opacity-100
+              md:translate-x-2 md:group-hover:translate-x-0
+              md:transition-all md:duration-400
             "
             >
               {project.techs.slice(0, 3).map((tech) =>
@@ -175,9 +175,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           <p
             className="
               text-xs leading-relaxed opacity-50
-              max-h-0 overflow-hidden
-              group-hover:max-h-24
-              transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]
+              md:max-h-0 overflow-hidden
+              md:group-hover:max-h-24
+              md:transition-all md:duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]
               font-sans
             "
             style={{ fontFamily: "var(--font-editorial-sans)", fontStyle: "italic" }}
@@ -193,7 +193,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             {project.techs.slice(0, 4).map((tech, i) => (
               <span
                 key={tech}
-                className="text-[9px] uppercase tracking-[0.18em] opacity-30 group-hover:opacity-60 transition-opacity duration-300"
+                className="text-[9px] uppercase tracking-[0.18em] opacity-30 md:group-hover:opacity-60 md:transition-opacity md:duration-300"
                 style={{ transitionDelay: `${i * 40}ms` }}
               >
                 {tech}

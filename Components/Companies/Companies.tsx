@@ -92,16 +92,16 @@ export default function Companies() {
                 style={{ width: CARD_WIDTH }}
               >
                 {/* linha topo — cresce no hover */}
-                <div className="absolute top-0 left-0 h-[1px] w-0 bg-purple-primary group-hover:w-full transition-all duration-600 ease-[cubic-bezier(0.16,1,0.3,1)]" />
+                <div className="absolute top-0 left-0 h-[1px] w-0 bg-purple-primary md:group-hover:w-full md:transition-all md:duration-600 ease-[cubic-bezier(0.16,1,0.3,1)]" />
 
                 {/* imagem */}
-                <div className="w-full flex items-center justify-center py-6 px-4 border border-current border-opacity-10 group-hover:border-opacity-25 transition-all duration-500">
+                <div className="w-full flex items-center justify-center py-6 px-4 border border-current border-opacity-10 md:group-hover:border-opacity-25 md:transition-all md:duration-500">
                   <Image
                     src={company.src}
                     alt={`Logo ${company.name}`}
                     width={180}
                     height={80}
-                    className="h-auto w-auto max-h-12 object-contain opacity-70 group-hover:opacity-100 transition-all duration-500"
+                    className="h-auto w-auto max-h-12 object-contain opacity-70 md:group-hover:opacity-100 md:transition-all md:duration-500"
                     loading="lazy"
                     style={{
                       filter: 'var(--theme-filter)',
@@ -110,7 +110,7 @@ export default function Companies() {
                 </div>
 
                 {/* nome + seta */}
-                <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="flex items-center gap-2 md:opacity-0 md:group-hover:opacity-100 md:transition-opacity md:duration-300">
                   <span
                     className="text-[9px] uppercase tracking-[0.25em] opacity-50"
                     style={{ fontFamily: "var(--font-sans)" }}

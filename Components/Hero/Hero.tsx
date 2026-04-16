@@ -190,7 +190,7 @@ export default function Hero() {
                   priority
                   fetchPriority="high"
                   sizes="100vw"
-                  className="object-cover grayscale-[0.3] group-hover:grayscale-0 md:transition-all md:duration-700"
+                  className="object-cover md:grayscale-[0.3] md:group-hover:grayscale-0 md:transition-all md:duration-700"
                 />
                 {/* overlay sutil */}
                 <div className="absolute inset-0 bg-gradient-to-t from-background/30 to-transparent" />
