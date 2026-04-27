@@ -5,7 +5,7 @@
 ========================= */
 :root {
   --font-sans: var(--font-inter);
-  --font-display: var(--font-sora);
+  --font-display: var(--font-inter);
 }
 
 /* =========================
@@ -28,7 +28,7 @@
 
 /* DARK */
 :root[data-theme="dark"] {
-  --background: #0a0a0a;
+  --background: #0c0c0b;
   --foreground: #ededed;
 
   --purple-primary: #c084fc;
@@ -54,10 +54,10 @@
   --color-purple-quinary: var(--purple-quinary);
   --color-purple-senary: var(--purple-senary);
 
-  --font-editorial-serif: var(--font-roboto);
-  --font-editorial-sans: var(--font-roboto);
-  --font-sans: var(--font-roboto);
-  --font-mono: var(--font-roboto);
+  --font-editorial-serif: var(--font-inter);
+  --font-editorial-sans: var(--font-inter);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-inter);
 }
 
 /* =========================
@@ -148,7 +148,7 @@
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: var(--font-roboto), sans-serif;
+  font-family: var(--font-inter), sans-serif;
   text-rendering: optimizeLegibility;
 }
 

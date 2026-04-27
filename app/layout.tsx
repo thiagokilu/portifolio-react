@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Sora } from "next/font/google";
+import { Inter } from "next/font/google";
 import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import "./globals.css";
 
@@ -7,13 +7,6 @@ const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
   weight: ["400", "600"],
-  display: "swap",
-});
-
-const sora = Sora({
-  variable: "--font-sora",
-  subsets: ["latin"],
-  weight: ["700"],
   display: "swap",
 });
 
@@ -135,10 +128,10 @@ export default function RootLayout({
         />
         <meta
           name="google-site-verification"
-          content="UFjQxjA8G3WGGYaHktuobl0fkekKd5OKaK5877Bw8H4"
+          content="VMuYkaF34YqH-UXj1kK8PIbkpMFlp7_Gp1rk6K7TzUE"
         />
       </head>
-      <body className={`${inter.variable} ${sora.variable} antialiased`}>
+      <body className={`${inter.variable} antialiased`}>
         {children}
         <GoogleAnalytics gaId="G-4G55N5WQYM" />
         <GoogleTagManager gtmId="G-4G55N5WQYM" />

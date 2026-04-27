@@ -5,7 +5,6 @@ import photo from "../../public/imagens/perfil-hero.webp";
 import Image from "next/image";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { IoCodeSlash } from "react-icons/io5";
-import Header from "../Header/Header";
 import { motion, type Variants } from "framer-motion";
 
 const stagger: Variants = {
@@ -25,8 +24,6 @@ const fadeUp: Variants = {
 export default function Hero() {
   return (
     <div style={{ fontFamily: "var(--font-editorial-serif)" }}>
-      <Header />
-
       <div id="Hero" className="relative min-h-screen overflow-hidden">
         {/* ── GRID DE FUNDO SUTIL ── */}
         <div className="absolute inset-0 pointer-events-none">
@@ -190,7 +187,7 @@ export default function Hero() {
                   priority
                   fetchPriority="high"
                   sizes="100vw"
-                  className="object-cover md:grayscale-[0.3] md:group-hover:grayscale-0 md:transition-all md:duration-700"
+                  className="object-cover"
                 />
                 {/* overlay sutil */}
                 <div className="absolute inset-0 bg-gradient-to-t from-background/30 to-transparent" />

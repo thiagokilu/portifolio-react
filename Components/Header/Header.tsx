@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { MoonIcon, SunIcon, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Logo from "../../public/icons/thiagodev.svg";
 import Link from "next/link";
@@ -29,63 +29,70 @@ export default function Header() {
 
   return (
     <header
-      className="w-full fixed top-0 left-0 z-50 bg-background/80 backdrop-blur-sm border-b border-current border-opacity-[0.06]"
-      style={{ fontFamily: "var(--font-sans)" }}
+      className="w-full fixed top-0 left-0 z-50  select-none cursor-none"
+      style={{ fontFamily: "'Inter', system-ui, sans-serif" }}
     >
-      <nav className="max-w-7xl mx-auto px-6 md:px-16 lg:px-24 flex items-center justify-between h-16">
-        {/* ── LOGO ── */}
-        <div className="w-32 opacity-80 hover:opacity-100 md:transition-opacity md:duration-300">
+      <nav className=" px-6 md:px-12 flex items-center justify-between h-[60px]">
+        {/* ── LOGO (Mantida a original com estilo do print) ── */}
+        <div className="w-32 cursor-none">
           <Link href="/">
-            <Image src={Logo} alt="Thiago Dev" className="dark:invert" />
+            <Image
+              src={Logo}
+              alt="Thiago Dev"
+              className="dark:invert opacity-80 hover:opacity-100 transition-opacity duration-300"
+            />
           </Link>
         </div>
 
-        {/* ── NAV DESKTOP ── */}
-        <ul className="hidden md:flex items-center gap-0">
-          {links.map((item) => (
-            <li key={item.href}>
-              <a
-                href={item.href}
-                className="group relative flex items-center px-4 h-16 text-[9px] uppercase tracking-[0.3em] opacity-100 md:transition-opacity md:duration-300"
-                style={{ fontFamily: "var(--font-sans)" }}
-              >
-                {item.label}
-                {/* linha inferior crescente */}
-                <span className="absolute bottom-0 left-0 h-[1px] w-0 bg-purple-primary group-hover:w-full md:transition-all md:duration-400 ease-[cubic-bezier(0.16,1,0.3,1)]" />
-              </a>
-            </li>
-          ))}
+        {/* ── NAV DESKTOP (Estilo 12px / 0.1em) ── */}
+        <div className="hidden md:flex items-center gap-10">
+          <ul className="flex items-center gap-2 list-none m-0 p-0">
+            {links.map((item) => (
+              <li key={item.href}>
+                <a
+                  href={item.href}
+                  className="group relative flex items-center px-4 py-2 text-[12px] font-normal uppercase tracking-[0.1em] text-[#93938F] hover:text-[#EDEDE8] transition-colors duration-300 cursor-none"
+                >
+                  {item.label}
+                  {/* Linha inferior baseada no CSS .nav-links a::after */}
+                  <span className="absolute bottom-1 left-4 h-[1px] w-0 bg-[#EDEDE8] transition-all duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:w-[calc(100%-2rem)]" />
+                </a>
+              </li>
+            ))}
+          </ul>
 
-          {/* divisória */}
-          <li className="w-px h-4 bg-current opacity-15 mx-3" />
-
-          {/* toggle tema */}
-          <li>
-            <button
-              onClick={toggleTheme}
-              aria-label="Mudar tema"
-              className="group flex items-center justify-center w-10 h-10 opacity-100 md:transition-opacity md:duration-300"
-            >
-              {theme === "dark" ? (
-                <SunIcon className="w-3.5 h-3.5" strokeWidth={1.5} />
-              ) : (
-                <MoonIcon className="w-3.5 h-3.5" strokeWidth={1.5} />
-              )}
-            </button>
-          </li>
-        </ul>
+          {/* ── TOGGLE TEMA (Design oval 39.6px x 20px) ── */}
+          <button
+            onClick={toggleTheme}
+            aria-label="Mudar tema"
+            className="flex items-center gap-2 px-3 rounded-full border border-[#EDEDE8]/10 hover:border-[#EDEDE8]/30 transition-all duration-300 cursor-none"
+            style={{ height: "20px" }}
+          >
+            {/* Ícone meio-a-meio customizado */}
+            <div className="w-[10px] h-[10px] rounded-full border border-[#EDEDE8] flex overflow-hidden">
+              <div
+                className={`w-1/2 h-full ${theme === "dark" ? "bg-[#EDEDE8]" : "bg-transparent"}`}
+              />
+              <div
+                className={`w-1/2 h-full ${theme === "light" ? "bg-[#EDEDE8]" : "bg-transparent"}`}
+              />
+            </div>
+            <span className="text-[#EDEDE8] text-[10px] font-bold uppercase leading-none tracking-tighter">
+              {theme === "dark" ? "Light" : "Dark"}
+            </span>
+          </button>
+        </div>
 
         {/* ── BOTÃO MOBILE ── */}
         <button
-          className="md:hidden opacity-100"
+          className="md:hidden text-[#EDEDE8] cursor-none"
           onClick={() => setOpen((o) => !o)}
           aria-label={open ? "Fechar menu" : "Abrir menu"}
-          aria-expanded={open}
         >
           {open ? (
-            <X className="w-5 h-5" strokeWidth={1.5} />
+            <X size={20} strokeWidth={1.5} />
           ) : (
-            <Menu className="w-5 h-5" strokeWidth={1.5} />
+            <Menu size={20} strokeWidth={1.5} />
           )}
         </button>
       </nav>
@@ -93,28 +100,23 @@ export default function Header() {
       {/* ── MENU MOBILE ── */}
       <div
         className={`
-          md:hidden border-t border-current border-opacity-[0.06]
-          bg-background overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]
-          ${open ? "max-h-72 py-6" : "max-h-0 py-0"}
+          md:hidden bg-[#0C0C0B] overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]
+          ${open ? "max-h-[100vh] py-8 border-t border-[#EDEDE8]/5" : "max-h-0"}
         `}
       >
-        <ul className="flex flex-col px-6 md:px-16 lg:px-24">
+        <ul className="flex flex-col px-8">
           {links.map((item, i) => (
             <li
               key={item.href}
-              className="border-b border-current border-opacity-[0.06] last:border-b-0"
+              className="border-b border-[#EDEDE8]/5 last:border-b-0"
             >
               <a
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="group relative flex items-center justify-between py-4 text-[9px] uppercase tracking-[0.3em] opacity-100"
-                style={{ fontFamily: "var(--font-sans)" }}
+                className="flex items-center justify-between py-5 text-[12px] font-normal uppercase tracking-[0.1em] text-[#EDEDE8] cursor-none"
               >
                 <span>{item.label}</span>
-                <span
-                  className="text-[8px] opacity-100 tabular-nums"
-                  style={{ fontFamily: "var(--font-sans)" }}
-                >
+                <span className="text-[10px] opacity-30 tabular-nums">
                   {String(i + 1).padStart(2, "0")}
                 </span>
               </a>
@@ -122,23 +124,15 @@ export default function Header() {
           ))}
 
           {/* tema mobile */}
-          <li className="pt-4 flex items-center justify-between">
-            <span
-              className="text-[9px] uppercase tracking-[0.3em] opacity-100"
-              style={{ fontFamily: "system-ui, sans-serif" }}
-            >
+          <li className="pt-6 flex items-center justify-between">
+            <span className="text-[12px] uppercase tracking-[0.1em] text-[#93938F]">
               Tema
             </span>
             <button
               onClick={toggleTheme}
-              aria-label="Mudar tema"
-              className="opacity-100"
+              className="flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#EDEDE8]/10 text-[#EDEDE8] text-[10px] uppercase font-bold"
             >
-              {theme === "dark" ? (
-                <SunIcon className="w-3.5 h-3.5" strokeWidth={1.5} />
-              ) : (
-                <MoonIcon className="w-3.5 h-3.5" strokeWidth={1.5} />
-              )}
+              {theme === "dark" ? "Light Mode" : "Dark Mode"}
             </button>
           </li>
         </ul>
