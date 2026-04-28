@@ -87,7 +87,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             className="
             absolute inset-0 z-20
             flex items-end justify-between p-5
-            bg-gradient-to-t from-[#2B2A27] via-[#2B2A27] to-transparent
+            bg-gradient-to-t from-[#2B2A27]/45 via-[#2B2A27]/15 to-transparent
             md:opacity-0 md:group-hover:opacity-100
             md:transition-opacity md:duration-500
           "
