@@ -3,7 +3,7 @@
 import { FileDown } from "lucide-react";
 import photo from "../../public/imagens/perfil-hero.webp";
 import Image from "next/image";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { IoCodeSlash } from "react-icons/io5";
 import { motion, type Variants } from "framer-motion";
 
@@ -162,6 +162,15 @@ export default function Hero() {
                     className="opacity-30 hover:opacity-80 hover:text-[#bc9b48] md:transition-all md:duration-300"
                   >
                     <FaLinkedin className="w-5 h-5" />
+                  </a>
+<a
+                    href="https://www.instagram.com/thiagodevsite?igsh=YnRxem5jNnE2NjFm"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                    className="opacity-30 hover:opacity-80 hover:text-[#bc9b48] md:transition-all md:duration-300"
+                  >
+                    <FaInstagram className="w-5 h-5" />
                   </a>
                 </div>
               </motion.div>
