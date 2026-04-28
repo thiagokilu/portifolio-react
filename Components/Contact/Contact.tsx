@@ -163,7 +163,7 @@ export default function Contact() {
                   className="text-[10px] opacity-50 tracking-wide"
                   style={{
                     fontFamily: "var(--font-editorial-sans)",
-                    color: "var(--color-red-400, #f87171)",
+                    color: "#bc9b48",
                   }}
                 >
                   {errors.name.message}
@@ -193,7 +193,7 @@ export default function Contact() {
                   className="text-[10px] opacity-50 tracking-wide"
                   style={{
                     fontFamily: "var(--font-editorial-sans)",
-                    color: "var(--color-red-400, #f87171)",
+                    color: "#bc9b48",
                   }}
                 >
                   {errors.email.message}
@@ -223,7 +223,7 @@ export default function Contact() {
                   className="text-[10px] opacity-50 tracking-wide"
                   style={{
                     fontFamily: "var(--font-editorial-sans)",
-                    color: "var(--color-red-400, #f87171)",
+                    color: "#bc9b48",
                   }}
                 >
                   {errors.phone.message}
@@ -253,7 +253,7 @@ export default function Contact() {
                   className="text-[10px] opacity-50 tracking-wide"
                   style={{
                     fontFamily: "var(--font-editorial-sans)",
-                    color: "var(--color-red-400, #f87171)",
+                    color: "#bc9b48",
                   }}
                 >
                   {errors.message.message}
@@ -280,8 +280,8 @@ export default function Contact() {
                 style={{ fontFamily: "var(--font-editorial-sans)" }}
               >
                 {/* fill hover */}
-                <span className="absolute inset-0 bg-purple-primary translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]" />
-                <span className="relative z-10 group-hover:text-white transition-colors duration-300">
+                <span className="absolute inset-0 bg-[#bc9b48] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]" />
+                <span className="relative z-10 group-hover:text-[#FDFEFD] transition-colors duration-300">
                   {isSubmitting ? "Enviando..." : "Enviar mensagem"}
                 </span>
               </button>
@@ -300,11 +300,11 @@ export default function Contact() {
         className="fixed bottom-8 right-8 z-50 group"
         aria-label="Contato via WhatsApp"
       >
-        <div className="relative w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110">
-          <FaWhatsapp className="w-7 h-7 text-white" />
+        <div className="relative w-14 h-14 bg-[#bc9b48] rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
+          <FaWhatsapp className="w-7 h-7 text-[#FDFEFD]" />
           
           {/* Tooltip */}
-          <div className="absolute bottom-full right-0 mb-2 px-3 py-1 bg-gray-800 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
+          <div className="absolute bottom-full right-0 mb-2 px-3 py-1 bg-[#2B2A27] text-[#FDFEFD] text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
             Fale comigo  no WhatsApp
           </div>
         </div>

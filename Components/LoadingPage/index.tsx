@@ -86,7 +86,7 @@ export default function LoadingPage() {
       {/* Cursor Container (O círculo com borda) */}
       {!isMobile && (
         <motion.div
-          className="fixed top-0 left-0 w-12 h-12 border-2 border-white rounded-full pointer-events-none z-[10000] mix-blend-difference flex items-center justify-center"
+          className="fixed top-0 left-0 w-12 h-12 border-2 border-[#FDFEFD] rounded-full pointer-events-none z-[10000] mix-blend-difference flex items-center justify-center"
           style={{
             x: cursorXSpring,
             y: cursorYSpring,
@@ -94,7 +94,7 @@ export default function LoadingPage() {
             translateY: "-50%",
           }}
         >
-          <div className="w-8 h-8 bg-white rounded-full" />
+          <div className="w-8 h-8 bg-[#FDFEFD] rounded-full" />
         </motion.div>
       )}
 
@@ -117,7 +117,7 @@ export default function LoadingPage() {
           <motion.div
             initial={{ opacity: 1 }}
             exit={{ opacity: 0, y: -100, transition: { duration: 0.8 } }}
-            className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-zinc-950 text-white"
+            className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[#2B2A27] text-[#FDFEFD]"
           >
             <div className="relative flex items-center justify-center">
               {/* Texto Circular */}
@@ -127,7 +127,6 @@ export default function LoadingPage() {
                 viewBox="0 0 250 250"
                 animate={{ rotate: 360 }}
                 transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-                className="drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]"
               >
                 <defs>
                   <path
@@ -136,7 +135,7 @@ export default function LoadingPage() {
                   />
                 </defs>
                 <text
-                  fill="white"
+                  fill="#FDFEFD"
                   fontSize="16"
                   fontWeight="bold"
                   letterSpacing="4"
@@ -158,7 +157,7 @@ export default function LoadingPage() {
                   {percent}%
                 </motion.span>
                 <motion.div
-                  className="h-[2px] bg-white mt-1"
+                  className="h-[2px] bg-[#FDFEFD] mt-1"
                   initial={{ width: 0 }}
                   animate={{ width: "100%" }}
                   style={{ width: `${percent * 0.4}px` }}

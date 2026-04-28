@@ -66,8 +66,8 @@ export default function Companies() {
       {/* ── TICKER ── */}
       {/* fade lateral */}
       <div className="relative">
-        <div className="pointer-events-none absolute left-0 top-0 h-full w-24 z-10 bg-gradient-to-r from-[var(--background,white)] to-transparent" />
-        <div className="pointer-events-none absolute right-0 top-0 h-full w-24 z-10 bg-gradient-to-l from-[var(--background,white)] to-transparent" />
+        <div className="pointer-events-none absolute left-0 top-0 h-full w-24 z-10 bg-gradient-to-r from-[var(--background)] to-transparent" />
+        <div className="pointer-events-none absolute right-0 top-0 h-full w-24 z-10 bg-gradient-to-l from-[var(--background)] to-transparent" />
 
         <div className="overflow-x-hidden py-2">
           <motion.div
@@ -92,7 +92,17 @@ export default function Companies() {
                 style={{ width: CARD_WIDTH }}
               >
                 {/* linha topo — cresce no hover */}
-                <div className="absolute top-0 left-0 h-[1px] w-0 bg-purple-primary md:group-hover:w-full md:transition-all md:duration-600 ease-[cubic-bezier(0.16,1,0.3,1)]" />
+                <div
+                  className={`
+                    absolute top-0 h-[1px] w-0 bg-[#bc9b48]
+                    md:transition-all md:duration-600 ease-[cubic-bezier(0.16,1,0.3,1)]
+                    ${
+                      company.name === "Stratek"
+                        ? "left-1/2 -translate-x-1/2 md:group-hover:w-[70%]"
+                        : "left-0 md:group-hover:w-full"
+                    }
+                  `}
+                />
 
                 {/* imagem */}
                 <div className="w-full flex items-center justify-center py-6 px-4 border border-current border-opacity-10 md:group-hover:border-opacity-25 md:transition-all md:duration-500">
@@ -104,7 +114,10 @@ export default function Companies() {
                     className="h-auto w-auto max-h-12 object-contain opacity-70 md:group-hover:opacity-100 md:transition-all md:duration-500"
                     loading="lazy"
                     style={{
-                      filter: 'var(--theme-filter)',
+                      filter:
+                        company.name === "Stratek"
+                          ? "none"
+                          : "var(--theme-filter)",
                     }}
                   />
                 </div>

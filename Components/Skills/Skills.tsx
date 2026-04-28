@@ -114,11 +114,11 @@ export default function Skills() {
               className="group relative flex flex-col items-center justify-center gap-3 py-6 px-4 border-b border-r border-current border-opacity-10 overflow-hidden"
             >
               {/* fill no hover */}
-              <span className="absolute inset-0 bg-purple-primary opacity-0 group-hover:opacity-5 transition-opacity duration-500" />
+              <span className="absolute inset-0 bg-[#bc9b48] opacity-0 group-hover:opacity-5 transition-opacity duration-500" />
 
               {/* ícone */}
               <Icon
-                className="text-3xl opacity-40 group-hover:opacity-100 group-hover:text-purple-primary transition-all duration-400 relative z-10"
+                className="text-3xl opacity-40 group-hover:opacity-100 group-hover:text-[#bc9b48] transition-all duration-400 relative z-10"
                 style={{ fontSize: "1.75rem" }}
               />
 
@@ -142,7 +142,7 @@ export default function Skills() {
               </span>
 
               {/* linha topo no hover */}
-              <span className="absolute top-0 left-0 h-[1px] w-0 bg-purple-primary group-hover:w-full transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]" />
+              <span className="absolute top-0 left-0 h-[1px] w-0 bg-[#bc9b48] group-hover:w-full transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]" />
             </motion.div>
           ))}
         </motion.div>

@@ -25,11 +25,9 @@ export default function Hero() {
   return (
     <div style={{ fontFamily: "var(--font-editorial-serif)" }}>
       <div id="Hero" className="relative min-h-screen overflow-hidden">
-        {/* ── GRID DE FUNDO SUTIL ── */}
+        {/* ── FUNDO ── */}
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(147,51,234,0.025)_1px,transparent_1px)] bg-[size:80px_100%]" />
-          <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(147,51,234,0.025)_1px,transparent_1px)] bg-[size:100%_80px]" />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/40" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background" />
         </div>
 
         {/* ── NÚMERO DECORATIVO ── */}
@@ -83,7 +81,7 @@ export default function Hero() {
                   Thiago
                   <br />
                   <em
-                    className="not-italic text-purple-primary"
+                    className="not-italic text-[#bc9b48]"
                     style={{ fontStyle: "italic", opacity: 0.9 }}
                   >
                     Alexandre
@@ -97,7 +95,7 @@ export default function Hero() {
                 className="flex flex-col gap-4 max-w-md"
               >
                 <div className="flex items-center gap-4">
-                  <div className="w-8 h-[1px] bg-purple-primary opacity-60" />
+                  <div className="w-8 h-[1px] bg-[#bc9b48] opacity-60" />
                   <span
                     className="text-sm font-light tracking-wide opacity-60"
                     style={{ fontFamily: "var(--font-sans)" }}
@@ -135,12 +133,12 @@ export default function Hero() {
                   "
                   style={{ fontFamily: "var(--font-sans)" }}
                 >
-                  <span className="absolute inset-0 bg-purple-primary translate-y-full group-hover:translate-y-0 md:transition-transform md:duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]" />
+                  <span className="absolute inset-0 bg-[#bc9b48] translate-y-full group-hover:translate-y-0 md:transition-transform md:duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]" />
                   <FileDown
-                    className="w-3.5 h-3.5 relative z-10 group-hover:text-white md:transition-colors md:duration-300"
+                    className="w-3.5 h-3.5 relative z-10 group-hover:text-[#FDFEFD] md:transition-colors md:duration-300"
                     strokeWidth={1.5}
                   />
-                  <span className="relative z-10 group-hover:text-white md:transition-colors md:duration-300">
+                  <span className="relative z-10 group-hover:text-[#FDFEFD] md:transition-colors md:duration-300">
                     Baixar CV
                   </span>
                 </a>
@@ -152,7 +150,7 @@ export default function Hero() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="GitHub"
-                    className="opacity-30 hover:opacity-80 hover:text-purple-primary md:transition-all md:duration-300"
+                    className="opacity-30 hover:opacity-80 hover:text-[#bc9b48] md:transition-all md:duration-300"
                   >
                     <FaGithub className="w-5 h-5" />
                   </a>
@@ -161,7 +159,7 @@ export default function Hero() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="LinkedIn"
-                    className="opacity-30 hover:opacity-80 hover:text-purple-primary md:transition-all md:duration-300"
+                    className="opacity-30 hover:opacity-80 hover:text-[#bc9b48] md:transition-all md:duration-300"
                   >
                     <FaLinkedin className="w-5 h-5" />
                   </a>
@@ -176,7 +174,7 @@ export default function Hero() {
             >
               {/* moldura dupla deslocada */}
               <div className="absolute -top-3 -left-3 w-full h-full border border-current opacity-10 group-hover:opacity-20 md:transition-opacity md:duration-500" />
-              <div className="absolute -top-1.5 -left-1.5 w-full h-full border border-purple-primary opacity-0 group-hover:opacity-20 md:transition-opacity md:duration-500" />
+              <div className="absolute -top-1.5 -left-1.5 w-full h-full border border-[#bc9b48] opacity-0 group-hover:opacity-20 md:transition-opacity md:duration-500" />
 
               {/* imagem */}
               <div className="relative w-full h-full overflow-hidden">
@@ -190,7 +188,7 @@ export default function Hero() {
                   className="object-cover"
                 />
                 {/* overlay sutil */}
-                <div className="absolute inset-0 bg-gradient-to-t from-background/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent" />
               </div>
 
               {/* label foto */}

@@ -126,7 +126,7 @@ export default function About() {
               >
                 <div className="shrink-0 mt-0.5">
                   <Icon
-                    className="w-5 h-5 text-purple-primary opacity-70 group-hover:opacity-100 transition-opacity duration-300"
+                    className="w-5 h-5 text-[#bc9b48] opacity-70 group-hover:opacity-100 transition-opacity duration-300"
                     strokeWidth={1.5}
                   />
                 </div>

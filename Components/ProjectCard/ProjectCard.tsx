@@ -87,20 +87,20 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             className="
             absolute inset-0 z-20
             flex items-end justify-between p-5
-            bg-gradient-to-t from-black/60 via-black/10 to-transparent
+            bg-gradient-to-t from-[#2B2A27] via-[#2B2A27] to-transparent
             md:opacity-0 md:group-hover:opacity-100
             md:transition-opacity md:duration-500
           "
           >
             <span
-              className="text-white text-[10px] font-sans uppercase tracking-[0.2em]"
+              className="text-[#FDFEFD] text-[10px] font-sans uppercase tracking-[0.2em]"
               style={{ fontFamily: "var(--font-editorial-sans)" }}
             >
               Ver projeto
             </span>
             {/* seta diagonal */}
             <svg
-              className="w-5 h-5 text-white md:translate-y-1 md:translate-x-1 md:group-hover:translate-y-0 md:group-hover:translate-x-0 md:transition-transform md:duration-300"
+              className="w-5 h-5 text-[#FDFEFD] md:translate-y-1 md:translate-x-1 md:group-hover:translate-y-0 md:group-hover:translate-x-0 md:transition-transform md:duration-300"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -121,7 +121,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           <div className="relative h-px bg-current opacity-10 mb-1">
             <div
               className="
-              absolute left-0 top-0 h-full w-0 bg-purple-primary
+              absolute left-0 top-0 h-full w-0 bg-[#bc9b48]
               md:transition-all md:duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]
               md:group-hover:w-full
             "
@@ -133,7 +133,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             <h3
               className="
                 text-xl leading-tight tracking-tight font-normal uppercase
-                md:group-hover:text-purple-primary md:transition-colors md:duration-300
+                md:group-hover:text-[#bc9b48] md:transition-colors md:duration-300
               "
               style={{ fontFamily: "var(--font-editorial-serif)" }}
             >

@@ -129,7 +129,7 @@ export default function ProjectsClient({
             {/* linha animada no hover */}
             <span
               className="
-                absolute bottom-0 left-0 h-px w-0 bg-purple-primary
+                absolute bottom-0 left-0 h-px w-0 bg-[#bc9b48]
                 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]
                 group-hover:w-full
               "
