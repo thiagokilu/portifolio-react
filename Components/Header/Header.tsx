@@ -26,7 +26,16 @@ export default function Header() {
   }
 
   useEffect(() => {
+    const storedTheme = window.localStorage.getItem("theme");
+
+    if (storedTheme === "dark" || storedTheme === "light") {
+      setTheme(storedTheme);
+    }
+  }, []);
+
+  useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
+    window.localStorage.setItem("theme", theme);
   }, [theme]);
 
   return (

@@ -31,6 +31,8 @@ const services = [
 ];
 
 export default function EditorialDarkServices() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <section
       id="services"
@@ -106,7 +108,7 @@ export default function EditorialDarkServices() {
         {/* Rodapé da Seção */}
         <motion.footer variants={fadeUp} className="mt-16 flex justify-end">
           <p className="text-[10px] uppercase tracking-[0.4em] opacity-20">
-            © 2026 Innovation Lab
+            © {currentYear} Innovation Lab
           </p>
         </motion.footer>
       </motion.div>

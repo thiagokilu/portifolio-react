@@ -22,6 +22,8 @@ const fadeUp: Variants = {
 };
 
 export default function Hero() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <div style={{ fontFamily: "var(--font-editorial-serif)" }}>
       <div id="Hero" className="relative min-h-screen overflow-hidden">
@@ -58,7 +60,7 @@ export default function Hero() {
               className="text-[9px] uppercase tracking-[0.4em] opacity-20"
               style={{ fontFamily: "var(--font-sans)" }}
             >
-              2025
+              {currentYear}
             </span>
           </motion.div>
 
@@ -163,7 +165,7 @@ export default function Hero() {
                   >
                     <FaLinkedin className="w-5 h-5" />
                   </a>
-<a
+                  <a
                     href="https://www.instagram.com/thiagodevsite?igsh=YnRxem5jNnE2NjFm"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -205,7 +207,7 @@ export default function Hero() {
                 className="absolute -bottom-6 right-0 text-[8px] uppercase tracking-[0.3em] opacity-25"
                 style={{ fontFamily: "var(--font-sans)" }}
               >
-                Thiago Alexandre, 2025
+                Thiago Alexandre, {currentYear}
               </span>
             </motion.div>
           </div>
