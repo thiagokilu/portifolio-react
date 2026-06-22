@@ -2,6 +2,7 @@ import About from "@/Components/About/About";
 import Companies from "@/Components/Companies/Companies";
 import Contact from "@/Components/Contact/Contact";
 import ContractedServices from "@/Components/ContractedServices/ContractedServices";
+import FeaturedClients from "@/Components/FeaturedClients/FeaturedClients";
 import Footer from "@/Components/Footer/Footer";
 import Header from "@/Components/Header/Header";
 import Hero from "@/Components/Hero/Hero";
@@ -18,6 +19,7 @@ export default function Home() {
         <Hero />
         <Skills />
         <About />
+        <FeaturedClients />
         <Companies />
         <ContractedServices />
         <Projects />

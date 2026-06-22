@@ -11,6 +11,7 @@ type AvailableThemes = "dark" | "light";
 const links = [
   { label: "Sobre", href: "#about" },
   { label: "Habilidades", href: "#skills" },
+  { label: "Cases", href: "#cases" },
   { label: "Projetos", href: "#projects" },
   { label: "Serviços", href: "#services" },
   { label: "Contato", href: "#contact" },

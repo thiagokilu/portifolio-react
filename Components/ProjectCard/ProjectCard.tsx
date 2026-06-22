@@ -180,7 +180,10 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               md:transition-all md:duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]
               font-sans
             "
-            style={{ fontFamily: "var(--font-editorial-sans)", fontStyle: "italic" }}
+            style={{
+              fontFamily: "var(--font-editorial-sans)",
+              fontStyle: "italic",
+            }}
           >
             {description}
           </p>

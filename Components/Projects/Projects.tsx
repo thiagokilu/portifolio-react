@@ -1,5 +1,4 @@
 import ProjectsClient from "./ProjectsClient";
-import projects from "@/public/files/projetos.json";
 
 export interface Project {
   id: number;
@@ -11,8 +10,18 @@ export interface Project {
   techs: string[];
 }
 
-export default function Projects() {
-  const orderedProjects = [...projects].reverse();
+export default async function Projects() {
+  try {
+    const res = await fetch(
+      "https://raw.githubusercontent.com/thiagokilu/api-projetos/main/projetos.json",
+      { next: { revalidate: 3600 } },
+    );
+    const projects: Project[] = await res.json();
+    const orderedProjects = [...projects].reverse();
 
-  return <ProjectsClient title="Projetos" projects={orderedProjects} />;
+    return <ProjectsClient title="Projetos" projects={orderedProjects} />;
+  } catch (error) {
+    console.error("Erro ao carregar projetos:", error);
+    return <ProjectsClient title="Projetos" projects={[]} />;
+  }
 }
