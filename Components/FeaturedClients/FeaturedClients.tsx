@@ -73,18 +73,17 @@ export default function FeaturedClients() {
                 href={client.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="relative aspect-[16/10] overflow-hidden bg-zinc-900"
+                className="relative  overflow-hidden bg-zinc-900"
               >
                 <img
                   src={client.image}
                   alt={`Print do site ${client.name}`}
                   loading="lazy"
                   className="
-                    w-full h-full object-cover
-                    grayscale
-                    transition-all duration-700
-                    group-hover:grayscale-0
-                    group-hover:scale-[1.03]
+                    w-full h-full object-cover object-center
+                    scale-[1.01]
+                    transition-transform duration-700
+                    group-hover:scale-[1.02]
                   "
                 />
 
