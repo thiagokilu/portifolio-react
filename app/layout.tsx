@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     siteName: "Thiago Dev",
     images: [
       {
-        url: "/imagens/perfil.png",
+        url: "/imagens/perfil-hero.png",
         width: 1200,
         height: 630,
         alt: "Thiago Dev Portfolio",
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     title: "Thiago Dev | Desenvolvedor Front-end",
     description:
       "Portfólio de Thiago Alexandre — Desenvolvedor Front-end especializado em criar interfaces modernas, rápidas e acessíveis.",
-    images: ["/imagens/perfil.png"],
+    images: ["/imagens/perfil-hero.png"],
     creator: "@thiagokilu",
   },
   icons: {

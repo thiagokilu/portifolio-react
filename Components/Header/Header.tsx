@@ -40,7 +40,7 @@ export default function Header() {
 
   return (
     <header
-      className="w-full fixed top-0 left-0 z-50  select-none cursor-none"
+      className="w-full fixed top-0 left-0 z-50  select-none cursor-none bg-background"
       style={{ fontFamily: "'Inter', system-ui, sans-serif" }}
     >
       <nav className=" px-6 md:px-12 flex items-center justify-between h-[60px]">
