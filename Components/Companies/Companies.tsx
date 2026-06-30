@@ -105,13 +105,13 @@ export default function Companies() {
                 />
 
                 {/* imagem */}
-                <div className="w-full flex items-center justify-center py-6 px-4 border border-current border-opacity-10 md:group-hover:border-opacity-25 md:transition-all md:duration-500">
+                <div className="w-full min-h-[72px] flex items-center justify-center py-6 px-4 border border-current border-opacity-10 md:group-hover:border-opacity-25 md:transition-all md:duration-500">
                   <Image
                     src={company.src}
                     alt={`Logo ${company.name}`}
                     width={180}
                     height={80}
-                    className="h-auto w-auto max-h-12 object-contain opacity-70 md:group-hover:opacity-100 md:transition-all md:duration-500"
+                    className="h-8 w-auto max-w-[140px] object-contain opacity-70 md:h-9 md:group-hover:opacity-100 md:transition-all md:duration-500"
                     loading="lazy"
                     style={{
                       filter:
@@ -149,7 +149,6 @@ export default function Companies() {
           </motion.div>
         </div>
       </div>
-
     </section>
   );
 }

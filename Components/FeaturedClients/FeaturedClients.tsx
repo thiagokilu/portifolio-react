@@ -4,7 +4,7 @@ import React from "react";
 
 const featuredClients = [
   {
-    name: "Assessorias Tratek",
+    name: "Assessoria Stratek",
     role: "Consultoria empresarial",
     description:
       "Site institucional moderno para posicionamento da assessoria com foco em credibilidade e conversão.",
