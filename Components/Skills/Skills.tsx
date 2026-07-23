@@ -8,6 +8,7 @@ import {
   FaGitAlt,
   FaLinux,
   FaDocker,
+  FaNodeJs,
 } from "react-icons/fa";
 import {
   SiTypescript,
@@ -16,6 +17,8 @@ import {
   SiSass,
   SiVuedotjs,
   SiWordpress,
+  SiExpress,
+  SiFastify,
 } from "react-icons/si";
 
 const stagger: Variants = {
@@ -46,8 +49,8 @@ const skills = [
   { icon: FaCss3Alt, name: "CSS3", category: "Estilo" },
   { icon: FaJs, name: "JavaScript", category: "Linguagem" },
   { icon: SiTypescript, name: "TypeScript", category: "Linguagem" },
-  { icon: SiVuedotjs, name: "Vue.js", category: "Framework" },
-  { icon: FaReact, name: "React", category: "Framework" },
+  { icon: SiVuedotjs, name: "Vue.js", category: "Library" },
+  { icon: FaReact, name: "React", category: "Library" },
   { icon: SiNextdotjs, name: "Next.js", category: "Framework" },
   { icon: SiTailwindcss, name: "Tailwind", category: "Estilo" },
   { icon: SiSass, name: "Sass", category: "Estilo" },
@@ -55,6 +58,9 @@ const skills = [
   { icon: FaLinux, name: "Linux", category: "Sistema" },
   { icon: FaDocker, name: "Docker", category: "DevOps" },
   { icon: SiWordpress, name: "WordPress", category: "CMS" },
+  { icon: FaNodeJs, name: "Node.js", category: "environment" },
+  { icon: SiExpress, name: "Express", category: "Framework" },
+  { icon: SiFastify, name: "Fastify", category: "Framework" },
 ];
 
 export default function Skills() {
