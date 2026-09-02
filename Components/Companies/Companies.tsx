@@ -114,10 +114,7 @@ export default function Companies() {
                     className="h-8 w-auto max-w-[140px] object-contain opacity-70 md:h-9 md:group-hover:opacity-100 md:transition-all md:duration-500"
                     loading="lazy"
                     style={{
-                      filter:
-                        company.name === "Stratek"
-                          ? "none"
-                          : "var(--theme-filter)",
+                      filter: "var(--theme-filter)",
                     }}
                   />
                 </div>

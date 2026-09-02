@@ -33,10 +33,12 @@ export default function FeaturedClients() {
       <div className="max-w-7xl mx-auto">
         {/* ── CABEÇALHO ── */}
         <div className="flex items-center justify-between mb-20">
-          <span className="text-[11px] uppercase tracking-[0.4em] text-white/40">
+          <span className="text-[11px] uppercase tracking-[0.4em] text-[var(--foreground)] opacity-40">
             Clientes Selecionados
           </span>
-          <span className="text-xs italic text-white/30">Portfolio Series</span>
+          <span className="text-xs italic text-[var(--foreground)] opacity-30">
+            Portfolio Series
+          </span>
         </div>
 
         {/* ── TÍTULO ── */}
@@ -45,7 +47,7 @@ export default function FeaturedClients() {
     text-[clamp(1.9rem,4.2vw,3.2rem)]
     leading-tight
     tracking-tight
-    text-white
+    text-[var(--foreground)]
     mb-20
     max-w-3xl
   "
@@ -63,7 +65,7 @@ export default function FeaturedClients() {
                 <span className="text-[10px] uppercase tracking-[0.3em] text-[#bc9b48]">
                   {client.role}
                 </span>
-                <span className="text-[10px] text-white/20">
+                <span className="text-[10px] text-[var(--foreground)] opacity-20">
                   {String(index + 1).padStart(2, "0")}
                 </span>
               </div>
@@ -107,7 +109,7 @@ export default function FeaturedClients() {
               <div className="mt-8 max-w-lg">
                 <h3
                   className="
-                    text-3xl md:text-4xl text-white mb-4
+                    text-3xl md:text-4xl text-[var(--foreground)] mb-4
                     transition-colors duration-300
                     group-hover:text-[#bc9b48]
                   "
@@ -117,13 +119,13 @@ export default function FeaturedClients() {
                 </h3>
 
                 <p
-                  className="text-white/60 text-base italic mb-6"
+                  className="text-[var(--foreground)] opacity-60 text-base italic mb-6"
                   style={{ fontFamily: "var(--font-editorial-serif)" }}
                 >
                   {client.description}
                 </p>
 
-                <p className="text-xs text-white/40 leading-relaxed max-w-md">
+                <p className="text-xs text-[var(--foreground)] opacity-40 leading-relaxed max-w-md">
                   {client.detail}
                 </p>
               </div>
