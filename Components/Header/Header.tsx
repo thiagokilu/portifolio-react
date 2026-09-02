@@ -14,7 +14,6 @@ const links = [
   { label: "Cases", href: "#cases" },
   { label: "Projetos", href: "#projects" },
   { label: "Serviços", href: "#services" },
-  { label: "Contato", href: "#contact" },
 ];
 
 export default function Header() {
