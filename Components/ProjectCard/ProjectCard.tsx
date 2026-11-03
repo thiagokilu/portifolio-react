@@ -70,7 +70,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
     >
       <article className="flex flex-col gap-0">
         {/* ── IMAGEM ── */}
-        <div className="relative aspect-[4/3] overflow-hidden">
+        <div className="relative aspect-[4/3] overflow-hidden bg-current/5">
           {/* grayscale que some no hover */}
           <div className="absolute inset-0 md:grayscale md:group-hover:grayscale-0 md:transition-all md:duration-700 ease-in-out z-10" />
 
@@ -78,8 +78,8 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             src={project.img}
             alt={project.title}
             fill
-            className="object-cover md:transition-transform md:duration-1000 ease-[cubic-bezier(0.22,1,0.36,1)] md:group-hover:scale-105"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="object-contain md:transition-opacity md:duration-700"
+            sizes=" 100vw,  50vw, 33vw"
           />
 
           {/* ── overlay escuro no hover com call-to-action ── */}
