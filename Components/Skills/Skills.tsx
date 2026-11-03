@@ -19,6 +19,8 @@ import {
   SiWordpress,
   SiExpress,
   SiFastify,
+  SiNestjs,
+  SiExpo,
 } from "react-icons/si";
 
 const stagger: Variants = {
@@ -59,8 +61,10 @@ const skills = [
   { icon: FaDocker, name: "Docker", category: "DevOps" },
   { icon: SiWordpress, name: "WordPress", category: "CMS" },
   { icon: FaNodeJs, name: "Node.js", category: "environment" },
+  { icon: SiNestjs, name: "Nest.js", category: "Framework" },
   { icon: SiExpress, name: "Express", category: "Framework" },
   { icon: SiFastify, name: "Fastify", category: "Framework" },
+  { icon: SiExpo, name: "React Native", category: "Sistema" },
 ];
 
 export default function Skills() {
