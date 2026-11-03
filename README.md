@@ -1,36 +1,129 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Thiago Dev — Portfólio
 
-## Getting Started
+Portfólio pessoal desenvolvido para apresentar minha trajetória profissional, projetos, experiências e habilidades na área de tecnologia.
 
-First, run the development server:
+O projeto foi desenvolvido com **Next.js, React e TypeScript**, priorizando uma interface moderna, responsiva e experiências visuais interativas.
+
+## ✨ Funcionalidades
+
+- **Apresentação pessoal:** seção inicial com informações e introdução profissional.
+- **Sobre mim:** apresentação da trajetória e conhecimentos.
+- **Projetos:** exposição de projetos desenvolvidos, com descrições e tecnologias utilizadas.
+- **Habilidades:** apresentação das tecnologias e ferramentas que fazem parte do meu conjunto de conhecimentos.
+- **Experiências profissionais:** apresentação de experiências e serviços realizados.
+- **Clientes e empresas:** seção dedicada a trabalhos e empresas em destaque.
+- **Contato:** formulário e canais para entrar em contato.
+- **Currículo:** acesso ao currículo profissional.
+- **Animações e interações:** transições e elementos visuais para enriquecer a navegação.
+- **SEO:** configurações de metadados, sitemap e robots.txt.
+
+## 🛠️ Tecnologias utilizadas
+
+- **Next.js 16** — Framework React para aplicações web.
+- **React 19** — Biblioteca para construção de interfaces.
+- **TypeScript** — Tipagem estática.
+- **Tailwind CSS 4** — Estilização da interface.
+- **Framer Motion** — Animações e transições.
+- **React Hook Form** — Gerenciamento de formulários.
+- **Zod** — Validação de dados.
+- **Lucide React** — Ícones.
+- **React Icons** — Biblioteca de ícones.
+
+## 🎨 Interface e experiência
+
+O projeto foi desenvolvido com atenção à experiência do usuário, incluindo:
+
+- Layout responsivo.
+- Componentização e reutilização de elementos.
+- Animações e transições.
+- Navegação entre seções.
+- Identidade visual personalizada.
+- Organização visual dos projetos e habilidades.
+
+## 🚀 Como executar o projeto
+
+### Pré-requisitos
+
+- Node.js 20.9.0 ou superior.
+- npm.
+
+### 1. Clone o repositório
+
+```bash
+git clone https://github.com/thiagokilu/portifolio-react.git
+```
+
+### 2. Acesse a pasta
+
+```bash
+cd portifolio-react
+```
+
+### 3. Instale as dependências
+
+```bash
+npm install
+```
+
+### 4. Execute em desenvolvimento
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 5. Acesse no navegador
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📦 Scripts disponíveis
 
-## Learn More
+| Comando | Descrição |
+|---|---|
+| `npm run dev` | Inicia o servidor de desenvolvimento. |
+| `npm run build` | Gera a versão de produção. |
+| `npm start` | Inicia o servidor de produção. |
+| `npm run lint` | Executa a análise estática com ESLint. |
 
-To learn more about Next.js, take a look at the following resources:
+## 📁 Estrutura do projeto
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```text
+portifolio-react/
+├── app/
+│   ├── globals.css       # Estilos globais
+│   ├── layout.tsx        # Layout principal
+│   ├── page.tsx          # Página inicial
+│   ├── robots.ts         # Configuração para mecanismos de busca
+│   └── sitemap.ts        # Sitemap
+├── Components/
+│   ├── About/            # Sobre mim
+│   ├── Companies/        # Empresas
+│   ├── Contact/          # Contato
+│   ├── ContractedServices/ # Serviços
+│   ├── FeaturedClients/  # Clientes em destaque
+│   ├── Footer/           # Rodapé
+│   ├── Header/           # Cabeçalho
+│   ├── Hero/             # Apresentação inicial
+│   ├── Projects/         # Projetos
+│   ├── ProjectCard/      # Cards de projetos
+│   └── Skills/           # Habilidades
+├── public/
+│   ├── companies/        # Logos de empresas
+│   ├── files/            # Arquivos e currículo
+│   ├── icons/            # Ícones
+│   └── imagens/          # Imagens
+├── package.json
+└── tsconfig.json
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 👨‍💻 Autor
 
-## Deploy on Vercel
+Desenvolvido por **Thiago Alexandre**.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- GitHub: [@thiagokilu](https://github.com/thiagokilu)
+- Repositório: [Portfólio React](https://github.com/thiagokilu/portifolio-react)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+⭐ Desenvolvido com Next.js, React e TypeScript.
